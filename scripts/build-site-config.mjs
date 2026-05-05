@@ -1,9 +1,26 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outputPath = resolve(root, 'js/site-config.js');
+const envPath = resolve(root, '.env');
+
+function loadLocalEnv() {
+  if (!existsSync(envPath)) return;
+  const lines = readFileSync(envPath, 'utf8').split(/\r?\n/);
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) return;
+    const match = trimmed.match(/^([A-Za-z_][A-Za-z0-9_]*)=(.*)$/);
+    if (!match) return;
+    const [, key, rawValue] = match;
+    if (process.env[key] !== undefined) return;
+    process.env[key] = rawValue.replace(/^['"]|['"]$/g, '').trim();
+  });
+}
+
+loadLocalEnv();
 
 function readPublicEnv(name) {
   return (process.env[name] || '').trim();
