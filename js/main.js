@@ -103,12 +103,14 @@
 
   const navMap = {
     home: 'home',
-    journey: 'journey',
-    toolkit: 'journey',
+    journey: 'about',
+    toolkit: 'skills',
     projects: 'projects',
     sketchbook: 'sketchbook',
-    experience: 'projects',
-    about: 'journey',
+    experience: 'experience',
+    'experience-timeline': 'experience',
+    education: 'education',
+    about: 'about',
     contact: 'contact'
   };
 

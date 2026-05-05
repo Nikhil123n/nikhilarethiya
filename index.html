@@ -17,11 +17,13 @@
     <a class="logo-mark" href="#home" aria-label="Back to top">NA<span>.</span></a>
     <p class="hover-note">hover me!</p>
     <nav class="tab-nav">
-      <a class="tab tab-home active" href="#home" data-target="home"><span>Home</span></a>
-      <a class="tab tab-about" href="#journey" data-target="journey"><span>Journey</span></a>
-      <a class="tab tab-projects" href="#projects" data-target="projects"><span>Projects</span></a>
-      <a class="tab tab-sketchbook" href="#sketchbook" data-target="sketchbook"><span>Sketchbook</span></a>
-      <a class="tab tab-contact" href="#contact" data-target="contact"><span>Contact</span></a>
+      <a class="tab tab-home active" href="#home" data-target="home"><img src="assets/artifacts/03-icons-doodles/svg/sidebar-home.svg" alt=""><span>Home</span></a>
+      <a class="tab tab-about" href="#about" data-target="about"><img src="assets/artifacts/03-icons-doodles/svg/sidebar-user.svg" alt=""><span>About</span></a>
+      <a class="tab tab-experience" href="#experience-timeline" data-target="experience"><img src="assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt=""><span>Experience</span></a>
+      <a class="tab tab-projects" href="#projects" data-target="projects"><img src="assets/artifacts/03-icons-doodles/svg/code-brackets.svg" alt=""><span>Projects</span></a>
+      <a class="tab tab-skills" href="#toolkit" data-target="skills"><img src="assets/artifacts/03-icons-doodles/svg/sidebar-skills.svg" alt=""><span>Skills</span></a>
+      <a class="tab tab-education" href="#education" data-target="education"><img src="assets/artifacts/03-icons-doodles/svg/education-cap.svg" alt=""><span>Education</span></a>
+      <a class="tab tab-contact" href="#contact" data-target="contact"><img src="assets/artifacts/03-icons-doodles/svg/contact-mail.svg" alt=""><span>Contact</span></a>
     </nav>
     <div class="scroll-note">
       <span>Scroll</span>
@@ -34,8 +36,9 @@
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#experience-timeline">Experience</a>
       <a href="#sketchbook">Sketchbook</a>
+      <a href="extra/">Extra</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="top-socials" aria-label="Contact and social links">
@@ -110,7 +113,46 @@
       </div>
     </section>
 
-    <section id="journey" class="scene section journey-section" data-scene="journey" data-avatar="assets/avatars/02-thinking-pose.png" data-caption="Scene 02: thinking through the problem.">
+    <section id="about" class="scene section about-section" data-scene="about" data-avatar="assets/avatars/04-headshot-left.png" data-caption="Scene 02: engineer by profession, creator by passion.">
+      <div class="about-card reveal">
+        <img src="assets/avatars/04-headshot-left.png" alt="Smiling hand-drawn avatar headshot">
+        <div>
+          <div class="section-kicker">About Me</div>
+          <h2>Engineer by profession, creator by passion.</h2>
+          <p>I am a software engineer who loves building robust systems and delightful experiences. I believe in clean code, strong architecture, continuous learning, and products that create measurable value.</p>
+          <a href="#contact" class="blue-link">Let's build something useful -&gt;</a>
+        </div>
+      </div>
+      <div class="stats-grid reveal-grid">
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt="">
+          <strong>2+</strong>
+          <span>Years of<br>Experience</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/rocket.svg" alt="">
+          <strong>10+</strong>
+          <span>Projects<br>Shipped</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/code-brackets.svg" alt="">
+          <strong>5+</strong>
+          <span>Technologies<br>Mastered</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/puzzle.svg" alt="">
+          <strong>1000+</strong>
+          <span>Problems<br>Solved</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/clock.svg" alt="">
+          <strong>24/7</strong>
+          <span>Always<br>Learning</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="journey" class="scene section journey-section" data-scene="journey" data-avatar="assets/avatars/02-thinking-pose.png" data-caption="Scene 03: thinking through the problem.">
       <div class="section-kicker">The Journey</div>
       <div class="section-heading-row">
         <h2>From Concept to Impact</h2>
@@ -156,53 +198,7 @@
       </div>
     </section>
 
-    <section id="toolkit" class="scene section toolkit-section" data-scene="toolkit" data-avatar="assets/avatars/03-writing-sketching-table.png" data-caption="Scene 03: sketching the architecture.">
-      <div class="toolkit-showcase">
-        <aside class="toolkit-side reveal">
-          <div class="section-kicker">Engineer's<br>Toolkit</div>
-          <h2>Technologies I use to build and ship.</h2>
-          <p>Frontend, backend, APIs, data, cloud, DevOps, testing, and AI-assisted engineering.</p>
-        </aside>
-
-        <div class="toolkit-grid reveal-grid">
-          <div class="tool-group" data-tilt-card>
-            <h3>Languages</h3>
-            <div class="skill-cloud">
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-python.svg" alt=""><span class="skill-label">Python</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-javascript.svg" alt=""><span class="skill-label">JavaScript</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-typescript.svg" alt=""><span class="skill-label">TypeScript</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-java.svg" alt=""><span class="skill-label">Java</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-cpp.svg" alt=""><span class="skill-label">C++</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-csharp.svg" alt=""><span class="skill-label">C#</span></span>
-            </div>
-          </div>
-          <div class="tool-group" data-tilt-card>
-            <h3>Frameworks</h3>
-            <div class="skill-cloud">
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-react.svg" alt=""><span class="skill-label">React</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-vue.svg" alt=""><span class="skill-label">Vue</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-nodejs.svg" alt=""><span class="skill-label">Node.js</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-django.svg" alt=""><span class="skill-label">Django</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-fastapi.svg" alt=""><span class="skill-label">FastAPI</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-flask.svg" alt=""><span class="skill-label">Flask</span></span>
-            </div>
-          </div>
-          <div class="tool-group" data-tilt-card>
-            <h3>Data, Cloud, DevOps</h3>
-            <div class="skill-cloud">
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-postgresql.svg" alt=""><span class="skill-label">PostgreSQL</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-mongodb.svg" alt=""><span class="skill-label">MongoDB</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-gcp.svg" alt=""><span class="skill-label">GCP</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-docker.svg" alt=""><span class="skill-label">Docker</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-kubernetes.svg" alt=""><span class="skill-label">Kubernetes</span></span>
-              <span class="skill-pill"><img src="assets/artifacts/03-icons-doodles/svg/tech-cicd.svg" alt=""><span class="skill-label">CI/CD</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="toolkit-strip" class="toolkit-strip-section" aria-labelledby="toolkit-strip-title">
+    <section id="toolkit" class="scene toolkit-strip-section" data-scene="toolkit" data-avatar="assets/avatars/03-writing-sketching-table.png" data-caption="Scene 04: my toolkit." aria-labelledby="toolkit-strip-title">
       <div class="toolkit-strip reveal">
         <div class="toolkit-strip-intro">
           <div class="toolkit-strip-heading">
@@ -256,7 +252,7 @@
       </div>
     </section>
 
-    <section id="projects" class="scene section projects-section" data-scene="projects" data-avatar="assets/avatars/06-sketching-notebook.png" data-caption="Scene 04: translating sketches into products.">
+    <section id="projects" class="scene section projects-section" data-scene="projects" data-avatar="assets/avatars/06-sketching-notebook.png" data-caption="Scene 05: translating sketches into products.">
       <div class="projects-showcase">
         <aside class="project-side reveal">
           <div class="section-kicker">Featured<br>Projects</div>
@@ -312,7 +308,7 @@
       </div>
     </section>
 
-    <section id="sketchbook" class="scene section sketchbook-section" data-scene="sketchbook" data-avatar="assets/avatars/03-writing-sketching-table.png" data-caption="Scene 05: opening the process notebook.">
+    <section id="sketchbook" class="scene section sketchbook-section" data-scene="sketchbook" data-avatar="assets/avatars/03-writing-sketching-table.png" data-caption="Scene 06: opening the process notebook.">
       <div class="sketchbook-showcase">
         <aside class="sketchbook-side reveal">
           <div class="section-kicker">Sketchbook<br>Wall</div>
@@ -397,63 +393,106 @@
       </div>
     </section>
 
-    <section id="experience" class="scene section experience-section" data-scene="experience" data-avatar="assets/avatars/02-thinking-pose.png" data-caption="Scene 06: connecting experience to outcomes.">
-      <div class="experience-showcase">
-        <aside class="experience-side reveal">
-          <div class="section-kicker">Experience Notes</div>
-          <h2>Production work, research systems, and real-world impact.</h2>
-          <p>Selected experience highlights translated into notebook cards for quick scanning.</p>
-        </aside>
+    <section id="experience-timeline" class="scene section experience-timeline-section" data-scene="experience-detail" data-caption="Scene 07: detailed experience timeline." aria-labelledby="experience-timeline-title">
+      <div class="experience-timeline-paper">
+        <h2 id="experience-timeline-title">Experience</h2>
+        <span class="experience-loop-doodle" aria-hidden="true"></span>
+        <img class="experience-star-doodle" src="assets/artifacts/03-icons-doodles/svg/star.svg" alt="">
 
-        <div class="experience-grid reveal-grid">
-          <article class="experience-card" data-tilt-card><h3>HIVE Labs</h3><span>Software Engineer</span><p>Built Spark and Python ingestion, Vue dashboards, model validation, CI testing, and containerized serving.</p></article>
-          <article class="experience-card" data-tilt-card><h3>United Nations</h3><span>Data Research Intern</span><p>Created Python ETL pipelines, validated 100K+ records, and reduced analyst review overhead.</p></article>
-          <article class="experience-card" data-tilt-card><h3>System Neural Lab</h3><span>Backend Software Engineer</span><p>Built Dockerized Django, Celery, Redis, PostgreSQL processing workflows with RBAC and Kubernetes deployments.</p></article>
-          <article class="experience-card" data-tilt-card><h3>National Informatics Centre</h3><span>Software Developer</span><p>Migrated legacy JSP systems toward React and API-driven components across large-scale public systems.</p></article>
+        <div class="experience-timeline-list">
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Software Engineer <span>|</span> HIVE Labs</h3>
+              <time>May 2025 - Dec 2025</time>
+            </div>
+            <ul>
+              <li>Built Apache <span class="experience-tech">Spark</span> + Python ingestion pipeline for 1,067 participants, cutting data prep time by ~35%.</li>
+              <li>Delivered <span class="experience-tech">Vue.js</span> real-time dashboard (500ms latency) with Jest tests achieving 80%+ UI coverage.</li>
+              <li>Automated ML training &amp; validation with pytest; reduced QA effort by 40% on <span class="experience-tech">AWS EKS</span>.</li>
+              <li>Authored 2 research papers on AI-driven glucose prediction and time-series modeling.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Data Research Intern <span>|</span> United Nations</h3>
+              <time>May 2025 - Aug 2025</time>
+            </div>
+            <ul>
+              <li>Built Python ETL pipelines validating 100K+ records, eliminating 30% manual processing overhead.</li>
+              <li>Resolved 45+ critical data discrepancies through cross-functional audits.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Backend Software Engineer <span>|</span> System Neural Development Lab</h3>
+              <time>Mar 2025 - May 2025</time>
+            </div>
+            <ul>
+              <li>Built <span class="experience-tech">Dockerized</span> Django app with Celery &amp; Redis; automated 1+ TB/day neural data processing.</li>
+              <li>Secured 4-node pipeline with RBAC, JWT auth &amp; REST APIs; zero unauthorized access events.</li>
+              <li>Hardened nodes with SSH/TLS tunnels &amp; isolated containers for safe, auditable execution.</li>
+              <li>Orchestrated CI/CD with Jenkins &amp; Kubernetes; cut config overhead by 60%.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Software Developer <span>|</span> National Informatics Centre</h3>
+              <time>Jan 2023 - Jun 2024</time>
+            </div>
+            <ul>
+              <li>Migrated 12-year-old JSP platform to modern stack; resolved 25+ version conflicts.</li>
+              <li>Built <span class="experience-tech">React.js</span> frontend; improved page load latency by 33% across 708 districts.</li>
+              <li>Optimized 12 SQL stored procedures; improved API query latency from ~8s to ~4s (2x faster).</li>
+              <li>Refactored 6 JSP modules to REST APIs; saved 8+ engineering hours monthly.</li>
+              <li>Migrated to UTF-8 Unicode, expanded support from 10 to 22 Indian languages.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="scene section about-section" data-scene="about" data-avatar="assets/avatars/04-headshot-left.png" data-caption="Scene 07: engineer by profession, creator by passion.">
-      <div class="about-card reveal">
-        <img src="assets/avatars/04-headshot-left.png" alt="Smiling hand-drawn avatar headshot">
-        <div>
-          <div class="section-kicker">About Me</div>
-          <h2>Engineer by profession, creator by passion.</h2>
-          <p>I am a software engineer who loves building robust systems and delightful experiences. I believe in clean code, strong architecture, continuous learning, and products that create measurable value.</p>
-          <a href="#contact" class="blue-link">Let's build something useful -&gt;</a>
+    <section id="education" class="scene section education-section" data-scene="education" data-caption="Scene 08: education foundations." aria-labelledby="education-title">
+      <div class="education-paper">
+        <h2 id="education-title">Education</h2>
+        <div class="education-layout">
+          <div class="education-list" aria-label="Education history">
+            <article class="education-item">
+              <img src="assets/artifacts/03-icons-doodles/svg/education-campus.svg" alt="">
+              <div class="education-copy">
+                <div class="education-heading">
+                  <h3>The George Washington University, Washington DC, USA</h3>
+                  <time>Aug 2024 - May 2026</time>
+                </div>
+                <p>Master of Science in Computer Science (GPA: 3.89/4)</p>
+                <p><strong>Coursework:</strong> Design &amp; Analysis of Algorithms, Advanced Software Paradigms,<br>Component Based Software Architecture</p>
+              </div>
+            </article>
+
+            <article class="education-item">
+              <img src="assets/artifacts/03-icons-doodles/svg/education-cap.svg" alt="">
+              <div class="education-copy">
+                <div class="education-heading">
+                  <h3>University of Mumbai, India</h3>
+                  <time>Aug 2019 - May 2023</time>
+                </div>
+                <p>Bachelor of Engineering in Computer Engineering (GPA: 3.78/4)</p>
+              </div>
+            </article>
+          </div>
+
+          <img class="education-illustration" src="assets/artifacts/03-icons-doodles/svg/education-books-apple.svg" alt="">
         </div>
-      </div>
-      <div class="stats-grid reveal-grid">
-        <article class="stat-card">
-          <img src="assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt="">
-          <strong>2+</strong>
-          <span>Years of<br>Experience</span>
-        </article>
-        <article class="stat-card">
-          <img src="assets/artifacts/03-icons-doodles/svg/rocket.svg" alt="">
-          <strong>10+</strong>
-          <span>Projects<br>Shipped</span>
-        </article>
-        <article class="stat-card">
-          <img src="assets/artifacts/03-icons-doodles/svg/code-brackets.svg" alt="">
-          <strong>5+</strong>
-          <span>Technologies<br>Mastered</span>
-        </article>
-        <article class="stat-card">
-          <img src="assets/artifacts/03-icons-doodles/svg/puzzle.svg" alt="">
-          <strong>1000+</strong>
-          <span>Problems<br>Solved</span>
-        </article>
-        <article class="stat-card">
-          <img src="assets/artifacts/03-icons-doodles/svg/clock.svg" alt="">
-          <strong>24/7</strong>
-          <span>Always<br>Learning</span>
-        </article>
       </div>
     </section>
 
-    <section id="contact" class="scene section contact-section" data-scene="contact" data-avatar="assets/avatars/07-celebrating-pose.png" data-caption="Scene 08: ready to ship the next thing.">
+    <section id="contact" class="scene section contact-section" data-scene="contact" data-avatar="assets/avatars/07-celebrating-pose.png" data-caption="Scene 09: ready to ship the next thing.">
       <div class="contact-copy reveal">
         <div class="section-kicker">Let's Connect</div>
         <h2>Let's build something real.</h2>
