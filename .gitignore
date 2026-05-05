@@ -1,0 +1,25 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment and local config
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+coverage/
+
+# Runtime/cache files
+*.log
+*.tmp
+*.temp
+js/site-config.js
+__pycache__/
+*.py[cod]
+.pytest_cache/

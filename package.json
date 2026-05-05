@@ -1,0 +1,21 @@
+{
+  "name": "sketchbook-scrolltelling-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A hand-drawn sketchbook scroll-telling software engineering portfolio using separated scalable assets.",
+  "scripts": {
+    "build": "node scripts/build-site-config.mjs",
+    "predev": "npm run build",
+    "dev": "python scripts/dev_server.py --port 5173",
+    "prestart": "npm run build",
+    "start": "python scripts/dev_server.py --port 5173"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "sketchbook",
+    "scrolltelling",
+    "static-site"
+  ],
+  "license": "UNLICENSED"
+}
