@@ -18,6 +18,8 @@
     <nav class="tab-nav">
       <a class="tab tab-home" href="../index.html#home" data-target="home"><img src="../assets/artifacts/03-icons-doodles/svg/sidebar-home.svg" alt=""><span>Home</span></a>
       <a class="tab tab-skills active" href="#toolkit" data-target="skills"><img src="../assets/artifacts/03-icons-doodles/svg/sidebar-skills.svg" alt=""><span>Toolkit</span></a>
+      <a class="tab tab-journey" href="#journey" data-target="journey"><img src="../assets/artifacts/03-icons-doodles/svg/lightbulb.svg" alt=""><span>Journey</span></a>
+      <a class="tab tab-sketchbook" href="#sketchbook" data-target="sketchbook"><img src="../assets/artifacts/03-icons-doodles/svg/sketch-star-small.svg" alt=""><span>Sketchbook</span></a>
       <a class="tab tab-experience" href="#experience" data-target="experience"><img src="../assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt=""><span>Notes</span></a>
     </nav>
     <div class="scroll-note">
@@ -32,6 +34,8 @@
       <a href="../index.html#toolkit">Main Toolkit</a>
       <a href="../index.html#experience-timeline">Main Experience</a>
       <a href="#toolkit" class="active">Engineer's Toolkit</a>
+      <a href="#journey">Journey</a>
+      <a href="#sketchbook">Sketchbook Wall</a>
       <a href="#experience">Experience Notes</a>
     </nav>
   </header>
@@ -87,7 +91,138 @@
       </div>
     </section>
 
-    <section id="experience" class="scene section experience-section" data-scene="experience" data-avatar="../assets/avatars/02-thinking-pose.png" data-caption="Extra 02: alternate experience cards.">
+    <section id="journey" class="scene section journey-section" data-scene="journey" data-avatar="../assets/avatars/02-thinking-pose.png" data-caption="Extra 02: thinking through the problem.">
+      <div class="section-kicker">The Journey</div>
+      <div class="section-heading-row">
+        <h2>From Concept to Impact</h2>
+        <p>Every project follows a story: understand the problem, shape a plan, build with care, test thoroughly, ship reliably, and measure impact.</p>
+      </div>
+      <div class="journey-strip reveal-grid">
+        <article class="journey-step" style="--accent: var(--red);" data-tilt-card>
+          <span>01</span>
+          <img src="../assets/artifacts/03-icons-doodles/svg/lightbulb.svg" alt="">
+          <h3>Idea</h3>
+          <p>Every great system starts with a clear problem.</p>
+        </article>
+        <article class="journey-step" style="--accent: var(--blue);" data-tilt-card>
+          <span>02</span>
+          <img src="../assets/artifacts/03-icons-doodles/svg/org-chart.svg" alt="">
+          <h3>Plan</h3>
+          <p>Map user flows, data contracts, and system boundaries.</p>
+        </article>
+        <article class="journey-step" style="--accent: var(--green);" data-tilt-card>
+          <span>03</span>
+          <img src="../assets/artifacts/03-icons-doodles/svg/terminal-window.svg" alt="">
+          <h3>Build</h3>
+          <p>Write clean backend, frontend, and API code.</p>
+        </article>
+        <article class="journey-step" style="--accent: var(--orange);" data-tilt-card>
+          <span>04</span>
+          <img src="../assets/artifacts/03-icons-doodles/svg/gear.svg" alt="">
+          <h3>Test</h3>
+          <p>Validate behavior with regression and UI tests.</p>
+        </article>
+        <article class="journey-step" style="--accent: var(--purple);" data-tilt-card>
+          <span>05</span>
+          <img src="../assets/artifacts/03-icons-doodles/svg/cloud-upload.svg" alt="">
+          <h3>Deploy</h3>
+          <p>Ship containerized services and reliable pipelines.</p>
+        </article>
+        <article class="journey-step" style="--accent: var(--green);" data-tilt-card>
+          <span>06</span>
+          <img src="../assets/artifacts/03-icons-doodles/svg/globe.svg" alt="">
+          <h3>Impact</h3>
+          <p>Measure latency, accuracy, cost, quality, and outcomes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sketchbook" class="scene section sketchbook-section" data-scene="sketchbook" data-avatar="../assets/avatars/03-writing-sketching-table.png" data-caption="Extra 03: opening the process notebook.">
+      <div class="sketchbook-showcase">
+        <aside class="sketchbook-side reveal">
+          <div class="section-kicker">Sketchbook<br>Wall</div>
+          <p class="sketchbook-lede">A peek into process, wireframes, diagrams, and ideas.</p>
+          <a class="sketchbook-action" href="#sketchbook">Explore Sketches <span aria-hidden="true">-&gt;</span></a>
+          <p class="sketchbook-note">Drag your cursor across the notes. The cards tilt like taped sketches on a real notebook page.</p>
+        </aside>
+
+        <div class="notebook-spread reveal-grid" aria-label="Sketchbook process notes">
+          <span class="notebook-binding" aria-hidden="true"></span>
+          <article class="notebook-page note-architecture" data-tilt-card>
+            <span class="tape tape-left"></span>
+            <img class="paperclip-note" src="../assets/artifacts/04-hand-drawn-ui-elements/svg/paperclip.svg" alt="">
+            <div class="flowchart-sketch">
+              <span>Client</span><i></i><span>API</span><i></i><span>Queue</span>
+              <span>Auth</span><i></i><span>Cache</span><i></i><span>DB</span>
+            </div>
+            <h3>System Architecture</h3>
+          </article>
+
+          <article class="notebook-page note-api" data-tilt-card>
+            <span class="tape tape-top"></span>
+            <h3>API Flow</h3>
+            <div class="sequence-sketch">
+              <span>Browser</span><span>API</span><span>Service</span><span>DB</span>
+              <i></i><i></i><i></i><i></i>
+              <b></b><b></b><b></b>
+            </div>
+          </article>
+
+          <article class="notebook-page note-user-flow" data-tilt-card>
+            <span class="tape tape-right"></span>
+            <h3>User Flow</h3>
+            <div class="flowchart-sketch compact-flow">
+              <span>Login</span><i></i><span>Plan</span><i></i><span>Build</span>
+              <span>Test</span><i></i><span>Ship</span><i></i><span>Learn</span>
+            </div>
+          </article>
+
+          <article class="notebook-page note-dashboard" data-tilt-card>
+            <span class="tape tape-left"></span>
+            <div class="screen-sketch">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h3>Dashboard UI</h3>
+          </article>
+
+          <article class="notebook-page note-schema" data-tilt-card>
+            <span class="tape tape-right"></span>
+            <div class="schema-sketch">
+              <span>users</span><i></i><span>jobs</span>
+              <span>events</span><i></i><span>reports</span>
+              <span>metrics</span><i></i><span>alerts</span>
+            </div>
+            <h3>Database Schema</h3>
+          </article>
+
+          <article class="notebook-page note-focus" data-tilt-card>
+            <span class="tape tape-top"></span>
+            <div class="photo-sketch">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <h3>Focus Mode</h3>
+          </article>
+
+          <article class="notebook-page note-wireframe" data-tilt-card>
+            <span class="tape tape-left"></span>
+            <div class="phone-wireframes">
+              <span></span><span></span><span></span>
+            </div>
+            <h3>Wireframe Sketch</h3>
+          </article>
+
+          <article class="notebook-page note-deploy" data-tilt-card>
+            <span class="tape tape-right"></span>
+            <div class="deploy-sketch">
+              <span>CI</span><i></i><span>Build</span><i></i><span>Run</span>
+            </div>
+            <h3>Deployment Pipeline</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="scene section experience-section" data-scene="experience" data-avatar="../assets/avatars/02-thinking-pose.png" data-caption="Extra 04: alternate experience cards.">
       <div class="experience-showcase">
         <aside class="experience-side reveal">
           <div class="section-kicker">Experience Notes</div>
