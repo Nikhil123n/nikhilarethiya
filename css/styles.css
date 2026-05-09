@@ -1640,43 +1640,30 @@ main {
 .project-card {
   position: relative;
   isolation: isolate;
-  padding: 22px 22px 20px;
-  border-radius: 2px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.72), rgba(250,246,238,0.94) 48%, rgba(239,226,202,0.52)),
-    var(--paper-2);
-  border: 1.8px solid rgba(36, 36, 35, 0.42);
-  box-shadow:
-    7px 9px 0 rgba(36, 36, 35, 0.08),
-    18px 24px 34px rgba(36, 36, 35, 0.14);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(50px, 3.7vw, 62px) clamp(30px, 2.3vw, 36px) clamp(42px, 3vw, 50px);
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  box-shadow: none;
   transform: rotate(-0.8deg);
-  min-height: 452px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 540px;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .project-card::before {
   content: "";
   position: absolute;
-  inset: 7px -8px -9px 8px;
-  z-index: -1;
-  border: 1.5px solid rgba(36, 36, 35, 0.18);
-  background: rgba(239, 226, 202, 0.62);
-  box-shadow: 8px 11px 18px rgba(36, 36, 35, 0.1);
-  transform: rotate(0.7deg);
+  inset: -18px -18px -20px -18px;
+  z-index: 0;
+  background: url('../assets/artifacts/project-card/sketch-card-blank-composite.svg') center / 100% 100% no-repeat;
+  pointer-events: none;
+  filter: drop-shadow(8px 12px 9px rgba(36, 36, 35, 0.13));
 }
 
 .project-card::after {
-  content: "";
-  position: absolute;
-  top: -15px;
-  right: 18px;
-  z-index: 3;
-  width: 82px;
-  height: 32px;
-  background-image: url('../assets/artifacts/08-textures-background/svg/tape-strip.svg');
-  background-size: 100% 100%;
-  transform: rotate(8deg);
-  opacity: 0.9;
+  content: none;
 }
 
 .project-card:nth-child(2) { transform: rotate(0.7deg); }
@@ -1687,25 +1674,8 @@ main {
   z-index: 1;
 }
 
-.paperclip {
-  position: absolute;
-  left: 28px;
-  top: -28px;
-  z-index: 4;
-  width: 36px;
-  height: 68px;
-  background-image: url('../assets/artifacts/04-hand-drawn-ui-elements/svg/paperclip.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: rotate(-7deg);
-}
-
-.paperclip.blue {
-  filter: hue-rotate(165deg) saturate(1.6);
-}
-
 .project-sketch {
-  height: clamp(138px, 11vw, 176px);
+  height: clamp(138px, 11vw, 170px);
   border: 1.8px solid rgba(36, 36, 35, 0.36);
   background: rgba(255, 255, 255, 0.58);
   border-radius: 3px;
@@ -1962,10 +1932,15 @@ main {
 }
 
 .project-card h3 {
+  font-family: var(--font-sketch-caps);
+  font-style: normal;
+  font-weight: 700;
   min-height: 48px;
   margin-top: 10px;
   font-size: clamp(17px, 1.35vw, 22px);
   line-height: 1.15;
+  letter-spacing: 0;
+  text-shadow: 0.2px 0 currentColor;
 }
 
 .project-card p {
@@ -1981,11 +1956,44 @@ main {
 }
 
 .project-card a {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 8px;
+  width: fit-content;
+  padding-bottom: 8px;
   font-size: 16px;
+  line-height: 1;
   text-transform: uppercase;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.project-card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background:
+    linear-gradient(176deg, transparent 0 35%, currentColor 36% 52%, transparent 53%),
+    linear-gradient(179deg, transparent 0 58%, currentColor 59% 72%, transparent 73%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 0 100%;
+  opacity: 0.9;
+  transition: background-size 0.18s ease;
+}
+
+.project-card a:hover,
+.project-card a:focus-visible {
+  color: var(--red);
+  transform: rotate(-1.5deg);
+}
+
+.project-card a:hover::after,
+.project-card a:focus-visible::after {
+  background-size: 100% 100%, 100% 100%;
 }
 
 .notebook-spread {
@@ -3307,9 +3315,8 @@ body[data-scene="about"] .reactive-avatar {
     box-shadow: 10px 14px 0 rgba(36,36,35,0.08), var(--shadow-sm);
   }
   .project-card[data-tilt-card]:hover {
-    box-shadow:
-      9px 12px 0 rgba(36, 36, 35, 0.1),
-      22px 30px 42px rgba(36, 36, 35, 0.16);
+    box-shadow: none;
+    filter: saturate(1.02);
   }
   .tool-group[data-tilt-card]:hover {
     box-shadow: 0 14px 28px rgba(36, 36, 35, 0.14);
@@ -3400,8 +3407,8 @@ body[data-scene="about"] .reactive-avatar {
     gap: clamp(18px, 2vw, 28px);
   }
   .project-card {
-    min-height: 432px;
-    padding: 20px 18px 18px;
+    min-height: 500px;
+    padding: 48px 26px 42px;
   }
   .project-sketch {
     height: clamp(126px, 10vw, 156px);
@@ -3581,8 +3588,8 @@ body[data-scene="about"] .reactive-avatar {
     gap: 18px;
   }
   .project-card {
-    min-height: 414px;
-    padding: 18px 16px;
+    min-height: 492px;
+    padding: 46px 24px 40px;
   }
   .project-sketch {
     height: 132px;
@@ -3794,7 +3801,7 @@ body[data-scene="about"] .reactive-avatar {
     gap: 18px;
   }
   .project-card {
-    min-height: 410px;
+    min-height: 500px;
   }
 }
 
@@ -4144,11 +4151,21 @@ body[data-scene="about"] .reactive-avatar {
     gap: 24px;
   }
   .project-card {
-    min-height: auto;
-    padding: 20px 18px;
+    min-height: 462px;
+    padding: 44px 28px 38px;
+  }
+  .project-card::before {
+    inset: -10px -10px -12px -10px;
   }
   .project-sketch {
-    height: clamp(142px, 46vw, 178px);
+    height: clamp(128px, 38vw, 156px);
+    margin-bottom: 14px;
+  }
+  .project-card .tags {
+    margin: 10px 0;
+  }
+  .project-card p {
+    margin-bottom: 10px;
   }
   .sketchbook-section {
     padding-left: 20px;
@@ -4340,6 +4357,13 @@ body[data-scene="about"] .reactive-avatar {
   }
   .project-more-link {
     white-space: normal;
+  }
+  .project-card {
+    min-height: 452px;
+    padding: 42px 24px 36px;
+  }
+  .project-card::before {
+    inset: -8px -8px -10px -8px;
   }
   .project-card h3 {
     min-height: auto;

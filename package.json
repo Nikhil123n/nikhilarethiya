@@ -5,6 +5,7 @@
   "description": "A hand-drawn sketchbook scroll-telling software engineering portfolio using separated scalable assets.",
   "scripts": {
     "build": "node scripts/build-site-config.mjs",
+    "check": "npm run build && python -m py_compile scripts/dev_server.py",
     "predev": "npm run build",
     "dev": "python scripts/dev_server.py --port 5173",
     "prestart": "npm run build",

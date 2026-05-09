@@ -36,6 +36,16 @@ No package installation is required.
 
 On macOS or Linux, use `python3 scripts/dev_server.py --port 5173` if `python` is not available.
 
+## Validate changes
+
+Before opening a pull request or pushing to `main`, run:
+
+```bash
+npm run check
+```
+
+This regenerates the public site config and verifies the local Python dev server parses correctly.
+
 ## Public contact configuration
 
 Direct contact details and social URLs are generated into `js/site-config.js` from environment variables. That generated file is ignored by Git so personal details do not live in repository source.
@@ -58,6 +68,16 @@ For Vercel or Netlify, use:
 
 - Build command: `npm run build`
 - Publish/output directory: `.`
+
+## GitHub workflow
+
+This repo includes GitHub Actions CI, Dependabot, pull request templates, and issue templates.
+
+- CI runs `npm run check` on pushes to `main` and pull requests into `main`.
+- Dependabot checks weekly for GitHub Actions and npm ecosystem updates.
+- Use pull requests for focused changes and include screenshots for visual updates.
+
+See `docs/github-workflow.md` for branch protection, secrets, and release guidance.
 
 ## Customize
 
