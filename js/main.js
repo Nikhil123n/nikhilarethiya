@@ -101,9 +101,218 @@
 
   applyPublicConfig();
 
+  function createSketchSoundboard() {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    function isMuted() {
+      try {
+        return window.localStorage?.getItem('portfolioSoundMuted') === 'true';
+      } catch {
+        return false;
+      }
+    }
+    let audioContext = null;
+    let unlocked = false;
+    const lastPlayed = new Map();
+    const throttle = {
+      pencilTap: 90,
+      paperRustle: 180,
+      pageFlick: 520,
+      markerSqueak: 480,
+      tapePop: 300
+    };
+
+    function getContext() {
+      if (!AudioContextClass || isMuted()) return null;
+      if (!audioContext) audioContext = new AudioContextClass();
+      return audioContext;
+    }
+
+    function unlock() {
+      const context = getContext();
+      if (!context) return;
+      context.resume?.();
+      unlocked = true;
+      window.removeEventListener('pointerdown', unlock);
+      window.removeEventListener('keydown', unlock);
+      window.removeEventListener('touchstart', unlock);
+    }
+
+    function canPlay(type) {
+      if (!unlocked || document.hidden || isMuted()) return false;
+      const now = performance.now();
+      const wait = throttle[type] || 120;
+      if (now - (lastPlayed.get(type) || 0) < wait) return false;
+      lastPlayed.set(type, now);
+      return true;
+    }
+
+    function envelope(gain, start, peak, attack, release) {
+      gain.gain.cancelScheduledValues(start);
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(peak, start + attack);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + attack + release);
+    }
+
+    function noiseSource(context, duration) {
+      const sampleCount = Math.max(1, Math.floor(context.sampleRate * duration));
+      const buffer = context.createBuffer(1, sampleCount, context.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < sampleCount; i += 1) {
+        data[i] = Math.random() * 2 - 1;
+      }
+      const source = context.createBufferSource();
+      source.buffer = buffer;
+      return source;
+    }
+
+    function playPencilTap(context) {
+      const start = context.currentTime;
+      const gain = context.createGain();
+      const filter = context.createBiquadFilter();
+      const click = noiseSource(context, 0.04);
+      const knock = context.createOscillator();
+
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1850, start);
+      filter.Q.setValueAtTime(1.2, start);
+      envelope(gain, start, 0.028, 0.003, 0.052);
+
+      knock.type = 'triangle';
+      knock.frequency.setValueAtTime(740, start);
+      knock.frequency.exponentialRampToValueAtTime(260, start + 0.045);
+
+      click.connect(filter);
+      filter.connect(gain);
+      knock.connect(gain);
+      gain.connect(context.destination);
+      click.start(start);
+      knock.start(start);
+      click.stop(start + 0.045);
+      knock.stop(start + 0.06);
+    }
+
+    function playPaperRustle(context) {
+      const start = context.currentTime;
+      const gain = context.createGain();
+      const filter = context.createBiquadFilter();
+      const rustle = noiseSource(context, 0.15);
+
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(950, start);
+      filter.frequency.linearRampToValueAtTime(1650, start + 0.08);
+      filter.Q.setValueAtTime(0.7, start);
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.linearRampToValueAtTime(0.018, start + 0.025);
+      gain.gain.linearRampToValueAtTime(0.006, start + 0.075);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.15);
+
+      rustle.connect(filter);
+      filter.connect(gain);
+      gain.connect(context.destination);
+      rustle.start(start);
+      rustle.stop(start + 0.15);
+    }
+
+    function playPageFlick(context) {
+      const start = context.currentTime;
+      const gain = context.createGain();
+      const filter = context.createBiquadFilter();
+      const flick = noiseSource(context, 0.2);
+
+      filter.type = 'highpass';
+      filter.frequency.setValueAtTime(420, start);
+      filter.frequency.exponentialRampToValueAtTime(2100, start + 0.16);
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.linearRampToValueAtTime(0.026, start + 0.035);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.19);
+
+      flick.connect(filter);
+      filter.connect(gain);
+      gain.connect(context.destination);
+      flick.start(start);
+      flick.stop(start + 0.2);
+    }
+
+    function playMarkerSqueak(context) {
+      const start = context.currentTime;
+      const gain = context.createGain();
+      const tone = context.createOscillator();
+      const filter = context.createBiquadFilter();
+
+      tone.type = 'sawtooth';
+      tone.frequency.setValueAtTime(760, start);
+      tone.frequency.linearRampToValueAtTime(1080, start + 0.045);
+      tone.frequency.linearRampToValueAtTime(690, start + 0.075);
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(980, start);
+      filter.Q.setValueAtTime(7, start);
+      envelope(gain, start, 0.012, 0.012, 0.075);
+
+      tone.connect(filter);
+      filter.connect(gain);
+      gain.connect(context.destination);
+      tone.start(start);
+      tone.stop(start + 0.095);
+    }
+
+    function playTapePop(context) {
+      const start = context.currentTime;
+      const gain = context.createGain();
+      const pop = context.createOscillator();
+      const peel = noiseSource(context, 0.075);
+      const filter = context.createBiquadFilter();
+
+      pop.type = 'sine';
+      pop.frequency.setValueAtTime(180, start);
+      pop.frequency.exponentialRampToValueAtTime(84, start + 0.055);
+      filter.type = 'highpass';
+      filter.frequency.setValueAtTime(1200, start);
+      envelope(gain, start, 0.022, 0.006, 0.075);
+
+      pop.connect(gain);
+      peel.connect(filter);
+      filter.connect(gain);
+      gain.connect(context.destination);
+      pop.start(start);
+      peel.start(start + 0.012);
+      pop.stop(start + 0.085);
+      peel.stop(start + 0.09);
+    }
+
+    function play(type) {
+      if (!canPlay(type)) return;
+      const context = getContext();
+      if (!context) return;
+      const sounds = {
+        pencilTap: playPencilTap,
+        paperRustle: playPaperRustle,
+        pageFlick: playPageFlick,
+        markerSqueak: playMarkerSqueak,
+        tapePop: playTapePop
+      };
+      sounds[type]?.(context);
+    }
+
+    window.addEventListener('pointerdown', unlock, { passive: true });
+    window.addEventListener('keydown', unlock, { passive: true });
+    window.addEventListener('touchstart', unlock, { passive: true });
+
+    return { play, unlock };
+  }
+
+  const sketchSounds = createSketchSoundboard();
+
+  function bindInteractionSound(elements, soundName) {
+    const uniqueElements = Array.from(new Set(elements)).filter(Boolean);
+    uniqueElements.forEach((element) => {
+      element.addEventListener('pointerenter', () => sketchSounds.play(soundName), { passive: true });
+      element.addEventListener('focus', () => sketchSounds.play(soundName));
+    });
+  }
+
   const navMap = {
     home: 'home',
-    journey: 'about',
+    journey: 'journey',
     toolkit: 'skills',
     projects: 'projects',
     sketchbook: 'sketchbook',
@@ -113,6 +322,7 @@
     about: 'about',
     contact: 'contact'
   };
+  let activeSceneId = '';
 
   function setProgress() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -125,7 +335,10 @@
     if (!section) return;
     const id = section.id;
     const scene = section.dataset.scene || id;
+    const sceneChanged = activeSceneId && activeSceneId !== id;
+    activeSceneId = id;
     body.dataset.scene = scene;
+    if (sceneChanged) sketchSounds.play('pageFlick');
 
     const activeTarget = navMap[id] || id;
     leftTabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.target === activeTarget));
@@ -148,14 +361,44 @@
     if (reactionCaption && caption) reactionCaption.textContent = caption;
   }
 
-  const sceneObserver = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (visible) setActiveScene(visible.target);
-  }, {
+  function getCurrentScene() {
+    if (!scenes.length) return null;
+    const referenceY = Math.min(window.innerHeight * 0.38, 320);
+    let current = scenes[0];
+    let closestDistance = Infinity;
+
+    scenes.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= referenceY && rect.bottom > referenceY) {
+        current = section;
+        closestDistance = 0;
+        return;
+      }
+
+      if (closestDistance !== 0) {
+        const distance = Math.min(Math.abs(rect.top - referenceY), Math.abs(rect.bottom - referenceY));
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          current = section;
+        }
+      }
+    });
+
+    return current;
+  }
+
+  let activeSceneFrame = 0;
+  function updateActiveScene() {
+    if (activeSceneFrame) return;
+    activeSceneFrame = window.requestAnimationFrame(() => {
+      activeSceneFrame = 0;
+      setActiveScene(getCurrentScene());
+    });
+  }
+
+  const sceneObserver = new IntersectionObserver(() => updateActiveScene(), {
     root: null,
-    threshold: [0.28, 0.42, 0.62]
+    threshold: [0, 0.18, 0.38, 0.62, 1]
   });
 
   scenes.forEach((section) => sceneObserver.observe(section));
@@ -178,6 +421,20 @@
   });
 
   revealTargets.forEach((item) => revealObserver.observe(item));
+
+  bindInteractionSound([
+    ...leftTabs,
+    ...topLinks,
+    ...document.querySelectorAll('.btn:not(.btn-primary), .top-socials a, .blue-link, .project-more-link, .sketchbook-action, .contact-list a')
+  ], 'pencilTap');
+
+  bindInteractionSound([
+    ...document.querySelectorAll('[data-tilt-card]:not(.hero-stage):not(.notebook-page)'),
+    ...document.querySelectorAll('.stat-card, .about-card, .contact-form')
+  ], 'paperRustle');
+
+  bindInteractionSound(document.querySelectorAll('.btn-primary'), 'markerSqueak');
+  bindInteractionSound(document.querySelectorAll('.notebook-page, .tape'), 'tapePop');
 
   if (!reduceMotion) {
     window.addEventListener('pointermove', (event) => {
@@ -206,13 +463,20 @@
 
   leftTabs.concat(topLinks).forEach((link) => {
     link.addEventListener('click', () => {
+      sketchSounds.play('pageFlick');
       leftTabs.concat(topLinks).forEach((l) => l.classList.remove('active'));
       link.classList.add('active');
     });
   });
 
-  window.addEventListener('scroll', setProgress, { passive: true });
-  window.addEventListener('resize', setProgress, { passive: true });
+  window.addEventListener('scroll', () => {
+    setProgress();
+    updateActiveScene();
+  }, { passive: true });
+  window.addEventListener('resize', () => {
+    setProgress();
+    updateActiveScene();
+  }, { passive: true });
   setProgress();
-  setActiveScene(document.getElementById('home'));
+  updateActiveScene();
 })();

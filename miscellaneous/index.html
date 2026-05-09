@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miscellaneous Sidebar Prototype</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&family=Permanent+Marker&display=swap");
+
+    :root {
+      --paper: #fcf6ef;
+      --paper-warm: #fffaf0;
+      --ink: #111;
+      --red: #e12a1e;
+      --tab-orange: #f6ad40;
+      --tab-yellow: #fae2a9;
+      --tab-green: #becd90;
+      --tab-blue: #7ac1dc;
+      --font-hand: "Patrick Hand", Kalam, "Comic Sans MS", cursive;
+      --font-caps: "Patrick Hand SC", "Patrick Hand", Kalam, cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 16%, rgba(246, 217, 130, 0.22), transparent 26rem),
+        linear-gradient(90deg, rgba(36,36,35,0.025) 1px, transparent 1px),
+        linear-gradient(rgba(36,36,35,0.022) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 48px 48px, 48px 48px, auto;
+      font-family: var(--font-hand);
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("../assets/artifacts/08-textures-background/svg/paper-texture.svg");
+      background-size: 330px 330px;
+      opacity: 0.38;
+      mix-blend-mode: multiply;
+    }
+
+    .prototype-wrap {
+      min-height: 100vh;
+      padding: clamp(18px, 3.5vw, 42px);
+      display: grid;
+      place-items: center;
+    }
+
+    .book-spread {
+      position: relative;
+      width: min(1380px, 100%);
+      height: min(780px, calc(100vh - clamp(36px, 7vw, 84px)));
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: minmax(360px, 510px) minmax(520px, 1fr);
+      filter: drop-shadow(0 22px 30px rgba(30, 25, 18, 0.14));
+    }
+
+    .left-page,
+    .right-page {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(36,36,35,0.018) 1px, transparent 1px),
+        linear-gradient(rgba(36,36,35,0.015) 1px, transparent 1px),
+        var(--paper-warm);
+      background-size: 48px 48px, 48px 48px, auto;
+      border: 2px solid rgba(40, 35, 28, 0.17);
+      box-shadow:
+        inset 0 0 36px rgba(98, 66, 32, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.42);
+    }
+
+    .left-page {
+      border-radius: 28px 10px 10px 28px;
+      padding: clamp(70px, 9vh, 96px) 34px 42px 144px;
+    }
+
+    .right-page {
+      border-left: 0;
+      border-radius: 10px 28px 28px 10px;
+      padding: clamp(64px, 10vh, 110px) clamp(54px, 8vw, 120px);
+    }
+
+    .left-page::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      width: 22px;
+      height: 100%;
+      background:
+        linear-gradient(90deg, rgba(92, 70, 46, 0.16), rgba(255,255,255,0.55) 45%, rgba(42, 35, 28, 0.08));
+      box-shadow: -12px 0 18px rgba(36, 30, 24, 0.09);
+      pointer-events: none;
+    }
+
+    .binding {
+      position: absolute;
+      z-index: 5;
+      left: -18px;
+      top: 10px;
+      width: 92px;
+      height: calc(100% - 20px);
+      pointer-events: none;
+      filter: drop-shadow(2px 0 3px rgba(30, 25, 18, 0.14));
+    }
+
+    .binding img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: fill;
+    }
+
+    .logo {
+      position: relative;
+      z-index: 2;
+      margin: 0 0 clamp(58px, 8vh, 86px);
+      color: var(--ink);
+      font-family: var(--font-caps);
+      font-size: clamp(76px, 8vw, 120px);
+      font-weight: 700;
+      line-height: 0.74;
+      letter-spacing: 0.02em;
+      transform: rotate(-1deg);
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .prototype-tabs {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: clamp(20px, 3vh, 34px);
+      width: min(100%, 330px);
+    }
+
+    .prototype-tab {
+      min-height: 88px;
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      align-items: center;
+      gap: 20px;
+      padding: 16px 26px 16px 30px;
+      border: 2px solid rgba(45, 39, 33, 0.28);
+      border-radius: 3px 10px 10px 3px;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow:
+        7px 9px 0 rgba(30, 25, 18, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+      font-family: var(--font-hand);
+      font-size: clamp(29px, 2.7vw, 40px);
+      font-weight: 700;
+      line-height: 1;
+      transform: rotate(-0.6deg);
+    }
+
+    .prototype-tab:nth-child(even) {
+      transform: rotate(0.7deg);
+    }
+
+    .prototype-tab img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: drop-shadow(1px 2px 0 rgba(30, 25, 18, 0.1));
+    }
+
+    .prototype-tab.home { background: var(--tab-orange); }
+    .prototype-tab.about { background: var(--tab-yellow); }
+    .prototype-tab.experience { background: var(--tab-green); }
+    .prototype-tab.projects { background: var(--tab-blue); }
+
+    .prototype-tab::before,
+    .prototype-tab::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.24);
+      transform: rotate(45deg);
+    }
+
+    .prototype-tab::before {
+      left: -10px;
+      top: -10px;
+    }
+
+    .prototype-tab::after {
+      right: -10px;
+      bottom: -10px;
+    }
+
+    .hero-kicker {
+      margin: 0 0 22px;
+      color: var(--red);
+      font-family: var(--font-hand);
+      font-size: clamp(42px, 4.5vw, 78px);
+      font-weight: 700;
+      line-height: 0.9;
+      transform: rotate(-1deg);
+    }
+
+    h1 {
+      max-width: 730px;
+      margin: 0;
+      font-family: var(--font-caps);
+      font-size: clamp(92px, 9.2vw, 162px);
+      font-weight: 700;
+      line-height: 0.84;
+      letter-spacing: 0.005em;
+      text-transform: uppercase;
+    }
+
+    .hero-rule {
+      width: min(92%, 650px);
+      height: 8px;
+      margin-top: 24px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent 0, var(--red) 4%, var(--red) 92%, transparent);
+      transform: rotate(-1deg);
+    }
+
+    .prototype-note {
+      position: absolute;
+      right: 28px;
+      bottom: 26px;
+      color: rgba(63, 59, 55, 0.76);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .prototype-note a {
+      color: #4676bf;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      body {
+        overflow: auto;
+      }
+
+      .book-spread {
+        height: auto;
+        min-height: 0;
+        grid-template-columns: 1fr;
+      }
+
+      .left-page,
+      .right-page {
+        min-height: 620px;
+      }
+
+      .right-page {
+        border-left: 2px solid rgba(40, 35, 28, 0.17);
+        border-radius: 0 0 24px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="prototype-wrap">
+    <section class="book-spread" aria-label="Notebook sidebar reference prototype">
+      <aside class="left-page">
+        <div class="binding" aria-hidden="true">
+          <img src="../assets/artifacts/miscellaneous/notebook-spiral-binding-reference.svg" alt="">
+        </div>
+
+        <p class="logo">NA<span>.</span></p>
+
+        <nav class="prototype-tabs" aria-label="Prototype notebook navigation">
+          <a class="prototype-tab home" href="../index.html#home">
+            <img src="../assets/artifacts/03-icons-doodles/svg/sidebar-home.svg" alt="">
+            <span>Home</span>
+          </a>
+          <a class="prototype-tab about" href="../index.html#about">
+            <img src="../assets/artifacts/03-icons-doodles/svg/sidebar-user.svg" alt="">
+            <span>About</span>
+          </a>
+          <a class="prototype-tab experience" href="../index.html#experience-timeline">
+            <img src="../assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt="">
+            <span>Experience</span>
+          </a>
+          <a class="prototype-tab projects" href="../index.html#projects">
+            <img src="../assets/artifacts/03-icons-doodles/svg/code-brackets.svg" alt="">
+            <span>Projects</span>
+          </a>
+        </nav>
+      </aside>
+
+      <section class="right-page">
+        <p class="hero-kicker">Hi, I'm</p>
+        <h1>Nikhil<br>Arethiya</h1>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="prototype-note">Prototype only. <a href="../index.html">Back home</a></p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

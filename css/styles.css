@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800&family=Patrick+Hand&family=Patrick+Hand+SC&family=Permanent+Marker&family=Reenie+Beanie&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&family=Permanent+Marker&family=Reenie+Beanie&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --paper: #F8F2E7;
+  --paper-bg: #FCF6EF;
+  --paper-shadow: #E8DCC8;
+  --paper: var(--paper-bg);
   --paper-2: #FAF6EE;
-  --ink: #242423;
-  --ink-soft: #4F4A45;
-  --blue: #2B7FFB;
+  --ink: #0A0A0A;
+  --ink-soft: #3F3B37;
+  --ink-muted: #5A5650;
+  --blue: #4676BF;
+  --blue-ink: #4676BF;
+  --blue-soft: #7AC1DC;
   --orange: #F1A108;
-  --red: #E55539;
+  --red: #E12A1E;
+  --red-pencil: #E12A1E;
+  --red-soft: #E54235;
   --green: #1BAB72;
   --purple: #9864DD;
   --gray: #757B81;
@@ -18,20 +25,24 @@
   --tab-green: #A9C786;
   --tab-blue: #8FC4E8;
   --tab-purple: #C59AE6;
-  --shadow: 0 16px 40px rgba(36, 36, 35, 0.12);
-  --shadow-sm: 0 8px 20px rgba(36, 36, 35, 0.10);
+  --tab-border: rgba(20, 20, 20, 0.42);
+  --sketch-shadow: rgba(30, 25, 18, 0.18);
+  --shadow: 0 16px 40px rgba(30, 25, 18, 0.12);
+  --shadow-sm: 0 8px 20px rgba(30, 25, 18, 0.10);
   --radius: 18px;
   --rail-width: 126px;
   --max-width: 1220px;
   --cursor-x: 0;
   --cursor-y: 0;
   --progress: 0%;
-  --font-body: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-logo: "Permanent Marker", "Comic Sans MS", cursive;
+  --font-heading: "Permanent Marker", Bangers, "Comic Sans MS", cursive;
+  --font-body: Kalam, "Patrick Hand", system-ui, sans-serif;
   --font-marker: "Permanent Marker", "Comic Sans MS", cursive;
   --font-display: Bangers, Impact, fantasy;
-  --font-hand: "Reenie Beanie", "Comic Sans MS", cursive;
-  --font-sketch: "Patrick Hand", "Comic Sans MS", cursive;
-  --font-sketch-caps: "Patrick Hand SC", "Comic Sans MS", cursive;
+  --font-hand: "Patrick Hand", Kalam, "Comic Sans MS", cursive;
+  --font-sketch: "Patrick Hand", Kalam, "Comic Sans MS", cursive;
+  --font-sketch-caps: "Patrick Hand SC", "Patrick Hand", Kalam, "Comic Sans MS", cursive;
   --font-ui: "Space Grotesk", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -150,7 +161,7 @@ textarea {
   position: relative;
   display: inline-flex;
   margin-left: 24px;
-  font-family: var(--font-marker);
+  font-family: var(--font-logo);
   font-size: 34px;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -189,15 +200,17 @@ textarea {
   border: 2px solid rgba(36, 36, 35, 0.55);
   box-shadow: 4px 5px 0 rgba(36, 36, 35, 0.12);
   border-radius: 4px 12px 12px 4px;
-  font-family: var(--font-marker);
-  font-size: 12px;
+  font-family: var(--font-hand);
+  font-size: 15px;
+  font-weight: 700;
   line-height: 1;
   background: var(--paper-2);
   transform: rotate(-1.2deg);
   transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
 }
 
-.tab img {
+.tab img,
+.tab svg {
   flex: 0 0 auto;
   width: 21px;
   height: 21px;
@@ -214,9 +227,11 @@ textarea {
 .tab:nth-child(even) { transform: rotate(1.2deg); }
 .tab-home { background: var(--tab-orange); }
 .tab-about { background: var(--tab-yellow); }
-.tab-experience { background: var(--tab-green); }
-.tab-projects { background: var(--tab-blue); }
+.tab-journey { background: #F1D47A; }
 .tab-skills { background: var(--tab-purple); }
+.tab-projects { background: var(--tab-blue); }
+.tab-sketchbook { background: #B8D9C7; }
+.tab-experience { background: var(--tab-green); }
 .tab-education { background: #DFA5E8; }
 .tab-contact { background: #F1B6DB; }
 .tab.active,
@@ -377,16 +392,15 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(500px, 1.15fr);
-  gap: clamp(30px, 6vw, 90px);
+  grid-template-columns: minmax(280px, 360px) minmax(500px, 1fr);
+  gap: clamp(18px, 3vw, 46px);
   align-items: center;
 }
 
 .hero-copy {
-  max-width: 560px;
+  max-width: 340px;
 }
 
-.eyebrow,
 .section-kicker {
   margin: 0 0 12px;
   font-family: var(--font-hand);
@@ -396,30 +410,102 @@ main {
   color: var(--blue);
 }
 
-.hero h1 {
+.hero-kicker {
+  margin: 0 0 8px;
+  font-family: var(--font-hand);
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--red-pencil);
+  transform: rotate(-1deg);
+}
+
+.hero-name-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-name {
   margin: 0;
   font-family: var(--font-sketch-caps);
-  font-size: clamp(72px, 9.3vw, 136px);
+  font-size: clamp(54px, 7vw, 88px);
   font-weight: 700;
-  line-height: 0.82;
+  line-height: 0.9;
   text-transform: uppercase;
-  letter-spacing: 0;
+  letter-spacing: 0.005em;
   color: var(--ink);
-  text-shadow: 0.35px 0 currentColor, 1px 1px 0 rgba(36, 36, 35, 0.06);
+  text-shadow: 0.45px 0 currentColor, 0.9px 0.9px 0 rgba(30, 25, 18, 0.06);
 }
 
-.role-line {
-  margin: 20px 0 16px;
-  max-width: 550px;
-  font-family: var(--font-marker);
-  font-size: clamp(19px, 2.2vw, 29px);
-  line-height: 1.25;
+.hero-name-wrap::after {
+  content: "";
+  display: block;
+  width: 92%;
+  height: 6px;
+  margin-top: 10px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--red-pencil) 5%,
+      var(--red-pencil) 92%,
+      transparent 100%
+    );
+  border-radius: 999px;
+  transform: rotate(-1.2deg);
 }
 
-.role-line span,
+.hero-role {
+  margin: 18px 0 0;
+  font-family: var(--font-hand);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.role-underlined {
+  position: relative;
+  display: inline-block;
+}
+
+.role-underlined::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -5px;
+  bottom: -6px;
+  height: 4px;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(63, 59, 55, 0.18) 8%, rgba(63, 59, 55, 0.18) 88%, transparent 100%);
+  border-radius: 999px;
+  transform: rotate(-0.8deg);
+}
+
+.hero-role .accent,
 .blue-link,
 .blue-ink {
-  color: var(--blue);
+  color: var(--blue-ink);
+}
+
+.hero-description {
+  max-width: 310px;
+  margin: 18px 0 0;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.65;
+  letter-spacing: 0.005em;
+  color: var(--ink-soft);
+}
+
+.hero-mantra {
+  margin: 18px 0 0;
+  font-family: var(--font-hand);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--blue-ink);
 }
 
 .hero-text,
@@ -466,12 +552,34 @@ main {
 }
 
 .btn-primary {
-  color: var(--red);
-  border-color: var(--red);
-  background: rgba(255, 255, 255, 0.42);
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  color: var(--paper-bg);
+  border-color: #B91B12;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.12), transparent 14% 82%, rgba(255,255,255,0.1)),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 5px),
+    var(--red-pencil);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    4px 4px 0 rgba(36, 36, 35, 0.16);
+  text-shadow: 1px 1px 0 rgba(80, 12, 8, 0.28);
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  z-index: 1;
+  border: 1.5px dashed rgba(255, 255, 255, 0.32);
+  border-radius: 2px;
+  pointer-events: none;
 }
 
 .btn-primary span {
+  position: relative;
+  z-index: 2;
   width: 0;
   height: 0;
   border-top: 6px solid transparent;
@@ -534,9 +642,9 @@ main {
 
 .hero-avatar {
   position: absolute;
-  width: min(82%, 650px);
-  right: 5%;
-  bottom: 12px;
+  width: min(78%, 620px);
+  right: 16%;
+  bottom: 32px;
   filter: drop-shadow(0 24px 22px rgba(36,36,35,0.13));
   transform: translate(calc(var(--cursor-x) * -10px), calc(var(--cursor-y) * -8px));
 }
