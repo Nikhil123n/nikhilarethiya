@@ -1601,7 +1601,7 @@ main {
 
 .project-row-arrow {
   position: absolute;
-  right: -108px;
+  right: -58px;
   top: 206px;
   width: 70px;
   height: 28px;
@@ -3417,7 +3417,7 @@ body[data-scene="about"] .reactive-avatar {
     right: -36px;
   }
   .project-row-arrow {
-    right: -90px;
+    right: -40px;
   }
   .sketchbook-section {
     padding-left: clamp(28px, 3vw, 48px);
@@ -3826,21 +3826,68 @@ body[data-scene="about"] .reactive-avatar {
   .scene {
     padding: 80px 20px 52px;
   }
+  .hero {
+    gap: clamp(24px, 5vw, 34px);
+    align-items: start;
+  }
   .hero-stage {
-    min-height: 520px;
+    width: min(100%, 680px);
+    height: clamp(430px, 68vw, 560px);
+    min-height: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+  .hero-stage::before {
+    inset: clamp(14px, 3.5vw, 26px);
+    border-radius: 20px;
   }
   .hero-avatar {
-    width: 100%;
-    right: -6%;
+    width: min(82%, 520px);
+    left: 50%;
+    right: auto;
+    bottom: clamp(16px, 4vw, 30px);
+    transform: translateX(-50%) translate(calc(var(--cursor-x) * -6px), calc(var(--cursor-y) * -5px));
   }
   .code-note,
   .plan-note {
-    position: relative;
+    position: absolute;
     inset: auto;
-    width: auto;
-    margin: 12px;
+    margin: 0;
   }
-  .doodle-plant,
+  .code-note {
+    top: clamp(18px, 3vw, 34px);
+    right: clamp(16px, 4vw, 30px);
+    width: clamp(210px, 42vw, 300px);
+    padding: clamp(12px, 2vw, 18px);
+  }
+  .code-note pre {
+    font-size: clamp(10px, 1.45vw, 13px);
+    line-height: 1.38;
+  }
+  .code-note span {
+    font-size: clamp(17px, 2.6vw, 22px);
+  }
+  .plan-note {
+    top: clamp(24px, 4vw, 50px);
+    left: clamp(16px, 4vw, 44px);
+    width: clamp(128px, 24vw, 172px);
+    padding: clamp(12px, 2vw, 18px);
+  }
+  .plan-note strong {
+    font-size: clamp(13px, 1.9vw, 16px);
+    margin-bottom: 8px;
+  }
+  .plan-note label {
+    margin: 6px 0;
+    font-size: clamp(11px, 1.8vw, 14px);
+  }
+  .doodle-plant {
+    display: block;
+    right: clamp(16px, 4vw, 28px);
+    bottom: clamp(36px, 7vw, 70px);
+    width: clamp(64px, 12vw, 96px);
+  }
   .reactive-avatar {
     display: none;
   }
@@ -4155,6 +4202,61 @@ body[data-scene="about"] .reactive-avatar {
   }
   .site-footer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-actions {
+    gap: 10px;
+  }
+  .hero-actions .btn {
+    min-height: 42px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+  .hero-stage {
+    height: clamp(430px, 112vw, 520px);
+  }
+  .hero-avatar {
+    width: min(88%, 340px);
+    left: 58%;
+    bottom: 14px;
+  }
+  .code-note {
+    top: 18px;
+    left: 50%;
+    right: auto;
+    width: min(calc(100% - 44px), 300px);
+    transform: translateX(-50%) rotate(1deg) translate(calc(var(--cursor-x) * 5px), calc(var(--cursor-y) * 4px));
+  }
+  .code-note pre {
+    font-size: clamp(9px, 2.2vw, 11px);
+  }
+  .code-note span {
+    font-size: clamp(16px, 4.2vw, 20px);
+  }
+  .plan-note {
+    top: clamp(150px, 33vw, 170px);
+    left: clamp(18px, 8vw, 38px);
+    width: min(44%, 172px);
+  }
+  .plan-note label {
+    margin: 5px 0;
+  }
+  .doodle-plant {
+    width: clamp(52px, 16vw, 76px);
+    right: 16px;
+    bottom: 34px;
+  }
+  .doodle-spark {
+    top: 132px;
+    right: 18%;
+    width: 32px;
+  }
+  .doodle-arrow {
+    left: 20px;
+    bottom: 76px;
+    width: 44px;
   }
 }
 
