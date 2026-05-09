@@ -32,9 +32,8 @@ The validation job:
 Dependabot is configured in `.github/dependabot.yml` for:
 
 - GitHub Actions updates
-- npm ecosystem updates
 
-It opens weekly pull requests so dependency changes are reviewed instead of happening silently.
+It checks monthly and groups all GitHub Actions updates into one pull request to avoid noisy one-line PRs.
 
 ## Recommended Branch Protection
 

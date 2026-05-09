@@ -74,7 +74,7 @@ For Vercel or Netlify, use:
 This repo includes GitHub Actions CI, Dependabot, pull request templates, and issue templates.
 
 - CI runs `npm run check` on pushes to `main` and pull requests into `main`.
-- Dependabot checks weekly for GitHub Actions and npm ecosystem updates.
+- Dependabot checks monthly and groups GitHub Actions updates into one pull request.
 - Use pull requests for focused changes and include screenshots for visual updates.
 
 See `docs/github-workflow.md` for branch protection, secrets, and release guidance.
