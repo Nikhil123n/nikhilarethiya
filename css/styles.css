@@ -1039,6 +1039,13 @@ main {
 }
 
 .toolkit-strip {
+  --toolkit-paper-fill: rgba(249, 243, 231, 0.78);
+  --toolkit-paper-warm: rgba(238, 229, 213, 0.22);
+  --toolkit-pencil-shade: rgba(36, 36, 35, 0.02);
+  --toolkit-pencil-shade-soft: rgba(36, 36, 35, 0.012);
+  --toolkit-pencil-scratch: rgba(36, 36, 35, 0.026);
+  --toolkit-line-horizontal: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20' preserveAspectRatio='none'%3E%3Cpath d='M2 10 C92 7 165 13 246 10 S412 8 502 10 S678 14 780 9 S980 6 1198 10' stroke='%23242423' stroke-opacity='.3' stroke-width='2.15' fill='none' stroke-linecap='round'/%3E%3Cpath d='M4 12 C132 10 216 8 326 11 S552 14 700 10 S952 7 1196 11' stroke='%23242423' stroke-opacity='.14' stroke-width='1.15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  --toolkit-line-vertical: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 360' preserveAspectRatio='none'%3E%3Cpath d='M9 2 C6 42 12 78 8 116 S7 193 9 230 S12 304 8 358' stroke='%23242423' stroke-opacity='.24' stroke-width='1.9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M11 3 C9 52 12 88 10 136 S7 220 10 268 S9 322 11 357' stroke='%23242423' stroke-opacity='.12' stroke-width='1.05' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   position: relative;
   isolation: isolate;
   width: 100%;
@@ -1048,14 +1055,19 @@ main {
   align-items: stretch;
   overflow: visible;
   min-height: clamp(136px, 10vw, 168px);
-  border-top: 2px solid rgba(36, 36, 35, 0.18);
-  border-bottom: 2px solid rgba(36, 36, 35, 0.16);
+  border: 0;
   background:
-    linear-gradient(90deg, rgba(36,36,35,0.035) 1px, transparent 1px),
-    linear-gradient(rgba(36,36,35,0.026) 1px, transparent 1px),
-    rgba(250, 246, 238, 0.9);
-  background-size: 48px 48px, 48px 48px, auto;
-  box-shadow: 0 10px 24px rgba(36, 36, 35, 0.06);
+    var(--toolkit-line-vertical) left center / 18px calc(100% - 8px) no-repeat,
+    var(--toolkit-line-vertical) right center / 18px calc(100% - 10px) no-repeat,
+    radial-gradient(ellipse at 17% 22%, rgba(255,255,255,0.44), transparent 42%),
+    radial-gradient(ellipse at 79% 38%, var(--toolkit-paper-warm), transparent 46%),
+    radial-gradient(ellipse at 43% 82%, rgba(36,36,35,0.026), transparent 38%),
+    repeating-linear-gradient(112deg, transparent 0 15px, var(--toolkit-pencil-scratch) 15px 16px, transparent 16px 34px),
+    repeating-linear-gradient(72deg, transparent 0 26px, rgba(36,36,35,0.014) 26px 27px, transparent 27px 49px),
+    repeating-linear-gradient(107deg, var(--toolkit-pencil-shade) 0 1px, transparent 1px 13px),
+    repeating-linear-gradient(16deg, var(--toolkit-pencil-shade-soft) 0 1px, transparent 1px 19px),
+    linear-gradient(183deg, rgba(252,247,238,0.68), var(--toolkit-paper-fill) 48%, rgba(245,238,224,0.76));
+  box-shadow: none;
 }
 
 .toolkit-strip::before,
@@ -1064,25 +1076,29 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: -1;
-  height: 18px;
-  background:
-    radial-gradient(ellipse at center, rgba(36,36,35,0.18), transparent 64%);
-  opacity: 0.16;
+  z-index: 2;
+  height: 16px;
+  pointer-events: none;
+  background: var(--toolkit-line-horizontal) center / 100% 100% no-repeat;
+  opacity: 0.96;
 }
 
 .toolkit-strip::before {
-  top: -11px;
+  top: -5px;
+  transform: rotate(-0.12deg);
 }
 
 .toolkit-strip::after {
-  bottom: -12px;
+  bottom: -5px;
+  transform: scaleY(-1) rotate(0.16deg);
 }
 
 .toolkit-strip-intro,
 .toolkit-strip-group {
+  position: relative;
   min-width: 0;
   padding: clamp(14px, 1.7vw, 24px) clamp(18px, 2.2vw, 30px);
+  background: transparent;
 }
 
 .toolkit-strip-intro {
@@ -1096,7 +1112,30 @@ main {
   grid-template-rows: auto 1fr;
   align-items: center;
   padding: clamp(14px, 1.7vw, 24px) clamp(12px, 1.2vw, 18px);
-  border-left: 2px solid rgba(36, 36, 35, 0.12);
+  border-left: 0;
+}
+
+.toolkit-strip-group::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: clamp(8px, 0.7vw, 13px);
+  bottom: clamp(8px, 0.7vw, 13px);
+  width: 16px;
+  pointer-events: none;
+  background:
+    var(--toolkit-line-vertical) center / 100% 100% no-repeat,
+    linear-gradient(90deg, rgba(36,36,35,0.055), transparent 70%);
+  opacity: 0.92;
+}
+
+.toolkit-strip-group:nth-child(odd)::before {
+  transform: scaleX(-1) rotate(0.18deg);
+  opacity: 0.82;
+}
+
+.toolkit-strip-group::after {
+  content: none;
 }
 
 .toolkit-strip-heading {
@@ -3856,11 +3895,35 @@ body[data-scene="about"] .reactive-avatar {
   }
   .toolkit-strip-group {
     border-left: 0;
-    border-top: 2px solid rgba(36, 36, 35, 0.12);
+    border-top: 0;
   }
   .toolkit-strip-group:nth-child(3),
   .toolkit-strip-group:nth-child(5) {
-    border-left: 2px solid rgba(36, 36, 35, 0.12);
+    border-left: 0;
+  }
+  .toolkit-strip-group::before {
+    display: none;
+  }
+  .toolkit-strip-group:nth-child(3)::before,
+  .toolkit-strip-group:nth-child(5)::before {
+    display: block;
+    top: 12px;
+    bottom: 12px;
+  }
+  .toolkit-strip-group::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 12px;
+    right: 12px;
+    height: 15px;
+    pointer-events: none;
+    background: var(--toolkit-line-horizontal) center / 100% 100% no-repeat;
+    opacity: 0.78;
+    transform: rotate(-0.08deg);
+  }
+  .toolkit-strip-group:nth-child(even)::after {
+    transform: scaleX(-1) rotate(0.12deg);
   }
   .toolkit-strip-icons {
     gap: 10px;
@@ -4323,15 +4386,25 @@ body[data-scene="about"] .reactive-avatar {
   .toolkit-strip-group:nth-child(4),
   .toolkit-strip-group:nth-child(5) {
     border-left: 0;
-    border-top: 2px solid rgba(36, 36, 35, 0.12);
+    border-top: 0;
+  }
+  .toolkit-strip-group::before,
+  .toolkit-strip-group:nth-child(3)::before,
+  .toolkit-strip-group:nth-child(5)::before {
+    display: none;
+  }
+  .toolkit-strip-group::after {
+    left: 0;
+    right: 0;
+    opacity: 0.82;
   }
   .toolkit-strip-group h3 {
-    justify-self: start;
-    text-align: left;
-    background-position: left bottom;
+    justify-self: center;
+    text-align: center;
+    background-position: center bottom;
   }
   .toolkit-strip-icons {
-    justify-content: flex-start;
+    justify-content: center;
   }
   .toolkit-icon {
     width: clamp(50px, 11vw, 58px);

@@ -4,9 +4,9 @@
 
     <style>
       :root {
-        --card-paper: #FCF4E6;
-        --card-paper-mid: #F6EBD8;
-        --card-paper-edge: #E6D2B4;
+        --card-paper: #F8EEDC;
+        --card-paper-mid: #EFE1CB;
+        --card-paper-edge: #DCC5A5;
         --card-ink: #26231F;
         --card-ink-soft: #4E4840;
         --card-pencil: #6E665D;
