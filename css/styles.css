@@ -1033,10 +1033,15 @@ main {
   border-bottom: 2px solid rgba(36, 36, 35, 0.12);
 }
 
+.toolkit-strip-layout {
+  width: min(100%, 1540px);
+  margin: 0 auto;
+}
+
 .toolkit-strip {
   position: relative;
   isolation: isolate;
-  width: min(100%, 1540px);
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(210px, 250px) repeat(4, minmax(0, 1fr));
@@ -1430,6 +1435,12 @@ main {
 }
 
 .certification-check {
+  --tick-left: 10%;
+  --tick-top: 46%;
+  --tick-width: 108%;
+  --tick-height: 50%;
+  --tick-rotate: -44deg;
+  --tick-stroke: clamp(4px, 0.9vw, 6px);
   position: relative;
   width: clamp(26px, 7vw, 38px);
   height: clamp(26px, 7vw, 38px);
@@ -1445,15 +1456,42 @@ main {
 .certification-check::before {
   content: "";
   position: absolute;
-  left: 19%;
-  top: 45%;
-  width: 83%;
-  height: 42%;
-  border-left: clamp(4px, 0.9vw, 6px) solid var(--cert-ink);
-  border-bottom: clamp(4px, 0.9vw, 6px) solid var(--cert-ink);
+  left: var(--tick-left);
+  top: var(--tick-top);
+  width: var(--tick-width);
+  height: var(--tick-height);
+  border-left: var(--tick-stroke) solid var(--cert-ink);
+  border-bottom: var(--tick-stroke) solid var(--cert-ink);
   border-radius: 0 0 0 3px;
-  transform: rotate(-45deg);
+  transform: rotate(var(--tick-rotate));
   transform-origin: left bottom;
+}
+
+.certification-item:nth-child(1) .certification-check {
+  --tick-left: 8%;
+  --tick-top: 47%;
+  --tick-width: 114%;
+  --tick-height: 52%;
+  --tick-rotate: -42deg;
+  transform: rotate(-3deg);
+}
+
+.certification-item:nth-child(2) .certification-check {
+  --tick-left: 6%;
+  --tick-top: 49%;
+  --tick-width: 106%;
+  --tick-height: 46%;
+  --tick-rotate: -49deg;
+  transform: rotate(1.5deg);
+}
+
+.certification-item:nth-child(3) .certification-check {
+  --tick-left: 12%;
+  --tick-top: 44%;
+  --tick-width: 120%;
+  --tick-height: 55%;
+  --tick-rotate: -40deg;
+  transform: rotate(-1deg);
 }
 
 .certification-check::after {
@@ -1484,6 +1522,83 @@ main {
 
 .certification-copy span {
   display: block;
+}
+
+@media (min-width: 1321px) {
+  .toolkit-strip-section {
+    padding-left: clamp(28px, 3.4vw, 54px);
+    padding-right: clamp(28px, 3.4vw, 54px);
+  }
+
+  .toolkit-strip-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(270px, 21vw, 315px);
+    gap: 0;
+    align-items: center;
+  }
+
+  .toolkit-strip-layout .toolkit-strip {
+    z-index: 1;
+    padding-right: clamp(38px, 3.4vw, 50px);
+  }
+
+  .toolkit-strip-layout .certifications-showcase {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    justify-content: flex-start;
+    align-self: center;
+  }
+
+  .toolkit-strip-layout .certifications-card {
+    width: min(100%, 315px);
+    transform: translate(clamp(-44px, -2.9vw, -38px), -10px) rotate(-7deg);
+    transform-origin: 50% 12%;
+  }
+
+  .toolkit-strip-layout .certifications-card__content {
+    padding: 22.8% 10.6% 9.8% 12.4%;
+  }
+
+  .toolkit-strip-layout .certifications-title {
+    margin-bottom: clamp(17px, 4.6%, 23px);
+    padding-bottom: 8px;
+    font-size: clamp(25px, 2.1vw, 32px);
+    text-shadow:
+      0.45px 0 var(--cert-ink),
+      -0.25px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .toolkit-strip-layout .certifications-title::after {
+    height: 5px;
+  }
+
+  .toolkit-strip-layout .certification-item {
+    grid-template-columns: clamp(22px, 2.1vw, 29px) minmax(0, 1fr);
+    gap: clamp(8px, 1vw, 13px);
+    padding: clamp(6px, 1vw, 10px) 0;
+  }
+
+  .toolkit-strip-layout .certification-check {
+    width: clamp(21px, 2.1vw, 28px);
+    height: clamp(21px, 2.1vw, 28px);
+    border-width: 3px;
+    --tick-stroke: 4px;
+  }
+
+  .toolkit-strip-layout .certification-check::before {
+    border-left-width: var(--tick-stroke);
+    border-bottom-width: var(--tick-stroke);
+  }
+
+  .toolkit-strip-layout .certification-copy {
+    font-size: clamp(16px, 1.38vw, 21px);
+    line-height: 1.12;
+    text-shadow:
+      0.25px 0 var(--cert-ink),
+      0 0.45px rgba(21, 18, 15, 0.4);
+  }
 }
 
 @media (max-width: 820px) {
@@ -1538,11 +1653,12 @@ main {
     width: clamp(24px, 7.4vw, 30px);
     height: clamp(24px, 7.4vw, 30px);
     border-width: 3px;
+    --tick-stroke: 4px;
   }
 
   .certification-check::before {
-    border-left-width: 4px;
-    border-bottom-width: 4px;
+    border-left-width: var(--tick-stroke);
+    border-bottom-width: var(--tick-stroke);
   }
 
   .certification-copy {
