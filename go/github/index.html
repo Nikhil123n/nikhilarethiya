@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JG1Z97Y7FE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JG1Z97Y7FE');
+  </script>
+  <title>Opening GitHub</title>
+</head>
+<body>
+  <p>Opening GitHub...</p>
+  <script>
+    const githubUrl = 'https://github.com/Nikhil123n';
+
+    function redirectToGitHub() {
+      window.location.replace(githubUrl);
+    }
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'resume_github_click', {
+        destination: 'github',
+        link_location: 'resume',
+        outbound_url: githubUrl,
+        transport_type: 'beacon',
+        event_callback: redirectToGitHub
+      });
+      window.setTimeout(redirectToGitHub, 900);
+    } else {
+      redirectToGitHub();
+    }
+  </script>
+</body>
+</html>
