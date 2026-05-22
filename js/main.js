@@ -61,9 +61,7 @@
     const destination = key === 'githubUrl' ? 'github' : 'linkedin';
     return {
       utm_source: 'portfolio',
-      utm_medium: 'website',
-      utm_campaign: 'portfolio_2026',
-      utm_content: clean(anchor.dataset.utmContent) || `${destination}_link`,
+      utm_medium: 'button',
       destination
     };
   }

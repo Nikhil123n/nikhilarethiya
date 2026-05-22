@@ -19,6 +19,9 @@
   <p>Opening GitHub...</p>
   <script>
     const githubUrl = 'https://github.com/Nikhil123n';
+    const params = new URLSearchParams(window.location.search);
+    const utmSource = params.get('utm_source') || 'resume';
+    const utmMedium = params.get('utm_medium') || 'pdf';
 
     function redirectToGitHub() {
       window.location.replace(githubUrl);
@@ -29,6 +32,8 @@
         destination: 'github',
         link_location: 'resume',
         outbound_url: githubUrl,
+        utm_source: utmSource,
+        utm_medium: utmMedium,
         transport_type: 'beacon',
         event_callback: redirectToGitHub
       });

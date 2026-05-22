@@ -4,6 +4,18 @@
 
 This guide is written for a portfolio website that may be built as static HTML/CSS/JS, React, Next.js, or a similar frontend framework.
 
+## Current Short UTM Convention
+
+For this portfolio, keep public links short and readable:
+
+```text
+https://nikhilarethiya.vercel.app/?utm_source=resume&utm_medium=pdf
+https://nikhilarethiya.vercel.app/?utm_source=linkedin&utm_medium=button
+https://nikhilarethiya.vercel.app/?utm_source=github&utm_medium=button
+```
+
+Use `utm_campaign` and `utm_content` only if you later need more detailed campaign reporting.
+
 ---
 
 ## 0. What You Are Building
