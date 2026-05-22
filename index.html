@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Sketchbook style scroll-telling software engineering portfolio." data-config-meta="siteDescription">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JG1Z97Y7FE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JG1Z97Y7FE');
+  </script>
   <title>Software Engineer Portfolio</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
@@ -32,12 +41,12 @@
 
   <header class="topbar">
     <div class="top-socials" aria-label="Contact and social links">
-      <a href="#" target="_blank" rel="noreferrer" aria-label="GitHub" data-config-href="githubUrl">
+      <a href="#" target="_blank" rel="noreferrer" aria-label="GitHub" data-config-href="githubUrl" data-utm-content="topbar_github" data-analytics="contact_click" data-contact-type="github" data-link-location="topbar">
         <svg class="top-icon top-icon-github" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <path d="M16 3.4c-7.1 0-12.8 5.7-12.8 12.8 0 5.7 3.7 10.5 8.8 12.2.6.1.9-.3.9-.6v-2.4c-3.6.8-4.3-1.5-4.3-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.3 2 1.3 1.1 1.9 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.8-.3-5.8-1.4-5.8-6.3 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1.1-.3 3.5 1.3 1-.3 2.1-.4 3.2-.4s2.2.1 3.2.4c2.4-1.6 3.5-1.3 3.5-1.3.7 1.7.3 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.9-3 6-5.8 6.3.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.9.6 5.1-1.7 8.8-6.5 8.8-12.2C28.8 9.1 23.1 3.4 16 3.4Z"/>
         </svg>
       </a>
-      <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-config-href="linkedinUrl">
+      <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-config-href="linkedinUrl" data-utm-content="topbar_linkedin" data-analytics="contact_click" data-contact-type="linkedin" data-link-location="topbar">
         <svg class="top-icon top-icon-linkedin" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <rect x="4.5" y="4.5" width="23" height="23" rx="2.4"/>
           <circle cx="10.8" cy="11" r="1.8" fill="var(--paper)"/>
@@ -238,7 +247,7 @@
         <aside class="project-side reveal">
           <div class="section-kicker">Featured<br>Projects</div>
           <p>Where engineering<br>meets thoughtful<br>product design.</p>
-          <a class="project-more-link" href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl">View All Projects <span>-&gt;</span></a>
+          <a class="project-more-link" href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl" data-utm-content="featured_projects_view_all" data-analytics="github_project_click" data-link-location="featured_projects">View All Projects <span>-&gt;</span></a>
           <span class="project-side-arrow" aria-hidden="true">&larr;</span>
         </aside>
 
@@ -393,8 +402,8 @@
         <div class="contact-links">
           <a href="#" data-config-href="emailHref" data-config-required="contactEmail"><img src="assets/artifacts/03-icons-doodles/svg/contact-mail.svg" alt=""><span data-config-text="contactEmail">Email</span></a>
           <a href="#" data-config-href="phoneHref" data-config-required="contactPhone"><img src="assets/artifacts/03-icons-doodles/svg/contact-phone.svg" alt=""><span data-config-text="contactPhone">Phone</span></a>
-          <a href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl"><img src="assets/artifacts/03-icons-doodles/svg/contact-github.svg" alt="">GitHub</a>
-          <a href="#" target="_blank" rel="noreferrer" data-config-href="linkedinUrl"><img src="assets/artifacts/03-icons-doodles/svg/contact-linkedin.svg" alt="">LinkedIn</a>
+          <a href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl" data-utm-content="contact_github" data-analytics="contact_click" data-contact-type="github" data-link-location="contact_section"><img src="assets/artifacts/03-icons-doodles/svg/contact-github.svg" alt="">GitHub</a>
+          <a href="#" target="_blank" rel="noreferrer" data-config-href="linkedinUrl" data-utm-content="contact_linkedin" data-analytics="contact_click" data-contact-type="linkedin" data-link-location="contact_section"><img src="assets/artifacts/03-icons-doodles/svg/contact-linkedin.svg" alt="">LinkedIn</a>
         </div>
       </div>
       <form class="contact-form reveal" action="#" method="post" data-config-form>

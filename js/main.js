@@ -40,6 +40,42 @@
     });
   }
 
+  function appendUtmParams(href, params) {
+    if (!/^https?:\/\//i.test(href)) return href;
+
+    try {
+      const url = new URL(href);
+      Object.entries(params).forEach(([key, value]) => {
+        if (value) url.searchParams.set(key, value);
+      });
+      return url.toString();
+    } catch {
+      return href;
+    }
+  }
+
+  function getOutboundUtmParams(anchor) {
+    const key = anchor?.dataset?.configHref;
+    if (key !== 'githubUrl' && key !== 'linkedinUrl') return null;
+
+    const destination = key === 'githubUrl' ? 'github' : 'linkedin';
+    return {
+      utm_source: 'portfolio',
+      utm_medium: 'website',
+      utm_campaign: 'portfolio_2026',
+      utm_content: clean(anchor.dataset.utmContent) || `${destination}_link`,
+      destination
+    };
+  }
+
+  function withOutboundUtm(anchor, href) {
+    const utmParams = getOutboundUtmParams(anchor);
+    if (!utmParams) return href;
+
+    const { destination, ...urlParams } = utmParams;
+    return appendUtmParams(href, urlParams);
+  }
+
   function setConfiguredHref(anchor, href) {
     if (!anchor) return;
     if (!href) {
@@ -49,14 +85,43 @@
       anchor.removeAttribute('href');
       return;
     }
-    anchor.href = href;
+    const trackedHref = withOutboundUtm(anchor, href);
+    anchor.href = trackedHref;
     anchor.classList.remove('is-config-missing');
     anchor.removeAttribute('aria-disabled');
     anchor.removeAttribute('tabindex');
-    if (!/^https?:\/\//i.test(href)) {
+    if (!/^https?:\/\//i.test(trackedHref)) {
       anchor.removeAttribute('target');
       anchor.removeAttribute('rel');
     }
+  }
+
+  function trackEvent(eventName, params = {}) {
+    if (!eventName || typeof window.gtag !== 'function') return;
+
+    const cleanParams = {};
+    Object.entries(params).forEach(([key, value]) => {
+      if (value) cleanParams[key] = value;
+    });
+
+    window.gtag('event', eventName, {
+      ...cleanParams,
+      transport_type: 'beacon'
+    });
+  }
+
+  function bindAnalyticsEvents() {
+    document.querySelectorAll('[data-analytics]').forEach((element) => {
+      element.addEventListener('click', () => {
+        const utmParams = getOutboundUtmParams(element) || {};
+        trackEvent(element.dataset.analytics, {
+          contact_type: clean(element.dataset.contactType),
+          link_location: clean(element.dataset.linkLocation),
+          outbound_url: element.href || '',
+          ...utmParams
+        });
+      });
+    });
   }
 
   function applyPublicConfig() {
@@ -100,6 +165,7 @@
   }
 
   applyPublicConfig();
+  bindAnalyticsEvents();
 
   function createSketchSoundboard() {
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
