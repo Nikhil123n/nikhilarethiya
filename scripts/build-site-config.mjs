@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outputPath = resolve(root, 'js/site-config.js');
+const contentSourcePath = resolve(root, 'src/content/portfolio.ts');
+const contentOutputPath = resolve(root, 'js/portfolio-content.js');
 const envPath = resolve(root, '.env');
 
 function loadLocalEnv() {
@@ -51,3 +53,18 @@ writeFileSync(
 );
 
 console.log('Generated js/site-config.js from PUBLIC_* environment variables.');
+
+if (existsSync(contentSourcePath)) {
+  const source = readFileSync(contentSourcePath, 'utf8')
+    .replace(/export\s+const\s+portfolioContent\s*=/, 'window.PORTFOLIO_CONTENT =')
+    .replace(/\nexport\s+default\s+portfolioContent;\s*$/m, '\n');
+
+  mkdirSync(dirname(contentOutputPath), { recursive: true });
+  writeFileSync(
+    contentOutputPath,
+    `// Generated from src/content/portfolio.ts. Edit the source file, not this file.\n${source}`,
+    'utf8'
+  );
+
+  console.log('Generated js/portfolio-content.js from src/content/portfolio.ts.');
+}

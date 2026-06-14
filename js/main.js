@@ -162,7 +162,130 @@
     }
   }
 
+  const projectSketches = {
+    dashboard: {
+      containerClass: 'dashboard-sketch',
+      parts: [
+        'dash-panel',
+        'dash-list',
+        'dash-map',
+        'dash-chart chart-one',
+        'dash-chart chart-two',
+        'dash-route route-one',
+        'dash-route route-two',
+        'dash-route route-three',
+        'dash-node route-node-one',
+        'dash-node route-node-two',
+        'dash-node route-node-three',
+        'dash-node route-node-four',
+        'dash-pin'
+      ]
+    },
+    medical: {
+      containerClass: 'medical-sketch',
+      parts: [
+        'medical-note note-left',
+        'medical-note note-right',
+        'profile-head',
+        'profile-neck',
+        'brain-loop loop-one',
+        'brain-loop loop-two',
+        'brain-stem'
+      ]
+    },
+    neural: {
+      containerClass: 'neural-sketch',
+      parts: ['node n1', 'node n2', 'node n3', 'node n4', 'node n5', 'node n6', 'node n7', 'node n8']
+    }
+  };
+
+  function createProjectSketch(sketchName) {
+    const sketch = projectSketches[clean(sketchName)] || projectSketches.dashboard;
+    const element = document.createElement('div');
+    element.className = `project-sketch ${sketch.containerClass}`;
+    element.setAttribute('aria-hidden', 'true');
+
+    sketch.parts.forEach((className) => {
+      const part = document.createElement('span');
+      part.className = className;
+      element.appendChild(part);
+    });
+
+    return element;
+  }
+
+  function createProjectCard(project) {
+    const article = document.createElement('article');
+    article.className = 'project-card';
+    article.dataset.tiltCard = '';
+    if (clean(project.id)) article.dataset.projectId = clean(project.id);
+
+    article.appendChild(createProjectSketch(project.sketch));
+
+    const title = document.createElement('h3');
+    title.textContent = clean(project.title);
+    article.appendChild(title);
+
+    const tags = document.createElement('div');
+    tags.className = 'tags';
+    const projectTags = Array.isArray(project.tags) ? project.tags : project.techStack;
+    (Array.isArray(projectTags) ? projectTags : []).forEach((tag) => {
+      const tagElement = document.createElement('span');
+      tagElement.textContent = clean(tag);
+      tags.appendChild(tagElement);
+    });
+    article.appendChild(tags);
+
+    const description = document.createElement('p');
+    description.textContent = clean(project.description);
+    article.appendChild(description);
+
+    const link = document.createElement('a');
+    const linkHref = clean(project.ctaHref) || clean(project.githubUrl) || '#contact';
+    link.href = linkHref;
+    if (/^https?:\/\//i.test(linkHref)) {
+      link.target = '_blank';
+      link.rel = 'noreferrer';
+    }
+    link.dataset.analytics = clean(project.analyticsEvent) || 'project_click';
+    link.dataset.linkLocation = 'featured_projects';
+    link.dataset.projectId = clean(project.id);
+    link.dataset.projectTitle = clean(project.title);
+    link.appendChild(document.createTextNode(clean(project.ctaLabel) || 'Case Study'));
+    link.appendChild(document.createTextNode(' '));
+
+    const arrow = document.createElement('span');
+    arrow.textContent = '->';
+    link.appendChild(arrow);
+    article.appendChild(link);
+
+    return article;
+  }
+
+  function renderProjectCards() {
+    const grid = document.querySelector('[data-project-grid]');
+    const projects = window.PORTFOLIO_CONTENT?.projects;
+    if (!grid || !Array.isArray(projects) || !projects.length) return;
+
+    const orderedProjects = projects
+      .filter((project) => project && project.visible !== false && project.featured !== false)
+      .map((project, index) => ({ project, index }))
+      .sort((a, b) => {
+        const orderA = Number.isFinite(Number(a.project.order)) ? Number(a.project.order) : a.index;
+        const orderB = Number.isFinite(Number(b.project.order)) ? Number(b.project.order) : b.index;
+        return orderA - orderB;
+      });
+
+    if (!orderedProjects.length) return;
+
+    grid.textContent = '';
+    orderedProjects.forEach(({ project }) => {
+      grid.appendChild(createProjectCard(project));
+    });
+  }
+
   applyPublicConfig();
+  renderProjectCards();
   bindAnalyticsEvents();
 
   function createSketchSoundboard() {
@@ -489,7 +612,7 @@
   bindInteractionSound([
     ...leftTabs,
     ...topLinks,
-    ...document.querySelectorAll('.btn:not(.btn-primary), .top-socials a, .blue-link, .project-more-link, .sketchbook-action, .contact-list a')
+    ...document.querySelectorAll('.btn:not(.btn-primary), .top-socials a, .blue-link, .project-more-link, .project-side-arrow, .project-row-arrow, .sketchbook-action, .contact-list a')
   ], 'pencilTap');
 
   bindInteractionSound([

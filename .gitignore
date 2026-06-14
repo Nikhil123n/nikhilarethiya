@@ -20,6 +20,7 @@ coverage/
 *.tmp
 *.temp
 js/site-config.js
+js/portfolio-content.js
 __pycache__/
 *.py[cod]
 .pytest_cache/
