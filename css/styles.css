@@ -3063,16 +3063,11 @@ main {
 .experience-timeline-paper {
   position: relative;
   isolation: isolate;
-  width: min(100%, 1180px);
+  width: min(100%, 1540px);
   margin: 0 auto;
-  padding: clamp(20px, 2.2vw, 34px) clamp(18px, 2.5vw, 34px) clamp(18px, 2.1vw, 30px);
-  background:
-    linear-gradient(90deg, rgba(36,36,35,0.018) 1px, transparent 1px),
-    linear-gradient(rgba(36,36,35,0.016) 1px, transparent 1px),
-    url('../assets/artifacts/08-textures-background/transparent-png/notebook-paper-texture-soft.png') center / 320px 240px repeat,
-    rgba(255, 252, 244, 0.5);
-  background-size: 48px 48px, 48px 48px, 320px 240px, auto;
-  background-blend-mode: normal, normal, multiply, normal;
+  padding: clamp(24px, 2vw, 32px) clamp(28px, 3vw, 48px) clamp(22px, 1.8vw, 30px);
+  overflow: visible;
+  background: transparent;
 }
 
 .experience-timeline-paper h2 {
@@ -3160,7 +3155,7 @@ main {
   position: relative;
   display: grid;
   gap: clamp(16px, 1.65vw, 22px);
-  padding-left: 54px;
+  padding-left: clamp(52px, 4.2vw, 68px);
 }
 
 .experience-timeline-list::before {
@@ -3175,7 +3170,7 @@ main {
 .experience-timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
-  left: -43px;
+  left: clamp(-56px, -3.45vw, -42px);
   top: 22px;
   bottom: calc(-1 * clamp(16px, 1.65vw, 22px) - 8px);
   width: 3px;
@@ -3187,7 +3182,7 @@ main {
 
 .experience-timeline-dot {
   position: absolute;
-  left: -52px;
+  left: clamp(-66px, calc(-4.2vw + 2px), -50px);
   top: 6px;
   width: 20px;
   height: 20px;
@@ -3890,7 +3885,7 @@ body[data-scene="about"] .reactive-avatar {
     padding-right: var(--section-divider-x);
   }
   .experience-timeline-paper {
-    width: min(100%, 1120px);
+    width: min(100%, 1280px);
   }
   .education-section {
     --education-section-x: clamp(28px, 3vw, 48px);
@@ -4121,7 +4116,7 @@ body[data-scene="about"] .reactive-avatar {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .experience-timeline-paper {
-    width: min(100%, 1040px);
+    width: min(100%, 1120px);
   }
   .experience-timeline-heading {
     gap: 28px;
@@ -4328,11 +4323,11 @@ body[data-scene="about"] .reactive-avatar {
     max-width: 620px;
   }
   .experience-timeline-paper {
-    width: min(100%, 860px);
+    width: min(100%, 1120px);
   }
   .experience-timeline-heading {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(18px, 3vw, 42px);
   }
   .experience-loop-doodle {
     left: auto;
@@ -4656,6 +4651,10 @@ body[data-scene="about"] .reactive-avatar {
   .experience-timeline-list {
     gap: 28px;
     padding-left: 38px;
+  }
+  .experience-timeline-heading {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
   .experience-timeline-list::before {
     left: 9px;
