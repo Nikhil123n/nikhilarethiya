@@ -20,6 +20,12 @@
 <body>
   <div class="paper-noise" aria-hidden="true"></div>
   <div class="cursor-orb" aria-hidden="true"></div>
+  <svg class="svg-filters" aria-hidden="true" focusable="false" width="0" height="0">
+    <filter id="rough-hero-name" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028 0.12" numOctaves="2" seed="12" result="roughInk"/>
+      <feDisplacementMap in="SourceGraphic" in2="roughInk" scale="1.15" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
 
   <aside class="notebook-rail" aria-label="Section navigation">
     <div class="spiral" aria-hidden="true"></div>
@@ -101,13 +107,29 @@
 }</pre>
           <span>// stories live forever</span>
         </div>
-        <div class="sticky-note plan-note" data-float="2">
-          <strong>Today's Plan</strong>
-          <label><input type="checkbox" checked> Build</label>
-          <label><input type="checkbox" checked> Test</label>
-          <label><input type="checkbox" checked> Deploy</label>
-          <label><input type="checkbox" checked> Impact</label>
-        </div>
+        <article class="certifications-card plan-note" aria-labelledby="today-plan-title" data-float="2">
+          <div class="certifications-card__content plan-note__content">
+            <h3 id="today-plan-title" class="certifications-title plan-note__title">I build</h3>
+            <ul class="certifications-list plan-note__list" aria-label="Today's build plan">
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Scalable Systems</span>
+              </li>
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Intuitive UIs</span>
+              </li>
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Clean Code</span>
+              </li>
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Real Impact</span>
+              </li>
+            </ul>
+          </div>
+        </article>
         <img class="doodle doodle-plant" src="assets/artifacts/01-homepage-layout/transparent-png/hero-plant.png" alt="" aria-hidden="true">
         <img class="doodle doodle-arrow" src="assets/artifacts/03-icons-doodles/svg/arrow-curved-right.svg" alt="" aria-hidden="true">
         <img class="doodle doodle-spark" src="assets/artifacts/03-icons-doodles/svg/sparkle.svg" alt="" aria-hidden="true">
@@ -218,7 +240,7 @@
                   <span class="certification-copy">
                     <span>Building Production</span>
                     <span>Ready React Apps</span>
-                    <span>(Linkedin)</span>
+                    <span class="certification-provider">(<span class="certification-provider__name">Linkedin</span>)</span>
                   </span>
                 </li>
                 <li class="certification-item">
@@ -366,7 +388,7 @@
         <div class="education-layout">
           <div class="education-list" aria-label="Education history">
             <article class="education-item">
-              <img src="assets/artifacts/03-icons-doodles/svg/education-campus.svg" alt="">
+              <img src="assets/artifacts/03-icons-doodles/transparent-png/education-campus-sketch-rough.png" alt="">
               <div class="education-copy">
                 <div class="education-heading">
                   <h3>The George Washington University, Washington DC, USA</h3>
@@ -378,7 +400,7 @@
             </article>
 
             <article class="education-item">
-              <img src="assets/artifacts/03-icons-doodles/svg/education-cap.svg" alt="">
+              <img src="assets/artifacts/03-icons-doodles/transparent-png/education-cap-sketch-rough.png" alt="">
               <div class="education-copy">
                 <div class="education-heading">
                   <h3>University of Mumbai, India</h3>
@@ -389,7 +411,7 @@
             </article>
           </div>
 
-          <img class="education-illustration" src="assets/artifacts/03-icons-doodles/svg/education-books-apple.svg" alt="">
+          <img class="education-illustration" src="assets/artifacts/03-icons-doodles/transparent-png/education-books-apple-sketch-hd.png" alt="">
         </div>
       </div>
     </section>

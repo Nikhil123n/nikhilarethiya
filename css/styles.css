@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&family=Permanent+Marker&family=Reenie+Beanie&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&family=Permanent+Marker&family=Reenie+Beanie&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
   --paper-bg: #FCF6EF;
@@ -43,6 +43,8 @@
   --font-hand: "Patrick Hand", Kalam, "Comic Sans MS", cursive;
   --font-sketch: "Patrick Hand", Kalam, "Comic Sans MS", cursive;
   --font-sketch-caps: "Patrick Hand SC", "Patrick Hand", Kalam, "Comic Sans MS", cursive;
+  --font-education-heading: "Patrick Hand SC", "Patrick Hand", "Comic Neue", "Comic Sans MS", cursive;
+  --font-education-body: "Patrick Hand", "Comic Neue", "Comic Sans MS", cursive;
   --font-ui: "Space Grotesk", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -78,6 +80,13 @@ body::before {
   z-index: -2;
 }
 
+.svg-filters {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .paper-noise {
   position: fixed;
   inset: 0;
@@ -98,6 +107,13 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main ul:not(.certifications-list) > li,
+main ol > li {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-shadow: none;
 }
 
 a:focus-visible,
@@ -281,7 +297,7 @@ textarea {
   gap: clamp(16px, 3vw, 42px);
   align-items: center;
   justify-content: center;
-  font-family: var(--font-marker);
+  font-family: var(--font-hand);
   font-size: 15px;
 }
 
@@ -331,6 +347,10 @@ textarea {
   border-color: var(--ink);
   background: var(--yellow-note);
   transform: rotate(-4deg) translateY(-1px);
+}
+
+.top-socials a[data-contact-type="linkedin"] {
+  color: #0A66C2;
 }
 
 .is-config-missing {
@@ -383,11 +403,28 @@ main {
 }
 
 .scene {
+  --section-divider-x: clamp(28px, 6vw, 92px);
+  position: relative;
   min-height: 100vh;
-  padding: 96px clamp(28px, 6vw, 92px) 72px;
+  padding: 96px var(--section-divider-x) 72px;
   scroll-margin-top: 86px;
-  border-bottom: 2px solid rgba(36, 36, 35, 0.12);
+  border-bottom: 0;
   min-width: 0;
+}
+
+.scene:not(.contact-section)::after {
+  content: "";
+  position: absolute;
+  left: var(--section-divider-x);
+  right: calc(var(--section-divider-x) + clamp(34px, 5vw, 96px));
+  bottom: -2px;
+  display: block;
+  z-index: 2;
+  height: 18px;
+  background: url("../assets/artifacts/03-icons-doodles/svg/sketch-section-divider.svg?v=2") left center / 100% 18px no-repeat;
+  opacity: 0.95;
+  pointer-events: none;
+  transform: rotate(-0.08deg);
 }
 
 .hero {
@@ -434,7 +471,15 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.005em;
   color: var(--ink);
-  text-shadow: 0.45px 0 currentColor, 0.9px 0.9px 0 rgba(30, 25, 18, 0.06);
+  -webkit-text-stroke: 0.35px rgba(10, 10, 10, 0.8);
+  paint-order: stroke fill;
+  filter: url("#rough-hero-name");
+  text-shadow:
+    0.55px 0 currentColor,
+    -0.35px 0 rgba(10, 10, 10, 0.66),
+    0 0.55px rgba(10, 10, 10, 0.58),
+    1.4px 1px 0 rgba(30, 25, 18, 0.08),
+    -0.6px 1.2px 0 rgba(30, 25, 18, 0.06);
 }
 
 .hero-name-wrap::after {
@@ -690,17 +735,6 @@ main {
   font-size: 24px;
 }
 
-.plan-note {
-  position: absolute;
-  top: 50px;
-  left: 44px;
-  width: 172px;
-  padding: 18px;
-  background: var(--yellow-note);
-  transform: rotate(-3.5deg) translate(calc(var(--cursor-x) * -4px), calc(var(--cursor-y) * 3px));
-}
-
-.plan-note::before,
 .tape::before {
   content: "";
   position: absolute;
@@ -713,22 +747,99 @@ main {
   transform: rotate(-6deg);
 }
 
-.plan-note strong {
-  display: block;
-  font-family: var(--font-marker);
-  font-size: 16px;
-  margin-bottom: 12px;
+.certifications-card.plan-note {
+  --cert-shadow: rgba(36, 36, 35, 0.18);
+  position: absolute;
+  top: 34px;
+  left: 30px;
+  width: 292px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: rotate(-5deg) translate(calc(var(--cursor-x) * -4px), calc(var(--cursor-y) * 3px));
 }
 
-.plan-note label {
-  display: block;
-  margin: 8px 0;
-  font-family: var(--font-marker);
-  font-size: 14px;
+.plan-note .certifications-card__content {
+  padding: 23.5% 12.4% 10.2%;
 }
 
-.plan-note input {
-  accent-color: var(--green);
+.plan-note .certifications-title {
+  align-self: center;
+  display: inline-block;
+  margin: 0 0 32px;
+  padding: 0 0 7px;
+  color: var(--cert-ink);
+  font-family: var(--font-sketch);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-transform: none;
+  white-space: nowrap;
+  text-shadow:
+    0.45px 0 var(--cert-ink),
+    0 0.55px rgba(21, 18, 15, 0.46);
+  transform: translateX(-11px) rotate(-2deg);
+  transform-origin: 48% 72%;
+}
+
+.plan-note .certifications-title span {
+  min-width: 26px;
+  color: rgba(21, 18, 15, 0.88);
+  font-family: var(--font-sketch-caps);
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.plan-note .certifications-title::after {
+  left: 3px;
+  right: auto;
+  bottom: 0;
+  width: calc(100% - 6px);
+  height: 4px;
+  background:
+    linear-gradient(176deg, transparent 0 32%, var(--cert-blue) 33% 52%, transparent 53%),
+    linear-gradient(181deg, transparent 0 54%, rgba(47, 111, 159, 0.82) 55% 74%, transparent 75%);
+  transform: rotate(-1.7deg);
+}
+
+.plan-note .certifications-list {
+  justify-content: flex-start;
+  gap: 3px;
+}
+
+.plan-note .certification-item {
+  grid-template-columns: 31px minmax(0, 1fr);
+  gap: 10px;
+  padding: 7px 0;
+}
+
+.plan-note .certification-item + .certification-item::before {
+  left: 0;
+  right: 2%;
+}
+
+.plan-note .certification-check {
+  width: 26px;
+  height: 26px;
+  border-width: 3px;
+  --tick-stroke: 4px;
+}
+
+.plan-note .certification-copy {
+  display: block;
+  color: var(--cert-ink);
+  font-family: var(--font-sketch);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-shadow:
+    0.35px 0 var(--cert-ink),
+    0 0.5px rgba(21, 18, 15, 0.42);
+  white-space: nowrap;
 }
 
 .doodle {
@@ -897,7 +1008,7 @@ main {
   margin: 0 0 24px;
   padding-bottom: 18px;
   color: var(--ink);
-  font-family: var(--font-marker);
+  font-family: var(--font-hand);
   font-size: clamp(36px, 2.72vw, 50px);
   font-weight: 400;
   line-height: 0.96;
@@ -1029,8 +1140,8 @@ main {
 
 .toolkit-strip-section {
   min-height: auto;
-  padding: 96px clamp(28px, 6vw, 92px) 72px;
-  border-bottom: 2px solid rgba(36, 36, 35, 0.12);
+  padding: 96px var(--section-divider-x) 72px;
+  border-bottom: 0;
 }
 
 .toolkit-strip-layout {
@@ -1563,10 +1674,17 @@ main {
   display: block;
 }
 
+.certification-copy .certification-provider__name {
+  display: inline;
+  font-weight: 400;
+  text-shadow: none;
+}
+
 @media (min-width: 1321px) {
   .toolkit-strip-section {
-    padding-left: clamp(28px, 3.4vw, 54px);
-    padding-right: clamp(28px, 3.4vw, 54px);
+    --section-divider-x: clamp(28px, 3.4vw, 54px);
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
 
   .toolkit-strip-layout {
@@ -1707,8 +1825,9 @@ main {
 }
 
 .projects-section {
+  --section-divider-x: clamp(38px, 4.2vw, 70px);
   justify-content: center;
-  padding-left: clamp(38px, 4.2vw, 70px);
+  padding-left: var(--section-divider-x);
   padding-right: clamp(34px, 4vw, 64px);
 }
 
@@ -1733,9 +1852,9 @@ main {
   margin: 0 0 24px;
   padding-bottom: 18px;
   color: var(--ink);
-  font-family: var(--font-marker);
+  font-family: var(--font-sketch-caps);
   font-size: clamp(36px, 2.72vw, 50px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 0.96;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -1758,14 +1877,14 @@ main {
 
 .project-side p {
   margin: 0 0 50px;
-  max-width: 245px;
-  color: rgba(36, 36, 35, 0.82);
-  font-family: var(--font-hand);
-  font-size: clamp(28px, 1.9vw, 36px);
+  max-width: 170px;
+  color: var(--ink);
+  font-family: var(--font-sketch);
+  font-size: clamp(18px, 1.25vw, 23px);
   font-weight: 700;
-  line-height: 0.92;
+  line-height: 1.08;
   letter-spacing: 0;
-  text-shadow: 0.25px 0 currentColor;
+  text-shadow: none;
 }
 
 .project-more-link {
@@ -2845,8 +2964,9 @@ main {
 }
 
 .experience-section {
+  --section-divider-x: clamp(38px, 4.2vw, 70px);
   justify-content: center;
-  padding-left: clamp(38px, 4.2vw, 70px);
+  padding-left: var(--section-divider-x);
   padding-right: clamp(34px, 4vw, 64px);
 }
 
@@ -2936,8 +3056,8 @@ main {
   position: relative;
   min-height: auto;
   min-width: 0;
-  padding: 42px clamp(28px, 6vw, 92px) 42px;
-  border-bottom: 2px solid rgba(36, 36, 35, 0.12);
+  padding: 96px var(--section-divider-x) 72px;
+  border-bottom: 0;
 }
 
 .experience-timeline-paper {
@@ -2961,7 +3081,7 @@ main {
   margin: 0 0 clamp(24px, 2.3vw, 36px);
   padding-bottom: 11px;
   color: var(--ink);
-  font-family: var(--font-sketch-caps);
+  font-family: var(--font-education-heading);
   font-size: clamp(35px, 2.75vw, 48px);
   font-weight: 700;
   line-height: 0.88;
@@ -3087,12 +3207,12 @@ main {
 .experience-timeline-heading h3 {
   margin: 0;
   color: var(--ink);
-  font-family: var(--font-sketch);
+  font-family: var(--font-education-body);
   font-size: clamp(24px, 1.75vw, 31px);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.02;
-  letter-spacing: 0;
-  text-shadow: 0.25px 0 currentColor;
+  letter-spacing: 0.05em;
+  text-shadow: none;
 }
 
 .experience-timeline-heading h3 span {
@@ -3104,12 +3224,13 @@ main {
 
 .experience-timeline-heading time {
   color: var(--red);
-  font-family: var(--font-sketch);
+  font-family: var(--font-education-body);
   font-size: clamp(20px, 1.45vw, 26px);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
+  letter-spacing: 0.05em;
   white-space: nowrap;
-  text-shadow: 0.25px 0 currentColor;
+  text-shadow: none;
 }
 
 .experience-timeline-item ul {
@@ -3122,12 +3243,12 @@ main {
 .experience-timeline-item li {
   padding-left: 5px;
   color: var(--ink);
-  font-family: var(--font-sketch);
+  font-family: var(--font-education-body);
   font-size: clamp(17px, 1.18vw, 21px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0;
-  text-shadow: 0.18px 0 currentColor;
+  letter-spacing: 0.05em;
+  text-shadow: none;
 }
 
 .experience-timeline-item li::marker {
@@ -3137,16 +3258,34 @@ main {
 
 .experience-tech {
   color: var(--blue);
-  font-weight: 700;
-  text-shadow: 0.2px 0 currentColor;
+  font-weight: inherit;
+  text-shadow: none;
 }
 
 .education-section {
+  --education-section-x: clamp(28px, 6vw, 92px);
+  --section-divider-x: var(--education-section-x);
   position: relative;
+  z-index: 1;
   min-height: auto;
   min-width: 0;
-  padding: 70px clamp(28px, 6vw, 92px) 58px;
-  border-bottom: 2px solid rgba(36, 36, 35, 0.12);
+  padding: 70px var(--education-section-x) 58px;
+  border-bottom: 0;
+}
+
+.education-section::after {
+  content: "";
+  position: absolute;
+  left: var(--education-section-x);
+  right: calc(var(--education-section-x) + clamp(34px, 5vw, 96px));
+  bottom: -2px;
+  display: block;
+  z-index: 2;
+  height: 18px;
+  background: url("../assets/artifacts/03-icons-doodles/svg/sketch-section-divider.svg?v=2") left center / 100% 18px no-repeat;
+  opacity: 0.95;
+  pointer-events: none;
+  transform: rotate(-0.08deg);
 }
 
 .education-paper {
@@ -3157,39 +3296,15 @@ main {
   margin: 0 auto;
   padding: clamp(24px, 2vw, 32px) clamp(28px, 3vw, 48px) clamp(22px, 1.8vw, 30px);
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(36,36,35,0.025) 1px, transparent 1px),
-    linear-gradient(rgba(36,36,35,0.022) 1px, transparent 1px),
-    url('../assets/artifacts/08-textures-background/transparent-png/notebook-paper-texture-soft.png') center / 260px 220px repeat,
-    rgba(255, 252, 244, 0.78);
-  background-size: 48px 48px, 48px 48px, 260px 220px, auto;
-  background-blend-mode: normal, normal, multiply, normal;
+  background: transparent;
 }
 
 .education-paper::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  right: clamp(30px, 8vw, 150px);
-  z-index: -1;
-  width: clamp(170px, 17vw, 270px);
-  height: 42px;
-  background:
-    linear-gradient(90deg, rgba(108, 79, 35, 0.18), transparent 12% 88%, rgba(108, 79, 35, 0.14)),
-    rgba(246, 217, 130, 0.75);
-  border: 1px solid rgba(108, 79, 35, 0.24);
-  box-shadow: 0 8px 16px rgba(36, 36, 35, 0.1);
-  transform: rotate(1.5deg);
+  content: none;
 }
 
 .education-paper::after {
-  content: "";
-  position: absolute;
-  inset: 14px 18px;
-  z-index: -1;
-  border-top: 1.5px solid rgba(36, 36, 35, 0.07);
-  border-bottom: 1.5px solid rgba(36, 36, 35, 0.06);
-  pointer-events: none;
+  content: none;
 }
 
 .education-paper h2 {
@@ -3198,7 +3313,7 @@ main {
   margin: 0 0 clamp(16px, 1.7vw, 24px);
   padding-bottom: 10px;
   color: var(--ink);
-  font-family: var(--font-sketch-caps);
+  font-family: var(--font-education-heading);
   font-size: clamp(34px, 2.55vw, 46px);
   font-weight: 700;
   line-height: 0.9;
@@ -3225,8 +3340,8 @@ main {
 
 .education-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(210px, 19vw, 290px);
-  gap: clamp(24px, 3.5vw, 54px);
+  grid-template-columns: minmax(0, 1fr) clamp(210px, 17vw, 260px);
+  gap: clamp(12px, 2vw, 28px);
   align-items: center;
 }
 
@@ -3238,14 +3353,14 @@ main {
 
 .education-item {
   display: grid;
-  grid-template-columns: clamp(68px, 5vw, 84px) minmax(0, 1fr);
-  gap: clamp(18px, 1.8vw, 28px);
+  grid-template-columns: clamp(64px, 5vw, 82px) minmax(0, 1fr);
+  gap: clamp(6px, 0.7vw, 12px);
   align-items: start;
 }
 
 .education-item > img {
-  width: clamp(62px, 4.8vw, 78px);
-  height: clamp(62px, 4.8vw, 78px);
+  width: clamp(58px, 4.6vw, 74px);
+  height: clamp(58px, 4.6vw, 74px);
   object-fit: contain;
   filter: drop-shadow(1px 2px 0 rgba(36, 36, 35, 0.08));
   transform: rotate(-1.5deg);
@@ -3269,22 +3384,24 @@ main {
 .education-heading h3,
 .education-heading time,
 .education-copy p {
-  font-family: var(--font-sketch);
-  font-weight: 700;
-  letter-spacing: 0;
-  text-shadow: 0.2px 0 currentColor;
+  font-family: var(--font-education-body);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-shadow: none;
 }
 
 .education-heading h3 {
   margin: 0;
   color: var(--ink);
   font-size: clamp(22px, 1.52vw, 28px);
+  font-weight: 600;
   line-height: 1.05;
 }
 
 .education-heading time {
   color: rgba(36, 36, 35, 0.86);
   font-size: clamp(19px, 1.28vw, 24px);
+  font-weight: 600;
   line-height: 1;
   white-space: nowrap;
 }
@@ -3306,7 +3423,7 @@ main {
 
 .education-illustration {
   width: clamp(208px, 19vw, 290px);
-  justify-self: end;
+  justify-self: center;
   align-self: center;
   filter: drop-shadow(10px 14px 10px rgba(36, 36, 35, 0.12));
   transform: rotate(-1.5deg) translateY(2px);
@@ -3755,8 +3872,9 @@ body[data-scene="about"] .reactive-avatar {
     height: clamp(42px, 3.2vw, 50px);
   }
   .experience-section {
-    padding-left: clamp(28px, 3vw, 48px);
-    padding-right: clamp(28px, 3vw, 48px);
+    --section-divider-x: clamp(28px, 3vw, 48px);
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .experience-showcase {
     width: min(100%, 1280px);
@@ -3767,22 +3885,25 @@ body[data-scene="about"] .reactive-avatar {
     grid-template-columns: repeat(4, minmax(170px, 1fr));
   }
   .experience-timeline-section {
-    padding-left: clamp(28px, 3vw, 48px);
-    padding-right: clamp(28px, 3vw, 48px);
+    --section-divider-x: clamp(28px, 3vw, 48px);
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .experience-timeline-paper {
     width: min(100%, 1120px);
   }
   .education-section {
-    padding-left: clamp(28px, 3vw, 48px);
-    padding-right: clamp(28px, 3vw, 48px);
+    --education-section-x: clamp(28px, 3vw, 48px);
+    padding-left: var(--education-section-x);
+    padding-right: var(--education-section-x);
   }
   .education-paper {
     width: min(100%, 1280px);
   }
   .projects-section {
-    padding-left: clamp(28px, 3vw, 48px);
-    padding-right: clamp(28px, 3vw, 48px);
+    --section-divider-x: clamp(28px, 3vw, 48px);
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .projects-showcase {
     width: min(100%, 1280px);
@@ -3829,6 +3950,44 @@ body[data-scene="about"] .reactive-avatar {
 }
 
 @media (max-width: 1320px) {
+  .code-note {
+    top: 36px;
+    right: 26px;
+    width: clamp(252px, 23vw, 286px);
+    padding: 15px 17px;
+  }
+  .code-note pre {
+    font-size: clamp(11px, 1vw, 13px);
+    line-height: 1.4;
+  }
+  .code-note span {
+    margin-top: 8px;
+    font-size: clamp(19px, 1.7vw, 22px);
+  }
+  .certifications-card.plan-note {
+    top: 38px;
+    left: 26px;
+    width: clamp(174px, 16vw, 194px);
+  }
+  .plan-note .certifications-title {
+    margin-bottom: 17px;
+    padding-bottom: 5px;
+    font-size: clamp(17px, 1.45vw, 20px);
+  }
+  .plan-note .certification-item {
+    grid-template-columns: 19px minmax(0, 1fr);
+    gap: 6px;
+    padding: 3px 0;
+  }
+  .plan-note .certification-check {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    --tick-stroke: 2.4px;
+  }
+  .plan-note .certification-copy {
+    font-size: clamp(13px, 1.22vw, 15px);
+  }
   .toolkit-showcase {
     width: min(100%, 1120px);
     grid-template-columns: 1fr;
@@ -3980,8 +4139,8 @@ body[data-scene="about"] .reactive-avatar {
     width: min(100%, 1120px);
   }
   .education-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
-    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 240px);
+    gap: 14px;
   }
   .education-heading {
     gap: 24px;
@@ -4061,6 +4220,26 @@ body[data-scene="about"] .reactive-avatar {
   }
   .hero-stage {
     min-height: 620px;
+  }
+  .code-note {
+    width: clamp(238px, 28vw, 276px);
+    padding: 14px 16px;
+  }
+  .code-note pre {
+    font-size: clamp(10.5px, 1.1vw, 12.5px);
+  }
+  .code-note span {
+    font-size: clamp(18px, 1.9vw, 21px);
+  }
+  .certifications-card.plan-note {
+    width: clamp(170px, 21vw, 190px);
+  }
+  .plan-note .certifications-title {
+    margin-bottom: 16px;
+    font-size: clamp(17px, 1.9vw, 20px);
+  }
+  .plan-note .certification-copy {
+    font-size: clamp(13px, 1.65vw, 15px);
   }
   .journey-strip,
   .toolkit-grid,
@@ -4194,9 +4373,8 @@ body[data-scene="about"] .reactive-avatar {
     margin-bottom: 0;
   }
   .project-side p {
-    max-width: 360px;
-    margin-bottom: 0;
-    font-size: 25px;
+    max-width: 320px;
+    margin-bottom: 4px;
   }
   .project-more-link {
     margin-bottom: 14px;
@@ -4242,7 +4420,8 @@ body[data-scene="about"] .reactive-avatar {
     margin-left: 0;
   }
   .scene {
-    padding: 80px 20px 52px;
+    --section-divider-x: 20px;
+    padding: 80px var(--section-divider-x) 52px;
   }
   .hero {
     gap: clamp(24px, 5vw, 34px);
@@ -4276,29 +4455,45 @@ body[data-scene="about"] .reactive-avatar {
   .code-note {
     top: clamp(18px, 3vw, 34px);
     right: clamp(16px, 4vw, 30px);
-    width: clamp(210px, 42vw, 300px);
+    width: clamp(200px, 38vw, 260px);
     padding: clamp(12px, 2vw, 18px);
   }
   .code-note pre {
-    font-size: clamp(10px, 1.45vw, 13px);
+    font-size: clamp(10px, 1.35vw, 12px);
     line-height: 1.38;
   }
   .code-note span {
-    font-size: clamp(17px, 2.6vw, 22px);
+    font-size: clamp(17px, 2.4vw, 20px);
   }
-  .plan-note {
+  .certifications-card.plan-note {
     top: clamp(24px, 4vw, 50px);
     left: clamp(16px, 4vw, 44px);
-    width: clamp(128px, 24vw, 172px);
-    padding: clamp(12px, 2vw, 18px);
+    width: clamp(216px, 34vw, 248px);
   }
-  .plan-note strong {
-    font-size: clamp(13px, 1.9vw, 16px);
-    margin-bottom: 8px;
+  .plan-note .certifications-card__content {
+    padding: 23.5% 12.4% 10.2%;
   }
-  .plan-note label {
-    margin: 6px 0;
-    font-size: clamp(11px, 1.8vw, 14px);
+  .plan-note .certifications-title {
+    margin-bottom: 27px;
+    font-size: clamp(21px, 3.4vw, 26px);
+    transform: translateX(-9px) rotate(-2deg);
+  }
+  .plan-note .certifications-title span {
+    min-width: 23px;
+    font-size: clamp(24px, 4vw, 32px);
+  }
+  .plan-note .certification-item {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 9px;
+    padding: 6px 0;
+  }
+  .plan-note .certification-check {
+    width: 24px;
+    height: 24px;
+    --tick-stroke: 3.6px;
+  }
+  .plan-note .certification-copy {
+    font-size: clamp(17px, 3vw, 21px);
   }
   .doodle-plant {
     display: block;
@@ -4365,7 +4560,8 @@ body[data-scene="about"] .reactive-avatar {
     font-size: 12px;
   }
   .toolkit-strip-section {
-    padding: 80px 20px 52px;
+    --section-divider-x: 20px;
+    padding: 80px var(--section-divider-x) 52px;
   }
   .toolkit-strip {
     grid-template-columns: 1fr;
@@ -4411,8 +4607,9 @@ body[data-scene="about"] .reactive-avatar {
     height: clamp(50px, 11vw, 58px);
   }
   .experience-section {
-    padding-left: 20px;
-    padding-right: 20px;
+    --section-divider-x: 20px;
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .experience-showcase {
     gap: 24px;
@@ -4441,7 +4638,8 @@ body[data-scene="about"] .reactive-avatar {
     gap: 18px;
   }
   .experience-timeline-section {
-    padding: 80px 20px 52px;
+    --section-divider-x: 20px;
+    padding: 80px var(--section-divider-x) 52px;
   }
   .experience-timeline-paper {
     width: 100%;
@@ -4489,7 +4687,8 @@ body[data-scene="about"] .reactive-avatar {
     font-size: clamp(18px, 5.5vw, 24px);
   }
   .education-section {
-    padding: 80px 20px 52px;
+    --education-section-x: 20px;
+    padding: 80px var(--education-section-x) 52px;
   }
   .education-paper {
     min-height: 0;
@@ -4515,12 +4714,12 @@ body[data-scene="about"] .reactive-avatar {
     gap: 30px;
   }
   .education-item {
-    grid-template-columns: 60px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 8px;
   }
   .education-item > img {
-    width: 58px;
-    height: 58px;
+    width: 60px;
+    height: 60px;
   }
   .education-heading {
     grid-template-columns: 1fr;
@@ -4541,8 +4740,9 @@ body[data-scene="about"] .reactive-avatar {
     opacity: 1;
   }
   .projects-section {
-    padding-left: 20px;
-    padding-right: 20px;
+    --section-divider-x: 20px;
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .projects-showcase {
     gap: 24px;
@@ -4556,9 +4756,8 @@ body[data-scene="about"] .reactive-avatar {
     margin-bottom: 20px;
   }
   .project-side p {
-    max-width: 300px;
+    max-width: 260px;
     margin-bottom: 26px;
-    font-size: clamp(28px, 9vw, 36px);
   }
   .project-more-link {
     margin-bottom: 22px;
@@ -4664,7 +4863,7 @@ body[data-scene="about"] .reactive-avatar {
     top: 18px;
     left: 50%;
     right: auto;
-    width: min(calc(100% - 44px), 300px);
+    width: min(calc(100% - 44px), 256px);
     transform: translateX(-50%) rotate(1deg) translate(calc(var(--cursor-x) * 5px), calc(var(--cursor-y) * 4px));
   }
   .code-note pre {
@@ -4673,13 +4872,40 @@ body[data-scene="about"] .reactive-avatar {
   .code-note span {
     font-size: clamp(16px, 4.2vw, 20px);
   }
-  .plan-note {
-    top: clamp(150px, 33vw, 170px);
-    left: clamp(18px, 8vw, 38px);
-    width: min(44%, 172px);
+  .certifications-card.plan-note {
+    top: clamp(168px, 39vw, 190px);
+    left: clamp(16px, 5vw, 28px);
+    width: min(54%, 198px);
   }
-  .plan-note label {
-    margin: 5px 0;
+  .plan-note .certifications-title {
+    margin-bottom: 22px;
+    padding-bottom: 6px;
+    font-size: clamp(18px, 5vw, 22px);
+    transform: translateX(-6px) rotate(-2deg);
+  }
+  .plan-note .certifications-title span {
+    min-width: 20px;
+    font-size: clamp(20px, 5.6vw, 24px);
+  }
+  .plan-note .certifications-title::after {
+    left: 2px;
+    bottom: 0;
+    width: calc(100% - 4px);
+    height: 3px;
+  }
+  .plan-note .certification-item {
+    grid-template-columns: 23px minmax(0, 1fr);
+    gap: 7px;
+    padding: 4px 0;
+  }
+  .plan-note .certification-check {
+    width: 20px;
+    height: 20px;
+    border-width: 2.5px;
+    --tick-stroke: 3px;
+  }
+  .plan-note .certification-copy {
+    font-size: clamp(14px, 4.1vw, 17px);
   }
   .doodle-plant {
     width: clamp(52px, 16vw, 76px);
@@ -4699,6 +4925,9 @@ body[data-scene="about"] .reactive-avatar {
 }
 
 @media (max-width: 440px) {
+  .scene {
+    --section-divider-x: 16px;
+  }
   .toolkit-section {
     padding-left: 16px;
     padding-right: 16px;
@@ -4714,8 +4943,9 @@ body[data-scene="about"] .reactive-avatar {
     font-size: 18px;
   }
   .toolkit-strip-section {
-    padding-left: 16px;
-    padding-right: 16px;
+    --section-divider-x: 16px;
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .sketchbook-section {
     padding-left: 16px;
@@ -4729,16 +4959,18 @@ body[data-scene="about"] .reactive-avatar {
     height: 48px;
   }
   .experience-section {
-    padding-left: 16px;
-    padding-right: 16px;
+    --section-divider-x: 16px;
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .experience-side h2 {
     width: min(100%, 320px);
     font-size: 29px;
   }
   .experience-timeline-section {
-    padding-left: 16px;
-    padding-right: 16px;
+    --section-divider-x: 16px;
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .experience-timeline-paper {
     padding-left: 16px;
@@ -4754,8 +4986,9 @@ body[data-scene="about"] .reactive-avatar {
     font-size: 24px;
   }
   .education-section {
-    padding-left: 16px;
-    padding-right: 16px;
+    --education-section-x: 16px;
+    padding-left: var(--education-section-x);
+    padding-right: var(--education-section-x);
   }
   .education-paper {
     padding-left: 16px;
@@ -4766,15 +4999,16 @@ body[data-scene="about"] .reactive-avatar {
     gap: 10px;
   }
   .education-item > img {
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
   }
   .education-copy p br {
     display: none;
   }
   .projects-section {
-    padding-left: 16px;
-    padding-right: 16px;
+    --section-divider-x: 16px;
+    padding-left: var(--section-divider-x);
+    padding-right: var(--section-divider-x);
   }
   .project-more-link {
     white-space: normal;
