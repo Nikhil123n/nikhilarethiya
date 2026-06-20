@@ -30,6 +30,7 @@
       <a class="tab tab-skills active" href="#toolkit" data-target="skills"><img src="../assets/artifacts/03-icons-doodles/svg/sidebar-skills.svg" alt=""><span>Toolkit</span></a>
       <a class="tab tab-journey" href="#journey" data-target="journey"><img src="../assets/artifacts/03-icons-doodles/svg/lightbulb.svg" alt=""><span>Journey</span></a>
       <a class="tab tab-sketchbook" href="#sketchbook" data-target="sketchbook"><img src="../assets/artifacts/03-icons-doodles/svg/sketch-star-small.svg" alt=""><span>Sketchbook</span></a>
+      <a class="tab tab-experience" href="#extra-professional-experience" data-target="experience-detail"><img src="../assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt=""><span>Pro Exp</span></a>
       <a class="tab tab-experience" href="#experience" data-target="experience"><img src="../assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt=""><span>Notes</span></a>
     </nav>
     <div class="scroll-note">
@@ -47,6 +48,7 @@
       <a href="#toolkit" class="active">Engineer's Toolkit</a>
       <a href="#journey">Journey</a>
       <a href="#sketchbook">Sketchbook Wall</a>
+      <a href="#extra-professional-experience">Professional Experience</a>
       <a href="#experience">Experience Notes</a>
     </nav>
   </header>
@@ -272,7 +274,72 @@
       </div>
     </section>
 
-    <section id="experience" class="scene section experience-section" data-scene="experience" data-avatar="../assets/avatars/02-thinking-pose.png" data-caption="Extra 04: alternate experience cards.">
+    <section id="extra-professional-experience" class="scene section experience-timeline-section" data-scene="experience-detail" data-avatar="../assets/avatars/02-thinking-pose.png" data-caption="Extra 04: detailed professional experience timeline." aria-labelledby="extra-professional-experience-title">
+      <div class="experience-timeline-paper">
+        <h2 id="extra-professional-experience-title">Professional Experience</h2>
+        <span class="experience-loop-doodle" aria-hidden="true"></span>
+        <img class="experience-star-doodle" src="../assets/artifacts/03-icons-doodles/svg/star.svg" alt="">
+
+        <div class="experience-timeline-list">
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Software Engineer <span>|</span> HIVE Labs</h3>
+              <time>May 2025 - Dec 2025</time>
+            </div>
+            <ul>
+              <li>Built Apache <span class="experience-tech">Spark</span> + Python ingestion pipeline for 1,067 participants, cutting data prep time by ~35%.</li>
+              <li>Delivered <span class="experience-tech">Vue.js</span> real-time dashboard (500ms latency) with Jest tests achieving 80%+ UI coverage.</li>
+              <li>Automated ML training &amp; validation with pytest; reduced QA effort by 40% on <span class="experience-tech">AWS EKS</span>.</li>
+              <li>Authored 2 research papers on AI-driven glucose prediction and time-series modeling.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Data Research Intern <span>|</span> United Nations</h3>
+              <time>May 2025 - Aug 2025</time>
+            </div>
+            <ul>
+              <li>Built Python ETL pipelines validating 100K+ records, eliminating 30% manual processing overhead.</li>
+              <li>Resolved 45+ critical data discrepancies through cross-functional audits.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Backend Software Engineer <span>|</span> System Neural Development Lab</h3>
+              <time>Mar 2025 - May 2025</time>
+            </div>
+            <ul>
+              <li>Built <span class="experience-tech">Dockerized</span> Django app with Celery &amp; Redis; automated 1+ TB/day neural data processing.</li>
+              <li>Secured 4-node pipeline with RBAC, JWT auth &amp; REST APIs; zero unauthorized access events.</li>
+              <li>Hardened nodes with SSH/TLS tunnels &amp; isolated containers for safe, auditable execution.</li>
+              <li>Orchestrated CI/CD with Jenkins &amp; Kubernetes; cut config overhead by 60%.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Software Developer <span>|</span> National Informatics Centre</h3>
+              <time>Jan 2023 - Jun 2024</time>
+            </div>
+            <ul>
+              <li>Migrated 12-year-old JSP platform to modern stack; resolved 25+ version conflicts.</li>
+              <li>Built <span class="experience-tech">React.js</span> frontend; improved page load latency by 33% across 708 districts.</li>
+              <li>Optimized 12 SQL stored procedures; improved API query latency from ~8s to ~4s (2x faster).</li>
+              <li>Refactored 6 JSP modules to REST APIs; saved 8+ engineering hours monthly.</li>
+              <li>Migrated to UTF-8 Unicode, expanded support from 10 to 22 Indian languages.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="scene section experience-section" data-scene="experience" data-avatar="../assets/avatars/02-thinking-pose.png" data-caption="Extra 05: alternate experience cards.">
       <div class="experience-showcase">
         <aside class="experience-side reveal">
           <div class="section-kicker">Experience Notes</div>

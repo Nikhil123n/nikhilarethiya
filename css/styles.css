@@ -3683,13 +3683,12 @@ main {
   display: grid;
   gap: 5px;
   margin: 10px 0 0;
-  padding-left: 0;
-  list-style: none;
+  padding-left: 26px;
+  list-style: disc;
 }
 
 .experience-timeline-item li {
-  position: relative;
-  padding-left: 26px;
+  padding-left: 5px;
   color: var(--ink);
   font-family: var(--font-education-body);
   font-size: clamp(17px, 1.18vw, 21px);
@@ -3699,17 +3698,9 @@ main {
   text-shadow: none;
 }
 
-.experience-timeline-item li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 4px;
-  height: 4px;
-  border: 1.2px solid var(--ink);
-  border-radius: 999px;
-  background: transparent;
-  transform: translateY(-50%);
+.experience-timeline-item li::marker {
+  color: var(--ink);
+  font-size: 0.68em;
 }
 
 .experience-tech {
