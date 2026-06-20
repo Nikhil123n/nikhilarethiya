@@ -214,16 +214,82 @@
     return element;
   }
 
+  function appendHighlightedText(element, text, phrases) {
+    const source = clean(text);
+    const highlights = (Array.isArray(phrases) ? phrases : [])
+      .map(clean)
+      .filter(Boolean);
+
+    if (!source || !highlights.length) {
+      element.textContent = source;
+      return;
+    }
+
+    const lowerSource = source.toLowerCase();
+    const lowerHighlights = highlights.map((phrase) => phrase.toLowerCase());
+    let cursor = 0;
+
+    while (cursor < source.length) {
+      let nextIndex = -1;
+      let nextPhrase = '';
+
+      lowerHighlights.forEach((phrase, index) => {
+        const foundIndex = lowerSource.indexOf(phrase, cursor);
+        if (
+          foundIndex !== -1 &&
+          (nextIndex === -1 || foundIndex < nextIndex || (foundIndex === nextIndex && phrase.length > nextPhrase.length))
+        ) {
+          nextIndex = foundIndex;
+          nextPhrase = highlights[index];
+        }
+      });
+
+      if (nextIndex === -1) {
+        element.appendChild(document.createTextNode(source.slice(cursor)));
+        break;
+      }
+
+      if (nextIndex > cursor) {
+        element.appendChild(document.createTextNode(source.slice(cursor, nextIndex)));
+      }
+
+      const mark = document.createElement('span');
+      mark.className = 'project-description-mark';
+      mark.textContent = source.slice(nextIndex, nextIndex + nextPhrase.length);
+      element.appendChild(mark);
+      cursor = nextIndex + nextPhrase.length;
+    }
+  }
+
   function createProjectCard(project) {
     const article = document.createElement('article');
-    article.className = 'project-card';
+    const cardVariant = (clean(project.cardVariant) || 'reference').replace(/[^a-z0-9-]/gi, '').toLowerCase();
+    article.className = cardVariant ? `project-card project-card--${cardVariant}` : 'project-card';
     article.dataset.tiltCard = '';
     if (clean(project.id)) article.dataset.projectId = clean(project.id);
+
+    const paperclipPin = document.createElement('span');
+    paperclipPin.className = 'project-paperclip-pin';
+    paperclipPin.setAttribute('aria-hidden', 'true');
+    article.appendChild(paperclipPin);
+
+    const tapePin = document.createElement('span');
+    tapePin.className = 'project-tape-pin';
+    tapePin.setAttribute('aria-hidden', 'true');
+    article.appendChild(tapePin);
 
     article.appendChild(createProjectSketch(project.sketch));
 
     const title = document.createElement('h3');
-    title.textContent = clean(project.title);
+    const titleCopy = document.createElement('span');
+    titleCopy.className = 'project-title-copy';
+    titleCopy.textContent = clean(project.title);
+    title.appendChild(titleCopy);
+
+    const titleStar = document.createElement('span');
+    titleStar.className = 'project-title-star';
+    titleStar.setAttribute('aria-hidden', 'true');
+    title.appendChild(titleStar);
     article.appendChild(title);
 
     const tags = document.createElement('div');
@@ -237,27 +303,46 @@
     article.appendChild(tags);
 
     const description = document.createElement('p');
-    description.textContent = clean(project.description);
+    appendHighlightedText(description, project.description, project.descriptionHighlights);
     article.appendChild(description);
 
-    const link = document.createElement('a');
-    const linkHref = clean(project.ctaHref) || clean(project.githubUrl) || '#contact';
-    link.href = linkHref;
-    if (/^https?:\/\//i.test(linkHref)) {
-      link.target = '_blank';
-      link.rel = 'noreferrer';
-    }
-    link.dataset.analytics = clean(project.analyticsEvent) || 'project_click';
-    link.dataset.linkLocation = 'featured_projects';
-    link.dataset.projectId = clean(project.id);
-    link.dataset.projectTitle = clean(project.title);
-    link.appendChild(document.createTextNode(clean(project.ctaLabel) || 'Case Study'));
-    link.appendChild(document.createTextNode(' '));
+    const actions = document.createElement('div');
+    actions.className = 'project-card__actions';
 
-    const arrow = document.createElement('span');
-    arrow.textContent = '->';
-    link.appendChild(arrow);
-    article.appendChild(link);
+    function createProjectLink({ href, label, analyticsEvent }) {
+      const link = document.createElement('a');
+      const linkHref = clean(href) || '#contact';
+      link.href = linkHref;
+      if (/^https?:\/\//i.test(linkHref)) {
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+      }
+      link.dataset.analytics = clean(analyticsEvent) || 'project_click';
+      link.dataset.linkLocation = 'featured_projects';
+      link.dataset.projectId = clean(project.id);
+      link.dataset.projectTitle = clean(project.title);
+      link.appendChild(document.createTextNode(label));
+      link.appendChild(document.createTextNode(' '));
+
+      const arrow = document.createElement('span');
+      arrow.textContent = '\u2192';
+      link.appendChild(arrow);
+      return link;
+    }
+
+    const githubHref = clean(project.ctaHref) || clean(project.githubUrl) || '#contact';
+    const liveDemoHref = clean(project.liveDemoUrl) || clean(project.demoUrl) || githubHref;
+    actions.appendChild(createProjectLink({
+      href: githubHref,
+      label: clean(project.ctaLabel) || 'GitHub',
+      analyticsEvent: clean(project.analyticsEvent) || 'project_click'
+    }));
+    actions.appendChild(createProjectLink({
+      href: liveDemoHref,
+      label: clean(project.liveDemoLabel) || 'Live Demo',
+      analyticsEvent: clean(project.liveDemoAnalyticsEvent) || 'project_live_demo_click'
+    }));
+    article.appendChild(actions);
 
     return article;
   }
@@ -282,6 +367,49 @@
     orderedProjects.forEach(({ project }) => {
       grid.appendChild(createProjectCard(project));
     });
+
+    bindProjectPager(grid);
+  }
+
+  function bindProjectPager(grid) {
+    const pager = document.querySelector('.project-pager');
+    const prev = document.querySelector('[data-project-page-prev]');
+    const next = document.querySelector('[data-project-page-next]');
+    const indicator = document.querySelector('[data-project-page-indicator]');
+    const cards = Array.from(grid.querySelectorAll('.project-card'));
+    if (!pager || !prev || !next || !indicator || !cards.length) return;
+
+    const pageSize = 3;
+    const pageCount = Math.max(1, Math.ceil(cards.length / pageSize));
+    let pageIndex = 0;
+
+    function formatPage(value) {
+      return String(value).padStart(2, '0');
+    }
+
+    function updatePager() {
+      const start = pageIndex * pageSize;
+      const end = start + pageSize;
+      cards.forEach((card, index) => {
+        card.classList.toggle('is-paged-out', index < start || index >= end);
+      });
+      indicator.textContent = `${formatPage(pageIndex + 1)} / ${formatPage(pageCount)}`;
+      prev.disabled = pageIndex === 0;
+      next.disabled = pageIndex >= pageCount - 1;
+      pager.hidden = pageCount <= 1;
+    }
+
+    prev.addEventListener('click', () => {
+      pageIndex = Math.max(0, pageIndex - 1);
+      updatePager();
+    });
+
+    next.addEventListener('click', () => {
+      pageIndex = Math.min(pageCount - 1, pageIndex + 1);
+      updatePager();
+    });
+
+    updatePager();
   }
 
   applyPublicConfig();

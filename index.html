@@ -137,15 +137,6 @@
     </section>
 
     <section id="about" class="scene section about-section" data-scene="about" data-avatar="assets/avatars/04-headshot-left.png" data-caption="Scene 02: engineer by profession, creator by passion.">
-      <div class="about-card reveal">
-        <img src="assets/avatars/04-headshot-left.png" alt="Smiling hand-drawn avatar headshot">
-        <div>
-          <div class="section-kicker">About Me</div>
-          <h2>Engineer by profession, creator by passion.</h2>
-          <p>I am a software engineer who loves building robust systems and delightful experiences. I believe in clean code, strong architecture, continuous learning, and products that create measurable value.</p>
-          <a href="#contact" class="blue-link">Let's build something useful -&gt;</a>
-        </div>
-      </div>
       <div class="stats-grid reveal-grid">
         <article class="stat-card">
           <img src="assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt="">
@@ -267,11 +258,15 @@
     <section id="projects" class="scene section projects-section" data-scene="projects" data-avatar="assets/avatars/06-sketching-notebook.png" data-caption="Scene 04: translating sketches into products.">
       <div class="projects-showcase">
         <aside class="project-side reveal">
-          <div class="section-kicker">Featured<br>Projects</div>
+          <div class="section-kicker">Featured Projects</div>
           <p>Where engineering<br>meets thoughtful<br>product design.</p>
-          <a class="project-more-link" href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl" data-analytics="github_project_click" data-link-location="featured_projects">View All Projects <span>-&gt;</span></a>
-          <a class="project-side-arrow" href="#" target="_blank" rel="noreferrer" aria-label="View all projects" data-config-href="githubUrl" data-analytics="github_project_click" data-link-location="featured_projects_arrow_left">&larr;</a>
         </aside>
+
+        <div class="project-pager" aria-label="Project pages">
+          <button class="project-pager__button" type="button" data-project-page-prev aria-label="Previous projects">&larr;</button>
+          <button class="project-pager__button" type="button" data-project-page-next aria-label="Next projects">&rarr;</button>
+          <span class="project-pager__count" data-project-page-indicator>01 / 01</span>
+        </div>
 
         <div class="project-grid reveal-grid" data-project-grid>
           <article class="project-card" data-tilt-card>
@@ -313,13 +308,25 @@
             <a href="#contact">Case Study <span>-&gt;</span></a>
           </article>
         </div>
-        <a class="project-row-arrow" href="#" target="_blank" rel="noreferrer" aria-label="View all projects" data-config-href="githubUrl" data-analytics="github_project_click" data-link-location="featured_projects_arrow_right"></a>
+        <div class="project-more-row reveal">
+          <a class="project-more-link" href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl" data-analytics="github_project_click" data-link-location="featured_projects">View All Projects <span>-&gt;</span></a>
+        </div>
+        <div class="project-footer-tags reveal" aria-label="Project notes">
+          <div class="project-footer-tag project-footer-tag--yellow">
+            <span>Engineer by profession,<br>creator by passion.</span>
+            <span class="project-footer-tag__icon project-footer-tag__icon--camera" aria-hidden="true"></span>
+          </div>
+          <div class="project-footer-tag project-footer-tag--blue">
+            <span>Let's build something awesome!</span>
+            <span class="project-footer-tag__icon project-footer-tag__icon--sparkle" aria-hidden="true"></span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="experience-timeline" class="scene section experience-timeline-section" data-scene="experience-detail" data-caption="Scene 05: detailed experience timeline." aria-labelledby="experience-timeline-title">
       <div class="experience-timeline-paper">
-        <h2 id="experience-timeline-title">Experience</h2>
+        <h2 id="experience-timeline-title">Professional Experience</h2>
         <span class="experience-loop-doodle" aria-hidden="true"></span>
         <img class="experience-star-doodle" src="assets/artifacts/03-icons-doodles/svg/star.svg" alt="">
 
