@@ -1,0 +1,130 @@
+[
+  {
+    "name": "01-working-at-laptop-desk",
+    "file": "01-working-at-laptop-desk.png",
+    "size": [
+      727,
+      677
+    ],
+    "component_ids": [
+      4,
+      8,
+      16,
+      25
+    ],
+    "source_bbox": [
+      20,
+      19,
+      747,
+      696
+    ]
+  },
+  {
+    "name": "02-thinking-pose",
+    "file": "02-thinking-pose.png",
+    "size": [
+      344,
+      421
+    ],
+    "component_ids": [
+      5,
+      11
+    ],
+    "source_bbox": [
+      659,
+      20,
+      1003,
+      441
+    ]
+  },
+  {
+    "name": "03-writing-sketching-table",
+    "file": "03-writing-sketching-table.png",
+    "size": [
+      470,
+      504
+    ],
+    "component_ids": [
+      10,
+      29,
+      38,
+      49
+    ],
+    "source_bbox": [
+      1038,
+      24,
+      1508,
+      528
+    ]
+  },
+  {
+    "name": "04-headshot-left",
+    "file": "04-headshot-left.png",
+    "size": [
+      285,
+      319
+    ],
+    "component_ids": [
+      271
+    ],
+    "source_bbox": [
+      0,
+      667,
+      285,
+      986
+    ]
+  },
+  {
+    "name": "05-headshot-right",
+    "file": "05-headshot-right.png",
+    "size": [
+      272,
+      305
+    ],
+    "component_ids": [
+      274
+    ],
+    "source_bbox": [
+      305,
+      672,
+      577,
+      977
+    ]
+  },
+  {
+    "name": "06-sketching-notebook",
+    "file": "06-sketching-notebook.png",
+    "size": [
+      407,
+      480
+    ],
+    "component_ids": [
+      170
+    ],
+    "source_bbox": [
+      704,
+      528,
+      1111,
+      1008
+    ]
+  },
+  {
+    "name": "07-celebrating-pose",
+    "file": "07-celebrating-pose.png",
+    "size": [
+      413,
+      403
+    ],
+    "component_ids": [
+      177,
+      191,
+      198
+    ],
+    "source_bbox": [
+      1087,
+      541,
+      1500,
+      944
+    ]
+  }
+]

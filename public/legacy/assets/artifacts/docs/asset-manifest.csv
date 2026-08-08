@@ -1,0 +1,521 @@
+section,name,type,file,notes,source_box
+01-homepage-layout,full section crop,section png,01-homepage-layout/section-crop/01-homepage-layout__full-section.png,Full visible numbered section crop from source design sheet.,"0,0,650,1024"
+03-icons-doodles,full section crop,section png,03-icons-doodles/03-icons-doodles__full-section.png,Full visible numbered section crop from source design sheet.,"1004,0,1267,410"
+04-hand-drawn-ui-elements,full section crop,section png,04-hand-drawn-ui-elements/04-hand-drawn-ui-elements__full-section.png,Full visible numbered section crop from source design sheet.,"1266,0,1536,410"
+05-typography,full section crop,section png,05-typography/05-typography__full-section.png,Full visible numbered section crop from source design sheet.,"650,410,1004,628"
+06-color-palette,full section crop,section png,06-color-palette/06-color-palette__full-section.png,Full visible numbered section crop from source design sheet.,"650,628,1004,760"
+07-ui-cards-components,full section crop,section png,07-ui-cards-components/07-ui-cards-components__full-section.png,Full visible numbered section crop from source design sheet.,"1004,410,1536,750"
+08-textures-background,full section crop,section png,08-textures-background/08-textures-background__full-section.png,Full visible numbered section crop from source design sheet.,"1004,750,1536,884"
+09-buttons-nav-tabs,full section crop,section png,09-buttons-nav-tabs/09-buttons-nav-tabs__full-section.png,Full visible numbered section crop from source design sheet.,"1004,884,1536,1024"
+01-homepage-layout,notebook-binding-and-left-tabs source crop,source crop png,01-homepage-layout/source-crops/notebook-binding-and-left-tabs__source.png,Exact crop from raster source image.,"0,0,105,420"
+01-homepage-layout,notebook-binding-and-left-tabs,transparent png,01-homepage-layout/transparent-png/notebook-binding-and-left-tabs.png,Paper background removed algorithmically from raster crop.,"0,0,105,420"
+01-homepage-layout,na-logo-and-hover-note source crop,source crop png,01-homepage-layout/source-crops/na-logo-and-hover-note__source.png,Exact crop from raster source image.,"52,10,150,62"
+01-homepage-layout,na-logo-and-hover-note,transparent png,01-homepage-layout/transparent-png/na-logo-and-hover-note.png,Paper background removed algorithmically from raster crop.,"52,10,150,62"
+01-homepage-layout,top-navigation source crop,source crop png,01-homepage-layout/source-crops/top-navigation__source.png,Exact crop from raster source image.,"222,12,615,50"
+01-homepage-layout,top-navigation,transparent png,01-homepage-layout/transparent-png/top-navigation.png,Paper background removed algorithmically from raster crop.,"222,12,615,50"
+01-homepage-layout,hero-intro-title-copy source crop,source crop png,01-homepage-layout/source-crops/hero-intro-title-copy__source.png,Exact crop from raster source image.,"82,60,285,334"
+01-homepage-layout,hero-intro-title-copy,transparent png,01-homepage-layout/transparent-png/hero-intro-title-copy.png,Paper background removed algorithmically from raster crop.,"82,60,285,334"
+01-homepage-layout,hero-name-wordmark source crop,source crop png,01-homepage-layout/source-crops/hero-name-wordmark__source.png,Exact crop from raster source image.,"86,92,292,198"
+01-homepage-layout,hero-name-wordmark,transparent png,01-homepage-layout/transparent-png/hero-name-wordmark.png,Paper background removed algorithmically from raster crop.,"86,92,292,198"
+01-homepage-layout,hero-positioning-copy source crop,source crop png,01-homepage-layout/source-crops/hero-positioning-copy__source.png,Exact crop from raster source image.,"85,200,283,333"
+01-homepage-layout,hero-positioning-copy,transparent png,01-homepage-layout/transparent-png/hero-positioning-copy.png,Paper background removed algorithmically from raster crop.,"85,200,283,333"
+01-homepage-layout,hero-cta-buttons source crop,source crop png,01-homepage-layout/source-crops/hero-cta-buttons__source.png,Exact crop from raster source image.,"87,341,247,402"
+01-homepage-layout,hero-cta-buttons,transparent png,01-homepage-layout/transparent-png/hero-cta-buttons.png,Paper background removed algorithmically from raster crop.,"87,341,247,402"
+01-homepage-layout,hero-workspace-composite source crop,source crop png,01-homepage-layout/source-crops/hero-workspace-composite__source.png,Exact crop from raster source image.,"246,56,545,388"
+01-homepage-layout,hero-workspace-composite,transparent png,01-homepage-layout/transparent-png/hero-workspace-composite.png,Paper background removed algorithmically from raster crop.,"246,56,545,388"
+01-homepage-layout,hero-code-snippet source crop,source crop png,01-homepage-layout/source-crops/hero-code-snippet__source.png,Exact crop from raster source image.,"457,58,550,175"
+01-homepage-layout,hero-code-snippet,transparent png,01-homepage-layout/transparent-png/hero-code-snippet.png,Paper background removed algorithmically from raster crop.,"457,58,550,175"
+01-homepage-layout,hero-todays-plan-sticky-note source crop,source crop png,01-homepage-layout/source-crops/hero-todays-plan-sticky-note__source.png,Exact crop from raster source image.,"553,57,638,183"
+01-homepage-layout,hero-todays-plan-sticky-note,transparent png,01-homepage-layout/transparent-png/hero-todays-plan-sticky-note.png,Paper background removed algorithmically from raster crop.,"553,57,638,183"
+01-homepage-layout,hero-process-diagram-paper source crop,source crop png,01-homepage-layout/source-crops/hero-process-diagram-paper__source.png,Exact crop from raster source image.,"270,58,405,157"
+01-homepage-layout,hero-process-diagram-paper,transparent png,01-homepage-layout/transparent-png/hero-process-diagram-paper.png,Paper background removed algorithmically from raster crop.,"270,58,405,157"
+01-homepage-layout,hero-plant source crop,source crop png,01-homepage-layout/source-crops/hero-plant__source.png,Exact crop from raster source image.,"564,207,635,289"
+01-homepage-layout,hero-plant,transparent png,01-homepage-layout/transparent-png/hero-plant.png,Paper background removed algorithmically from raster crop.,"564,207,635,289"
+01-homepage-layout,hero-cursor-note source crop,source crop png,01-homepage-layout/source-crops/hero-cursor-note__source.png,Exact crop from raster source image.,"522,313,638,371"
+01-homepage-layout,hero-cursor-note,transparent png,01-homepage-layout/transparent-png/hero-cursor-note.png,Paper background removed algorithmically from raster crop.,"522,313,638,371"
+01-homepage-layout,journey-strip-full source crop,source crop png,01-homepage-layout/source-crops/journey-strip-full__source.png,Exact crop from raster source image.,"30,425,626,612"
+01-homepage-layout,journey-strip-full,transparent png,01-homepage-layout/transparent-png/journey-strip-full.png,Paper background removed algorithmically from raster crop.,"30,425,626,612"
+01-homepage-layout,journey-step-01-idea source crop,source crop png,01-homepage-layout/source-crops/journey-step-01-idea__source.png,Exact crop from raster source image.,"55,477,140,590"
+01-homepage-layout,journey-step-01-idea,transparent png,01-homepage-layout/transparent-png/journey-step-01-idea.png,Paper background removed algorithmically from raster crop.,"55,477,140,590"
+01-homepage-layout,journey-step-02-plan source crop,source crop png,01-homepage-layout/source-crops/journey-step-02-plan__source.png,Exact crop from raster source image.,"158,477,245,590"
+01-homepage-layout,journey-step-02-plan,transparent png,01-homepage-layout/transparent-png/journey-step-02-plan.png,Paper background removed algorithmically from raster crop.,"158,477,245,590"
+01-homepage-layout,journey-step-03-build source crop,source crop png,01-homepage-layout/source-crops/journey-step-03-build__source.png,Exact crop from raster source image.,"265,477,350,590"
+01-homepage-layout,journey-step-03-build,transparent png,01-homepage-layout/transparent-png/journey-step-03-build.png,Paper background removed algorithmically from raster crop.,"265,477,350,590"
+01-homepage-layout,journey-step-04-test source crop,source crop png,01-homepage-layout/source-crops/journey-step-04-test__source.png,Exact crop from raster source image.,"370,477,456,590"
+01-homepage-layout,journey-step-04-test,transparent png,01-homepage-layout/transparent-png/journey-step-04-test.png,Paper background removed algorithmically from raster crop.,"370,477,456,590"
+01-homepage-layout,journey-step-05-deploy source crop,source crop png,01-homepage-layout/source-crops/journey-step-05-deploy__source.png,Exact crop from raster source image.,"477,477,557,590"
+01-homepage-layout,journey-step-05-deploy,transparent png,01-homepage-layout/transparent-png/journey-step-05-deploy.png,Paper background removed algorithmically from raster crop.,"477,477,557,590"
+01-homepage-layout,journey-step-06-impact source crop,source crop png,01-homepage-layout/source-crops/journey-step-06-impact__source.png,Exact crop from raster source image.,"566,477,630,590"
+01-homepage-layout,journey-step-06-impact,transparent png,01-homepage-layout/transparent-png/journey-step-06-impact.png,Paper background removed algorithmically from raster crop.,"566,477,630,590"
+01-homepage-layout,engineers-toolkit-full source crop,source crop png,01-homepage-layout/source-crops/engineers-toolkit-full__source.png,Exact crop from raster source image.,"30,623,650,753"
+01-homepage-layout,engineers-toolkit-full,transparent png,01-homepage-layout/transparent-png/engineers-toolkit-full.png,Paper background removed algorithmically from raster crop.,"30,623,650,753"
+01-homepage-layout,toolkit-languages source crop,source crop png,01-homepage-layout/source-crops/toolkit-languages__source.png,Exact crop from raster source image.,"137,625,251,725"
+01-homepage-layout,toolkit-languages,transparent png,01-homepage-layout/transparent-png/toolkit-languages.png,Paper background removed algorithmically from raster crop.,"137,625,251,725"
+01-homepage-layout,toolkit-frameworks source crop,source crop png,01-homepage-layout/source-crops/toolkit-frameworks__source.png,Exact crop from raster source image.,"252,625,374,725"
+01-homepage-layout,toolkit-frameworks,transparent png,01-homepage-layout/transparent-png/toolkit-frameworks.png,Paper background removed algorithmically from raster crop.,"252,625,374,725"
+01-homepage-layout,toolkit-databases source crop,source crop png,01-homepage-layout/source-crops/toolkit-databases__source.png,Exact crop from raster source image.,"375,625,469,725"
+01-homepage-layout,toolkit-databases,transparent png,01-homepage-layout/transparent-png/toolkit-databases.png,Paper background removed algorithmically from raster crop.,"375,625,469,725"
+01-homepage-layout,toolkit-cloud-devops source crop,source crop png,01-homepage-layout/source-crops/toolkit-cloud-devops__source.png,Exact crop from raster source image.,"470,625,574,725"
+01-homepage-layout,toolkit-cloud-devops,transparent png,01-homepage-layout/transparent-png/toolkit-cloud-devops.png,Paper background removed algorithmically from raster crop.,"470,625,574,725"
+01-homepage-layout,toolkit-tools source crop,source crop png,01-homepage-layout/source-crops/toolkit-tools__source.png,Exact crop from raster source image.,"574,625,648,725"
+01-homepage-layout,toolkit-tools,transparent png,01-homepage-layout/transparent-png/toolkit-tools.png,Paper background removed algorithmically from raster crop.,"574,625,648,725"
+01-homepage-layout,sketchbook-projects-callout source crop,source crop png,01-homepage-layout/source-crops/sketchbook-projects-callout__source.png,Exact crop from raster source image.,"28,762,318,930"
+01-homepage-layout,sketchbook-projects-callout,transparent png,01-homepage-layout/transparent-png/sketchbook-projects-callout.png,Paper background removed algorithmically from raster crop.,"28,762,318,930"
+01-homepage-layout,small-about-portrait-area source crop,source crop png,01-homepage-layout/source-crops/small-about-portrait-area__source.png,Exact crop from raster source image.,"90,760,260,928"
+01-homepage-layout,small-about-portrait-area,transparent png,01-homepage-layout/transparent-png/small-about-portrait-area.png,Paper background removed algorithmically from raster crop.,"90,760,260,928"
+01-homepage-layout,stats-grid source crop,source crop png,01-homepage-layout/source-crops/stats-grid__source.png,Exact crop from raster source image.,"410,775,680,913"
+01-homepage-layout,stats-grid,transparent png,01-homepage-layout/transparent-png/stats-grid.png,Paper background removed algorithmically from raster crop.,"410,775,680,913"
+01-homepage-layout,system-architecture-notebook source crop,source crop png,01-homepage-layout/source-crops/system-architecture-notebook__source.png,Exact crop from raster source image.,"718,756,995,950"
+01-homepage-layout,system-architecture-notebook,transparent png,01-homepage-layout/transparent-png/system-architecture-notebook.png,Paper background removed algorithmically from raster crop.,"718,756,995,950"
+01-homepage-layout,lets-connect-footer source crop,source crop png,01-homepage-layout/source-crops/lets-connect-footer__source.png,Exact crop from raster source image.,"28,952,830,1018"
+01-homepage-layout,lets-connect-footer,transparent png,01-homepage-layout/transparent-png/lets-connect-footer.png,Paper background removed algorithmically from raster crop.,"28,952,830,1018"
+01-homepage-layout,hero name wordmark,svg + png,01-homepage-layout/svg-recreated/hero-name-wordmark.svg,Recreated editable SVG wordmark.,
+03-icons-doodles,lightbulb,svg,03-icons-doodles/svg/lightbulb.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,lightbulb,png preview,03-icons-doodles/png/lightbulb.png,PNG render of SVG asset.,
+03-icons-doodles,arrow-right,svg,03-icons-doodles/svg/arrow-right.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,arrow-right,png preview,03-icons-doodles/png/arrow-right.png,PNG render of SVG asset.,
+03-icons-doodles,arrow-curved-right,svg,03-icons-doodles/svg/arrow-curved-right.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,arrow-curved-right,png preview,03-icons-doodles/png/arrow-curved-right.png,PNG render of SVG asset.,
+03-icons-doodles,arrow-curved-left,svg,03-icons-doodles/svg/arrow-curved-left.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,arrow-curved-left,png preview,03-icons-doodles/png/arrow-curved-left.png,PNG render of SVG asset.,
+03-icons-doodles,arrow-dashed,svg,03-icons-doodles/svg/arrow-dashed.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,arrow-dashed,png preview,03-icons-doodles/png/arrow-dashed.png,PNG render of SVG asset.,
+03-icons-doodles,star,svg,03-icons-doodles/svg/star.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,star,png preview,03-icons-doodles/png/star.png,PNG render of SVG asset.,
+03-icons-doodles,sparkle,svg,03-icons-doodles/svg/sparkle.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,sparkle,png preview,03-icons-doodles/png/sparkle.png,PNG render of SVG asset.,
+03-icons-doodles,planet,svg,03-icons-doodles/svg/planet.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,planet,png preview,03-icons-doodles/png/planet.png,PNG render of SVG asset.,
+03-icons-doodles,x-mark,svg,03-icons-doodles/svg/x-mark.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,x-mark,png preview,03-icons-doodles/png/x-mark.png,PNG render of SVG asset.,
+03-icons-doodles,exclamation,svg,03-icons-doodles/svg/exclamation.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,exclamation,png preview,03-icons-doodles/png/exclamation.png,PNG render of SVG asset.,
+03-icons-doodles,question,svg,03-icons-doodles/svg/question.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,question,png preview,03-icons-doodles/png/question.png,PNG render of SVG asset.,
+03-icons-doodles,code-brackets,svg,03-icons-doodles/svg/code-brackets.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,code-brackets,png preview,03-icons-doodles/png/code-brackets.png,PNG render of SVG asset.,
+03-icons-doodles,terminal-window,svg,03-icons-doodles/svg/terminal-window.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,terminal-window,png preview,03-icons-doodles/png/terminal-window.png,PNG render of SVG asset.,
+03-icons-doodles,gear,svg,03-icons-doodles/svg/gear.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,gear,png preview,03-icons-doodles/png/gear.png,PNG render of SVG asset.,
+03-icons-doodles,cloud,svg,03-icons-doodles/svg/cloud.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,cloud,png preview,03-icons-doodles/png/cloud.png,PNG render of SVG asset.,
+03-icons-doodles,cloud-upload,svg,03-icons-doodles/svg/cloud-upload.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,cloud-upload,png preview,03-icons-doodles/png/cloud-upload.png,PNG render of SVG asset.,
+03-icons-doodles,globe,svg,03-icons-doodles/svg/globe.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,globe,png preview,03-icons-doodles/png/globe.png,PNG render of SVG asset.,
+03-icons-doodles,database,svg,03-icons-doodles/svg/database.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,database,png preview,03-icons-doodles/png/database.png,PNG render of SVG asset.,
+03-icons-doodles,cube,svg,03-icons-doodles/svg/cube.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,cube,png preview,03-icons-doodles/png/cube.png,PNG render of SVG asset.,
+03-icons-doodles,puzzle,svg,03-icons-doodles/svg/puzzle.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,puzzle,png preview,03-icons-doodles/png/puzzle.png,PNG render of SVG asset.,
+03-icons-doodles,org-chart,svg,03-icons-doodles/svg/org-chart.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,org-chart,png preview,03-icons-doodles/png/org-chart.png,PNG render of SVG asset.,
+03-icons-doodles,network-nodes,svg,03-icons-doodles/svg/network-nodes.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,network-nodes,png preview,03-icons-doodles/png/network-nodes.png,PNG render of SVG asset.,
+03-icons-doodles,rocket,svg,03-icons-doodles/svg/rocket.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,rocket,png preview,03-icons-doodles/png/rocket.png,PNG render of SVG asset.,
+03-icons-doodles,paper-plane,svg,03-icons-doodles/svg/paper-plane.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,paper-plane,png preview,03-icons-doodles/png/paper-plane.png,PNG render of SVG asset.,
+03-icons-doodles,mail,svg,03-icons-doodles/svg/mail.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,mail,png preview,03-icons-doodles/png/mail.png,PNG render of SVG asset.,
+03-icons-doodles,at-sign,svg,03-icons-doodles/svg/at-sign.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,at-sign,png preview,03-icons-doodles/png/at-sign.png,PNG render of SVG asset.,
+03-icons-doodles,phone,svg,03-icons-doodles/svg/phone.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,phone,png preview,03-icons-doodles/png/phone.png,PNG render of SVG asset.,
+03-icons-doodles,location-pin,svg,03-icons-doodles/svg/location-pin.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,location-pin,png preview,03-icons-doodles/png/location-pin.png,PNG render of SVG asset.,
+03-icons-doodles,cursor,svg,03-icons-doodles/svg/cursor.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,cursor,png preview,03-icons-doodles/png/cursor.png,PNG render of SVG asset.,
+03-icons-doodles,scribble-blue,svg,03-icons-doodles/svg/scribble-blue.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,scribble-blue,png preview,03-icons-doodles/png/scribble-blue.png,PNG render of SVG asset.,
+03-icons-doodles,scribble-green,svg,03-icons-doodles/svg/scribble-green.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,scribble-green,png preview,03-icons-doodles/png/scribble-green.png,PNG render of SVG asset.,
+03-icons-doodles,scribble-orange,svg,03-icons-doodles/svg/scribble-orange.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,scribble-orange,png preview,03-icons-doodles/png/scribble-orange.png,PNG render of SVG asset.,
+03-icons-doodles,scribble-purple,svg,03-icons-doodles/svg/scribble-purple.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,scribble-purple,png preview,03-icons-doodles/png/scribble-purple.png,PNG render of SVG asset.,
+03-icons-doodles,underline-blue,svg,03-icons-doodles/svg/underline-blue.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,underline-blue,png preview,03-icons-doodles/png/underline-blue.png,PNG render of SVG asset.,
+03-icons-doodles,underline-red,svg,03-icons-doodles/svg/underline-red.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,underline-red,png preview,03-icons-doodles/png/underline-red.png,PNG render of SVG asset.,
+03-icons-doodles,underline-green,svg,03-icons-doodles/svg/underline-green.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,underline-green,png preview,03-icons-doodles/png/underline-green.png,PNG render of SVG asset.,
+03-icons-doodles,dashed-arc,svg,03-icons-doodles/svg/dashed-arc.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,dashed-arc,png preview,03-icons-doodles/png/dashed-arc.png,PNG render of SVG asset.,
+03-icons-doodles,sketch-star-small,svg,03-icons-doodles/svg/sketch-star-small.svg,Clean recreated vector asset matching visible doodle style.,
+03-icons-doodles,sketch-star-small,png preview,03-icons-doodles/png/sketch-star-small.png,PNG render of SVG asset.,
+03-icons-doodles,lightbulb-doodle source crop,source crop png,03-icons-doodles/source-crops/lightbulb-doodle__source.png,Exact crop from raster source image.,"1015,47,1071,100"
+03-icons-doodles,lightbulb-doodle,transparent png,03-icons-doodles/transparent-png/lightbulb-doodle.png,Paper background removed algorithmically from raster crop.,"1015,47,1071,100"
+03-icons-doodles,long-arrow-right source crop,source crop png,03-icons-doodles/source-crops/long-arrow-right__source.png,Exact crop from raster source image.,"1080,53,1145,86"
+03-icons-doodles,long-arrow-right,transparent png,03-icons-doodles/transparent-png/long-arrow-right.png,Paper background removed algorithmically from raster crop.,"1080,53,1145,86"
+03-icons-doodles,star-doodle source crop,source crop png,03-icons-doodles/source-crops/star-doodle__source.png,Exact crop from raster source image.,"1150,48,1200,96"
+03-icons-doodles,star-doodle,transparent png,03-icons-doodles/transparent-png/star-doodle.png,Paper background removed algorithmically from raster crop.,"1150,48,1200,96"
+03-icons-doodles,sparkles-doodle source crop,source crop png,03-icons-doodles/source-crops/sparkles-doodle__source.png,Exact crop from raster source image.,"1205,47,1237,97"
+03-icons-doodles,sparkles-doodle,transparent png,03-icons-doodles/transparent-png/sparkles-doodle.png,Paper background removed algorithmically from raster crop.,"1205,47,1237,97"
+03-icons-doodles,planet-doodle source crop,source crop png,03-icons-doodles/source-crops/planet-doodle__source.png,Exact crop from raster source image.,"1235,50,1264,80"
+03-icons-doodles,planet-doodle,transparent png,03-icons-doodles/transparent-png/planet-doodle.png,Paper background removed algorithmically from raster crop.,"1235,50,1264,80"
+03-icons-doodles,curved-arrow-small-01 source crop,source crop png,03-icons-doodles/source-crops/curved-arrow-small-01__source.png,Exact crop from raster source image.,"1018,110,1052,145"
+03-icons-doodles,curved-arrow-small-01,transparent png,03-icons-doodles/transparent-png/curved-arrow-small-01.png,Paper background removed algorithmically from raster crop.,"1018,110,1052,145"
+03-icons-doodles,curved-arrow-small-02 source crop,source crop png,03-icons-doodles/source-crops/curved-arrow-small-02__source.png,Exact crop from raster source image.,"1076,110,1114,145"
+03-icons-doodles,curved-arrow-small-02,transparent png,03-icons-doodles/transparent-png/curved-arrow-small-02.png,Paper background removed algorithmically from raster crop.,"1076,110,1114,145"
+03-icons-doodles,curved-arrow-small-03 source crop,source crop png,03-icons-doodles/source-crops/curved-arrow-small-03__source.png,Exact crop from raster source image.,"1140,110,1177,145"
+03-icons-doodles,curved-arrow-small-03,transparent png,03-icons-doodles/transparent-png/curved-arrow-small-03.png,Paper background removed algorithmically from raster crop.,"1140,110,1177,145"
+03-icons-doodles,red-x-mark source crop,source crop png,03-icons-doodles/source-crops/red-x-mark__source.png,Exact crop from raster source image.,"1198,108,1230,140"
+03-icons-doodles,red-x-mark,transparent png,03-icons-doodles/transparent-png/red-x-mark.png,Paper background removed algorithmically from raster crop.,"1198,108,1230,140"
+03-icons-doodles,exclamation-mark source crop,source crop png,03-icons-doodles/source-crops/exclamation-mark__source.png,Exact crop from raster source image.,"1235,108,1260,145"
+03-icons-doodles,exclamation-mark,transparent png,03-icons-doodles/transparent-png/exclamation-mark.png,Paper background removed algorithmically from raster crop.,"1235,108,1260,145"
+03-icons-doodles,question-mark-01 source crop,source crop png,03-icons-doodles/source-crops/question-mark-01__source.png,Exact crop from raster source image.,"1018,156,1048,190"
+03-icons-doodles,question-mark-01,transparent png,03-icons-doodles/transparent-png/question-mark-01.png,Paper background removed algorithmically from raster crop.,"1018,156,1048,190"
+03-icons-doodles,sketch-swoosh-01 source crop,source crop png,03-icons-doodles/source-crops/sketch-swoosh-01__source.png,Exact crop from raster source image.,"1078,155,1110,190"
+03-icons-doodles,sketch-swoosh-01,transparent png,03-icons-doodles/transparent-png/sketch-swoosh-01.png,Paper background removed algorithmically from raster crop.,"1078,155,1110,190"
+03-icons-doodles,sketch-hatch-01 source crop,source crop png,03-icons-doodles/source-crops/sketch-hatch-01__source.png,Exact crop from raster source image.,"1138,155,1174,190"
+03-icons-doodles,sketch-hatch-01,transparent png,03-icons-doodles/transparent-png/sketch-hatch-01.png,Paper background removed algorithmically from raster crop.,"1138,155,1174,190"
+03-icons-doodles,question-mark-02 source crop,source crop png,03-icons-doodles/source-crops/question-mark-02__source.png,Exact crop from raster source image.,"1198,155,1230,190"
+03-icons-doodles,question-mark-02,transparent png,03-icons-doodles/transparent-png/question-mark-02.png,Paper background removed algorithmically from raster crop.,"1198,155,1230,190"
+03-icons-doodles,question-mark-03 source crop,source crop png,03-icons-doodles/source-crops/question-mark-03__source.png,Exact crop from raster source image.,"1235,155,1263,190"
+03-icons-doodles,question-mark-03,transparent png,03-icons-doodles/transparent-png/question-mark-03.png,Paper background removed algorithmically from raster crop.,"1235,155,1263,190"
+03-icons-doodles,code-brackets source crop,source crop png,03-icons-doodles/source-crops/code-brackets__source.png,Exact crop from raster source image.,"1015,204,1050,245"
+03-icons-doodles,code-brackets,transparent png,03-icons-doodles/transparent-png/code-brackets.png,Paper background removed algorithmically from raster crop.,"1015,204,1050,245"
+03-icons-doodles,terminal-window source crop,source crop png,03-icons-doodles/source-crops/terminal-window__source.png,Exact crop from raster source image.,"1065,204,1110,244"
+03-icons-doodles,terminal-window,transparent png,03-icons-doodles/transparent-png/terminal-window.png,Paper background removed algorithmically from raster crop.,"1065,204,1110,244"
+03-icons-doodles,gear source crop,source crop png,03-icons-doodles/source-crops/gear__source.png,Exact crop from raster source image.,"1120,205,1155,244"
+03-icons-doodles,gear,transparent png,03-icons-doodles/transparent-png/gear.png,Paper background removed algorithmically from raster crop.,"1120,205,1155,244"
+03-icons-doodles,cloud source crop,source crop png,03-icons-doodles/source-crops/cloud__source.png,Exact crop from raster source image.,"1160,205,1198,244"
+03-icons-doodles,cloud,transparent png,03-icons-doodles/transparent-png/cloud.png,Paper background removed algorithmically from raster crop.,"1160,205,1198,244"
+03-icons-doodles,cloud-upload source crop,source crop png,03-icons-doodles/source-crops/cloud-upload__source.png,Exact crop from raster source image.,"1200,205,1238,244"
+03-icons-doodles,cloud-upload,transparent png,03-icons-doodles/transparent-png/cloud-upload.png,Paper background removed algorithmically from raster crop.,"1200,205,1238,244"
+03-icons-doodles,globe source crop,source crop png,03-icons-doodles/source-crops/globe__source.png,Exact crop from raster source image.,"1238,205,1265,244"
+03-icons-doodles,globe,transparent png,03-icons-doodles/transparent-png/globe.png,Paper background removed algorithmically from raster crop.,"1238,205,1265,244"
+03-icons-doodles,database source crop,source crop png,03-icons-doodles/source-crops/database__source.png,Exact crop from raster source image.,"1016,255,1047,292"
+03-icons-doodles,database,transparent png,03-icons-doodles/transparent-png/database.png,Paper background removed algorithmically from raster crop.,"1016,255,1047,292"
+03-icons-doodles,cube source crop,source crop png,03-icons-doodles/source-crops/cube__source.png,Exact crop from raster source image.,"1068,253,1105,292"
+03-icons-doodles,cube,transparent png,03-icons-doodles/transparent-png/cube.png,Paper background removed algorithmically from raster crop.,"1068,253,1105,292"
+03-icons-doodles,puzzle source crop,source crop png,03-icons-doodles/source-crops/puzzle__source.png,Exact crop from raster source image.,"1120,253,1155,292"
+03-icons-doodles,puzzle,transparent png,03-icons-doodles/transparent-png/puzzle.png,Paper background removed algorithmically from raster crop.,"1120,253,1155,292"
+03-icons-doodles,org-chart-01 source crop,source crop png,03-icons-doodles/source-crops/org-chart-01__source.png,Exact crop from raster source image.,"1165,252,1195,293"
+03-icons-doodles,org-chart-01,transparent png,03-icons-doodles/transparent-png/org-chart-01.png,Paper background removed algorithmically from raster crop.,"1165,252,1195,293"
+03-icons-doodles,org-chart-02 source crop,source crop png,03-icons-doodles/source-crops/org-chart-02__source.png,Exact crop from raster source image.,"1205,252,1238,293"
+03-icons-doodles,org-chart-02,transparent png,03-icons-doodles/transparent-png/org-chart-02.png,Paper background removed algorithmically from raster crop.,"1205,252,1238,293"
+03-icons-doodles,network-nodes source crop,source crop png,03-icons-doodles/source-crops/network-nodes__source.png,Exact crop from raster source image.,"1240,252,1266,293"
+03-icons-doodles,network-nodes,transparent png,03-icons-doodles/transparent-png/network-nodes.png,Paper background removed algorithmically from raster crop.,"1240,252,1266,293"
+03-icons-doodles,rocket source crop,source crop png,03-icons-doodles/source-crops/rocket__source.png,Exact crop from raster source image.,"1015,308,1047,350"
+03-icons-doodles,rocket,transparent png,03-icons-doodles/transparent-png/rocket.png,Paper background removed algorithmically from raster crop.,"1015,308,1047,350"
+03-icons-doodles,paper-plane source crop,source crop png,03-icons-doodles/source-crops/paper-plane__source.png,Exact crop from raster source image.,"1066,310,1106,347"
+03-icons-doodles,paper-plane,transparent png,03-icons-doodles/transparent-png/paper-plane.png,Paper background removed algorithmically from raster crop.,"1066,310,1106,347"
+03-icons-doodles,mail source crop,source crop png,03-icons-doodles/source-crops/mail__source.png,Exact crop from raster source image.,"1118,312,1157,342"
+03-icons-doodles,mail,transparent png,03-icons-doodles/transparent-png/mail.png,Paper background removed algorithmically from raster crop.,"1118,312,1157,342"
+03-icons-doodles,at-sign source crop,source crop png,03-icons-doodles/source-crops/at-sign__source.png,Exact crop from raster source image.,"1168,309,1198,346"
+03-icons-doodles,at-sign,transparent png,03-icons-doodles/transparent-png/at-sign.png,Paper background removed algorithmically from raster crop.,"1168,309,1198,346"
+03-icons-doodles,phone source crop,source crop png,03-icons-doodles/source-crops/phone__source.png,Exact crop from raster source image.,"1208,309,1238,347"
+03-icons-doodles,phone,transparent png,03-icons-doodles/transparent-png/phone.png,Paper background removed algorithmically from raster crop.,"1208,309,1238,347"
+03-icons-doodles,location-pin source crop,source crop png,03-icons-doodles/source-crops/location-pin__source.png,Exact crop from raster source image.,"1242,309,1265,347"
+03-icons-doodles,location-pin,transparent png,03-icons-doodles/transparent-png/location-pin.png,Paper background removed algorithmically from raster crop.,"1242,309,1265,347"
+03-icons-doodles,scribble-blue-top source crop,source crop png,03-icons-doodles/source-crops/scribble-blue-top__source.png,Exact crop from raster source image.,"1014,360,1062,380"
+03-icons-doodles,scribble-blue-top,transparent png,03-icons-doodles/transparent-png/scribble-blue-top.png,Paper background removed algorithmically from raster crop.,"1014,360,1062,380"
+03-icons-doodles,scribble-green-top source crop,source crop png,03-icons-doodles/source-crops/scribble-green-top__source.png,Exact crop from raster source image.,"1074,360,1122,380"
+03-icons-doodles,scribble-green-top,transparent png,03-icons-doodles/transparent-png/scribble-green-top.png,Paper background removed algorithmically from raster crop.,"1074,360,1122,380"
+03-icons-doodles,scribble-blue-top-2 source crop,source crop png,03-icons-doodles/source-crops/scribble-blue-top-2__source.png,Exact crop from raster source image.,"1132,360,1182,380"
+03-icons-doodles,scribble-blue-top-2,transparent png,03-icons-doodles/transparent-png/scribble-blue-top-2.png,Paper background removed algorithmically from raster crop.,"1132,360,1182,380"
+03-icons-doodles,scribble-black-top source crop,source crop png,03-icons-doodles/source-crops/scribble-black-top__source.png,Exact crop from raster source image.,"1192,360,1238,380"
+03-icons-doodles,scribble-black-top,transparent png,03-icons-doodles/transparent-png/scribble-black-top.png,Paper background removed algorithmically from raster crop.,"1192,360,1238,380"
+03-icons-doodles,scribble-orange-bottom source crop,source crop png,03-icons-doodles/source-crops/scribble-orange-bottom__source.png,Exact crop from raster source image.,"1014,386,1062,405"
+03-icons-doodles,scribble-orange-bottom,transparent png,03-icons-doodles/transparent-png/scribble-orange-bottom.png,Paper background removed algorithmically from raster crop.,"1014,386,1062,405"
+03-icons-doodles,scribble-blue-bottom source crop,source crop png,03-icons-doodles/source-crops/scribble-blue-bottom__source.png,Exact crop from raster source image.,"1074,386,1122,405"
+03-icons-doodles,scribble-blue-bottom,transparent png,03-icons-doodles/transparent-png/scribble-blue-bottom.png,Paper background removed algorithmically from raster crop.,"1074,386,1122,405"
+03-icons-doodles,scribble-yellow-bottom source crop,source crop png,03-icons-doodles/source-crops/scribble-yellow-bottom__source.png,Exact crop from raster source image.,"1132,386,1182,405"
+03-icons-doodles,scribble-yellow-bottom,transparent png,03-icons-doodles/transparent-png/scribble-yellow-bottom.png,Paper background removed algorithmically from raster crop.,"1132,386,1182,405"
+03-icons-doodles,scribble-purple-bottom source crop,source crop png,03-icons-doodles/source-crops/scribble-purple-bottom__source.png,Exact crop from raster source image.,"1192,386,1238,405"
+03-icons-doodles,scribble-purple-bottom,transparent png,03-icons-doodles/transparent-png/scribble-purple-bottom.png,Paper background removed algorithmically from raster crop.,"1192,386,1238,405"
+04-hand-drawn-ui-elements,paperclip,svg,04-hand-drawn-ui-elements/svg/paperclip.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,paperclip,png preview,04-hand-drawn-ui-elements/png/paperclip.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,pushpin-red,svg,04-hand-drawn-ui-elements/svg/pushpin-red.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,pushpin-red,png preview,04-hand-drawn-ui-elements/png/pushpin-red.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,pushpin-blue,svg,04-hand-drawn-ui-elements/svg/pushpin-blue.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,pushpin-blue,png preview,04-hand-drawn-ui-elements/png/pushpin-blue.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,pushpin-yellow,svg,04-hand-drawn-ui-elements/svg/pushpin-yellow.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,pushpin-yellow,png preview,04-hand-drawn-ui-elements/png/pushpin-yellow.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,pushpin-green,svg,04-hand-drawn-ui-elements/svg/pushpin-green.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,pushpin-green,png preview,04-hand-drawn-ui-elements/png/pushpin-green.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,speech-bubble,svg,04-hand-drawn-ui-elements/svg/speech-bubble.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,speech-bubble,png preview,04-hand-drawn-ui-elements/png/speech-bubble.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,cloud-bubble,svg,04-hand-drawn-ui-elements/svg/cloud-bubble.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,cloud-bubble,png preview,04-hand-drawn-ui-elements/png/cloud-bubble.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,rectangle-bubble,svg,04-hand-drawn-ui-elements/svg/rectangle-bubble.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,rectangle-bubble,png preview,04-hand-drawn-ui-elements/png/rectangle-bubble.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,arrow-curved-right,svg,04-hand-drawn-ui-elements/svg/arrow-curved-right.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,arrow-curved-right,png preview,04-hand-drawn-ui-elements/png/arrow-curved-right.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,arrow-curved-left,svg,04-hand-drawn-ui-elements/svg/arrow-curved-left.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,arrow-curved-left,png preview,04-hand-drawn-ui-elements/png/arrow-curved-left.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,arrow-dashed,svg,04-hand-drawn-ui-elements/svg/arrow-dashed.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,arrow-dashed,png preview,04-hand-drawn-ui-elements/png/arrow-dashed.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,cursor,svg,04-hand-drawn-ui-elements/svg/cursor.svg,Clean recreated vector asset matching visible doodle style.,
+04-hand-drawn-ui-elements,cursor,png preview,04-hand-drawn-ui-elements/png/cursor.png,PNG render of SVG asset.,
+04-hand-drawn-ui-elements,tape-strip,svg,04-hand-drawn-ui-elements/svg/tape-strip.svg,Recreated vector texture/UI primitive.,
+04-hand-drawn-ui-elements,tape-strip,png preview,04-hand-drawn-ui-elements/png/tape-strip.png,,
+04-hand-drawn-ui-elements,torn-paper,svg,04-hand-drawn-ui-elements/svg/torn-paper.svg,Recreated vector texture/UI primitive.,
+04-hand-drawn-ui-elements,torn-paper,png preview,04-hand-drawn-ui-elements/png/torn-paper.png,,
+04-hand-drawn-ui-elements,notebook-paper,svg,04-hand-drawn-ui-elements/svg/notebook-paper.svg,Recreated vector texture/UI primitive.,
+04-hand-drawn-ui-elements,notebook-paper,png preview,04-hand-drawn-ui-elements/png/notebook-paper.png,,
+04-hand-drawn-ui-elements,sticky-note-blank,svg,04-hand-drawn-ui-elements/svg/sticky-note-blank.svg,Recreated vector asset.,
+04-hand-drawn-ui-elements,sticky-note-blank,png preview,04-hand-drawn-ui-elements/png/sticky-note-blank.png,,
+04-hand-drawn-ui-elements,lined-notebook-paper,svg,04-hand-drawn-ui-elements/svg/lined-notebook-paper.svg,Recreated vector asset.,
+04-hand-drawn-ui-elements,lined-notebook-paper,png preview,04-hand-drawn-ui-elements/png/lined-notebook-paper.png,,
+04-hand-drawn-ui-elements,button-outline-black,svg,04-hand-drawn-ui-elements/svg/button-outline-black.svg,Recreated vector asset.,
+04-hand-drawn-ui-elements,button-outline-black,png preview,04-hand-drawn-ui-elements/png/button-outline-black.png,,
+04-hand-drawn-ui-elements,button-outline-red,svg,04-hand-drawn-ui-elements/svg/button-outline-red.svg,Recreated vector asset.,
+04-hand-drawn-ui-elements,button-outline-red,png preview,04-hand-drawn-ui-elements/png/button-outline-red.png,,
+04-hand-drawn-ui-elements,sticky-note-blank-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/sticky-note-blank-source__source.png,Exact crop from raster source image.,"1281,47,1368,151"
+04-hand-drawn-ui-elements,sticky-note-blank-source,transparent png,04-hand-drawn-ui-elements/transparent-png/sticky-note-blank-source.png,Paper background removed algorithmically from raster crop.,"1281,47,1368,151"
+04-hand-drawn-ui-elements,lined-notebook-paper-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/lined-notebook-paper-source__source.png,Exact crop from raster source image.,"1372,47,1485,151"
+04-hand-drawn-ui-elements,lined-notebook-paper-source,transparent png,04-hand-drawn-ui-elements/transparent-png/lined-notebook-paper-source.png,Paper background removed algorithmically from raster crop.,"1372,47,1485,151"
+04-hand-drawn-ui-elements,tape-strip-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/tape-strip-source__source.png,Exact crop from raster source image.,"1280,172,1375,205"
+04-hand-drawn-ui-elements,tape-strip-source,transparent png,04-hand-drawn-ui-elements/transparent-png/tape-strip-source.png,Paper background removed algorithmically from raster crop.,"1280,172,1375,205"
+04-hand-drawn-ui-elements,pushpins-row-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/pushpins-row-source__source.png,Exact crop from raster source image.,"1378,160,1498,221"
+04-hand-drawn-ui-elements,pushpins-row-source,transparent png,04-hand-drawn-ui-elements/transparent-png/pushpins-row-source.png,Paper background removed algorithmically from raster crop.,"1378,160,1498,221"
+04-hand-drawn-ui-elements,paperclip-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/paperclip-source__source.png,Exact crop from raster source image.,"1502,135,1530,204"
+04-hand-drawn-ui-elements,paperclip-source,transparent png,04-hand-drawn-ui-elements/transparent-png/paperclip-source.png,Paper background removed algorithmically from raster crop.,"1502,135,1530,204"
+04-hand-drawn-ui-elements,speech-bubble-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/speech-bubble-source__source.png,Exact crop from raster source image.,"1280,262,1358,324"
+04-hand-drawn-ui-elements,speech-bubble-source,transparent png,04-hand-drawn-ui-elements/transparent-png/speech-bubble-source.png,Paper background removed algorithmically from raster crop.,"1280,262,1358,324"
+04-hand-drawn-ui-elements,cloud-bubble-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/cloud-bubble-source__source.png,Exact crop from raster source image.,"1367,262,1452,324"
+04-hand-drawn-ui-elements,cloud-bubble-source,transparent png,04-hand-drawn-ui-elements/transparent-png/cloud-bubble-source.png,Paper background removed algorithmically from raster crop.,"1367,262,1452,324"
+04-hand-drawn-ui-elements,rectangle-bubble-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/rectangle-bubble-source__source.png,Exact crop from raster source image.,"1456,262,1526,324"
+04-hand-drawn-ui-elements,rectangle-bubble-source,transparent png,04-hand-drawn-ui-elements/transparent-png/rectangle-bubble-source.png,Paper background removed algorithmically from raster crop.,"1456,262,1526,324"
+04-hand-drawn-ui-elements,buttons-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/buttons-source__source.png,Exact crop from raster source image.,"1280,330,1518,371"
+04-hand-drawn-ui-elements,buttons-source,transparent png,04-hand-drawn-ui-elements/transparent-png/buttons-source.png,Paper background removed algorithmically from raster crop.,"1280,330,1518,371"
+04-hand-drawn-ui-elements,dashed-arrows-and-cursor-source source crop,source crop png,04-hand-drawn-ui-elements/source-crops/dashed-arrows-and-cursor-source__source.png,Exact crop from raster source image.,"1278,378,1534,410"
+04-hand-drawn-ui-elements,dashed-arrows-and-cursor-source,transparent png,04-hand-drawn-ui-elements/transparent-png/dashed-arrows-and-cursor-source.png,Paper background removed algorithmically from raster crop.,"1278,378,1534,410"
+05-typography,wordmark-nikhil-arethiya-source source crop,source crop png,05-typography/source-crops/wordmark-nikhil-arethiya-source__source.png,Exact crop from raster source image.,"680,468,800,555"
+05-typography,wordmark-nikhil-arethiya-source,transparent png,05-typography/transparent-png/wordmark-nikhil-arethiya-source.png,Paper background removed algorithmically from raster crop.,"680,468,800,555"
+05-typography,the-journey-heading-source source crop,source crop png,05-typography/source-crops/the-journey-heading-source__source.png,Exact crop from raster source image.,"680,555,790,610"
+05-typography,the-journey-heading-source,transparent png,05-typography/transparent-png/the-journey-heading-source.png,Paper background removed algorithmically from raster crop.,"680,555,790,610"
+05-typography,heading-subheading-body-specimen-source source crop,source crop png,05-typography/source-crops/heading-subheading-body-specimen-source__source.png,Exact crop from raster source image.,"810,468,985,612"
+05-typography,heading-subheading-body-specimen-source,transparent png,05-typography/transparent-png/heading-subheading-body-specimen-source.png,Paper background removed algorithmically from raster crop.,"810,468,985,612"
+05-typography,wordmark-nikhil-arethiya,svg,05-typography/svg/wordmark-nikhil-arethiya.svg,Recreated vector asset.,
+05-typography,wordmark-nikhil-arethiya,png preview,05-typography/png/wordmark-nikhil-arethiya.png,,
+05-typography,section-heading-the-journey,svg,05-typography/svg/section-heading-the-journey.svg,Recreated vector asset.,
+05-typography,section-heading-the-journey,png preview,05-typography/png/section-heading-the-journey.png,,
+05-typography,typography specimen html,html,05-typography/html/typography-specimen.html,,
+06-color-palette,color tokens json,json,06-color-palette/tokens/colors.json,,
+06-color-palette,color tokens css,css,06-color-palette/tokens/colors.css,,
+06-color-palette,color paper,svg,06-color-palette/svg/color-paper.svg,#F8F2E7,
+06-color-palette,color paper,png,06-color-palette/png/color-paper.png,#F8F2E7,
+06-color-palette,color ink,svg,06-color-palette/svg/color-ink.svg,#242423,
+06-color-palette,color ink,png,06-color-palette/png/color-ink.png,#242423,
+06-color-palette,color blue,svg,06-color-palette/svg/color-blue.svg,#2B7FFB,
+06-color-palette,color blue,png,06-color-palette/png/color-blue.png,#2B7FFB,
+06-color-palette,color orange,svg,06-color-palette/svg/color-orange.svg,#F1A108,
+06-color-palette,color orange,png,06-color-palette/png/color-orange.png,#F1A108,
+06-color-palette,color red,svg,06-color-palette/svg/color-red.svg,#E55539,
+06-color-palette,color red,png,06-color-palette/png/color-red.png,#E55539,
+06-color-palette,color green,svg,06-color-palette/svg/color-green.svg,#1BAB72,
+06-color-palette,color green,png,06-color-palette/png/color-green.png,#1BAB72,
+06-color-palette,color purple,svg,06-color-palette/svg/color-purple.svg,#9864DD,
+06-color-palette,color purple,png,06-color-palette/png/color-purple.png,#9864DD,
+06-color-palette,color gray,svg,06-color-palette/svg/color-gray.svg,#757B81,
+06-color-palette,color gray,png,06-color-palette/png/color-gray.png,#757B81,
+06-color-palette,color yellow_note,svg,06-color-palette/svg/color-yellow_note.svg,#F6D982,
+06-color-palette,color yellow_note,png,06-color-palette/png/color-yellow_note.png,#F6D982,
+06-color-palette,color tape,svg,06-color-palette/svg/color-tape.svg,#D7BA73,
+06-color-palette,color tape,png,06-color-palette/png/color-tape.png,#D7BA73,
+06-color-palette,color tab_orange,svg,06-color-palette/svg/color-tab_orange.svg,#EAA65E,
+06-color-palette,color tab_orange,png,06-color-palette/png/color-tab_orange.png,#EAA65E,
+06-color-palette,color tab_yellow,svg,06-color-palette/svg/color-tab_yellow.svg,#EEDC8D,
+06-color-palette,color tab_yellow,png,06-color-palette/png/color-tab_yellow.png,#EEDC8D,
+06-color-palette,color tab_green,svg,06-color-palette/svg/color-tab_green.svg,#A9C786,
+06-color-palette,color tab_green,png,06-color-palette/png/color-tab_green.png,#A9C786,
+06-color-palette,color tab_blue,svg,06-color-palette/svg/color-tab_blue.svg,#8FC4E8,
+06-color-palette,color tab_blue,png,06-color-palette/png/color-tab_blue.png,#8FC4E8,
+06-color-palette,color tab_purple,svg,06-color-palette/svg/color-tab_purple.svg,#C59AE6,
+06-color-palette,color tab_purple,png,06-color-palette/png/color-tab_purple.png,#C59AE6,
+06-color-palette,full color palette,svg,06-color-palette/svg/full-color-palette.svg,,
+06-color-palette,source-color-swatch-row source crop,source crop png,06-color-palette/source-crops/source-color-swatch-row__source.png,Exact crop from raster source image.,"665,688,990,752"
+07-ui-cards-components,project-card-source source crop,source crop png,07-ui-cards-components/source-crops/project-card-source__source.png,Exact crop from raster source image.,"1010,455,1155,694"
+07-ui-cards-components,project-card-source,transparent png,07-ui-cards-components/transparent-png/project-card-source.png,Paper background removed algorithmically from raster crop.,"1010,455,1155,694"
+07-ui-cards-components,skill-badge-source source crop,source crop png,07-ui-cards-components/source-crops/skill-badge-source__source.png,Exact crop from raster source image.,"1205,465,1305,555"
+07-ui-cards-components,skill-badge-source,transparent png,07-ui-cards-components/transparent-png/skill-badge-source.png,Paper background removed algorithmically from raster crop.,"1205,465,1305,555"
+07-ui-cards-components,sticky-note-checklist-source source crop,source crop png,07-ui-cards-components/source-crops/sticky-note-checklist-source__source.png,Exact crop from raster source image.,"1358,462,1468,612"
+07-ui-cards-components,sticky-note-checklist-source,transparent png,07-ui-cards-components/transparent-png/sticky-note-checklist-source.png,Paper background removed algorithmically from raster crop.,"1358,462,1468,612"
+07-ui-cards-components,notebook-section-title-source source crop,source crop png,07-ui-cards-components/source-crops/notebook-section-title-source__source.png,Exact crop from raster source image.,"1180,615,1310,695"
+07-ui-cards-components,notebook-section-title-source,transparent png,07-ui-cards-components/transparent-png/notebook-section-title-source.png,Paper background removed algorithmically from raster crop.,"1180,615,1310,695"
+07-ui-cards-components,step-box-source source crop,source crop png,07-ui-cards-components/source-crops/step-box-source__source.png,Exact crop from raster source image.,"1350,650,1522,728"
+07-ui-cards-components,step-box-source,transparent png,07-ui-cards-components/transparent-png/step-box-source.png,Paper background removed algorithmically from raster crop.,"1350,650,1522,728"
+07-ui-cards-components,project-card-template,svg,07-ui-cards-components/svg/project-card-template.svg,Recreated vector asset.,
+07-ui-cards-components,project-card-template,png preview,07-ui-cards-components/png/project-card-template.png,,
+07-ui-cards-components,skill-badge-javascript,svg,07-ui-cards-components/svg/skill-badge-javascript.svg,Recreated vector asset.,
+07-ui-cards-components,skill-badge-javascript,png preview,07-ui-cards-components/png/skill-badge-javascript.png,,
+07-ui-cards-components,sticky-note-checklist,svg,07-ui-cards-components/svg/sticky-note-checklist.svg,Recreated vector asset.,
+07-ui-cards-components,sticky-note-checklist,png preview,07-ui-cards-components/png/sticky-note-checklist.png,,
+07-ui-cards-components,notebook-section-title,svg,07-ui-cards-components/svg/notebook-section-title.svg,Recreated vector asset.,
+07-ui-cards-components,notebook-section-title,png preview,07-ui-cards-components/png/notebook-section-title.png,,
+07-ui-cards-components,journey-step-box-template,svg,07-ui-cards-components/svg/journey-step-box-template.svg,Recreated vector asset.,
+07-ui-cards-components,journey-step-box-template,png preview,07-ui-cards-components/png/journey-step-box-template.png,,
+07-ui-cards-components,component preview html,html,07-ui-cards-components/html/component-preview.html,,
+08-textures-background,paper-texture,svg,08-textures-background/svg/paper-texture.svg,Recreated reusable texture/background element.,
+08-textures-background,paper-texture,png preview,08-textures-background/png/paper-texture.png,,
+08-textures-background,notebook-paper,svg,08-textures-background/svg/notebook-paper.svg,Recreated reusable texture/background element.,
+08-textures-background,notebook-paper,png preview,08-textures-background/png/notebook-paper.png,,
+08-textures-background,notebook-binding,svg,08-textures-background/svg/notebook-binding.svg,Recreated reusable texture/background element.,
+08-textures-background,notebook-binding,png preview,08-textures-background/png/notebook-binding.png,,
+08-textures-background,tape-strip,svg,08-textures-background/svg/tape-strip.svg,Recreated reusable texture/background element.,
+08-textures-background,tape-strip,png preview,08-textures-background/png/tape-strip.png,,
+08-textures-background,torn-paper,svg,08-textures-background/svg/torn-paper.svg,Recreated reusable texture/background element.,
+08-textures-background,torn-paper,png preview,08-textures-background/png/torn-paper.png,,
+08-textures-background,graphite-hatching,svg,08-textures-background/svg/graphite-hatching.svg,Recreated reusable texture/background element.,
+08-textures-background,graphite-hatching,png preview,08-textures-background/png/graphite-hatching.png,,
+08-textures-background,watercolor-wash-blue,svg,08-textures-background/svg/watercolor-wash-blue.svg,Recreated reusable texture/background element.,
+08-textures-background,watercolor-wash-blue,png preview,08-textures-background/png/watercolor-wash-blue.png,,
+08-textures-background,grid-paper,svg,08-textures-background/svg/grid-paper.svg,Recreated reusable texture/background element.,
+08-textures-background,grid-paper,png preview,08-textures-background/png/grid-paper.png,,
+08-textures-background,textures css,css,08-textures-background/css/textures.css,,
+08-textures-background,notebook-paper-texture-source source crop,source crop png,08-textures-background/source-crops/notebook-paper-texture-source__source.png,Exact crop from raster source image.,"1028,780,1165,866"
+08-textures-background,notebook-paper-texture-source,transparent png,08-textures-background/transparent-png/notebook-paper-texture-source.png,Paper background removed algorithmically from raster crop.,"1028,780,1165,866"
+08-textures-background,torn-paper-texture-source source crop,source crop png,08-textures-background/source-crops/torn-paper-texture-source__source.png,Exact crop from raster source image.,"1180,778,1308,856"
+08-textures-background,torn-paper-texture-source,transparent png,08-textures-background/transparent-png/torn-paper-texture-source.png,Paper background removed algorithmically from raster crop.,"1180,778,1308,856"
+08-textures-background,graphite-hatching-light-source source crop,source crop png,08-textures-background/source-crops/graphite-hatching-light-source__source.png,Exact crop from raster source image.,"1325,785,1408,845"
+08-textures-background,graphite-hatching-light-source,transparent png,08-textures-background/transparent-png/graphite-hatching-light-source.png,Paper background removed algorithmically from raster crop.,"1325,785,1408,845"
+08-textures-background,graphite-hatching-dark-source source crop,source crop png,08-textures-background/source-crops/graphite-hatching-dark-source__source.png,Exact crop from raster source image.,"1420,785,1518,845"
+08-textures-background,graphite-hatching-dark-source,transparent png,08-textures-background/transparent-png/graphite-hatching-dark-source.png,Paper background removed algorithmically from raster crop.,"1420,785,1518,845"
+08-textures-background,thin-pencil-lines-source source crop,source crop png,08-textures-background/source-crops/thin-pencil-lines-source__source.png,Exact crop from raster source image.,"1210,862,1500,880"
+08-textures-background,thin-pencil-lines-source,transparent png,08-textures-background/transparent-png/thin-pencil-lines-source.png,Paper background removed algorithmically from raster crop.,"1210,862,1500,880"
+09-buttons-nav-tabs,nav-tab-home,svg,09-buttons-nav-tabs/svg/nav-tab-home.svg,Recreated vector asset.,
+09-buttons-nav-tabs,nav-tab-home,png preview,09-buttons-nav-tabs/png/nav-tab-home.png,,
+09-buttons-nav-tabs,nav-tab-about,svg,09-buttons-nav-tabs/svg/nav-tab-about.svg,Recreated vector asset.,
+09-buttons-nav-tabs,nav-tab-about,png preview,09-buttons-nav-tabs/png/nav-tab-about.png,,
+09-buttons-nav-tabs,nav-tab-projects,svg,09-buttons-nav-tabs/svg/nav-tab-projects.svg,Recreated vector asset.,
+09-buttons-nav-tabs,nav-tab-projects,png preview,09-buttons-nav-tabs/png/nav-tab-projects.png,,
+09-buttons-nav-tabs,nav-tab-sketchbook,svg,09-buttons-nav-tabs/svg/nav-tab-sketchbook.svg,Recreated vector asset.,
+09-buttons-nav-tabs,nav-tab-sketchbook,png preview,09-buttons-nav-tabs/png/nav-tab-sketchbook.png,,
+09-buttons-nav-tabs,nav-tab-contact,svg,09-buttons-nav-tabs/svg/nav-tab-contact.svg,Recreated vector asset.,
+09-buttons-nav-tabs,nav-tab-contact,png preview,09-buttons-nav-tabs/png/nav-tab-contact.png,,
+09-buttons-nav-tabs,button-open-reel-red,svg,09-buttons-nav-tabs/svg/button-open-reel-red.svg,Recreated vector asset.,
+09-buttons-nav-tabs,button-open-reel-red,png preview,09-buttons-nav-tabs/png/button-open-reel-red.png,,
+09-buttons-nav-tabs,button-browse-sketchbook,svg,09-buttons-nav-tabs/svg/button-browse-sketchbook.svg,Recreated vector asset.,
+09-buttons-nav-tabs,button-browse-sketchbook,png preview,09-buttons-nav-tabs/png/button-browse-sketchbook.png,,
+09-buttons-nav-tabs,button-view-finished-work,svg,09-buttons-nav-tabs/svg/button-view-finished-work.svg,Recreated vector asset.,
+09-buttons-nav-tabs,button-view-finished-work,png preview,09-buttons-nav-tabs/png/button-view-finished-work.png,,
+09-buttons-nav-tabs,nav-tabs-row-source source crop,source crop png,09-buttons-nav-tabs/source-crops/nav-tabs-row-source__source.png,Exact crop from raster source image.,"1030,928,1526,968"
+09-buttons-nav-tabs,nav-tabs-row-source,transparent png,09-buttons-nav-tabs/transparent-png/nav-tabs-row-source.png,Paper background removed algorithmically from raster crop.,"1030,928,1526,968"
+09-buttons-nav-tabs,nav-tab-home-source source crop,source crop png,09-buttons-nav-tabs/source-crops/nav-tab-home-source__source.png,Exact crop from raster source image.,"1030,928,1124,968"
+09-buttons-nav-tabs,nav-tab-home-source,transparent png,09-buttons-nav-tabs/transparent-png/nav-tab-home-source.png,Paper background removed algorithmically from raster crop.,"1030,928,1124,968"
+09-buttons-nav-tabs,nav-tab-about-source source crop,source crop png,09-buttons-nav-tabs/source-crops/nav-tab-about-source__source.png,Exact crop from raster source image.,"1124,928,1214,968"
+09-buttons-nav-tabs,nav-tab-about-source,transparent png,09-buttons-nav-tabs/transparent-png/nav-tab-about-source.png,Paper background removed algorithmically from raster crop.,"1124,928,1214,968"
+09-buttons-nav-tabs,nav-tab-projects-source source crop,source crop png,09-buttons-nav-tabs/source-crops/nav-tab-projects-source__source.png,Exact crop from raster source image.,"1214,928,1319,968"
+09-buttons-nav-tabs,nav-tab-projects-source,transparent png,09-buttons-nav-tabs/transparent-png/nav-tab-projects-source.png,Paper background removed algorithmically from raster crop.,"1214,928,1319,968"
+09-buttons-nav-tabs,nav-tab-sketchbook-source source crop,source crop png,09-buttons-nav-tabs/source-crops/nav-tab-sketchbook-source__source.png,Exact crop from raster source image.,"1319,928,1428,968"
+09-buttons-nav-tabs,nav-tab-sketchbook-source,transparent png,09-buttons-nav-tabs/transparent-png/nav-tab-sketchbook-source.png,Paper background removed algorithmically from raster crop.,"1319,928,1428,968"
+09-buttons-nav-tabs,nav-tab-contact-source source crop,source crop png,09-buttons-nav-tabs/source-crops/nav-tab-contact-source__source.png,Exact crop from raster source image.,"1428,928,1526,968"
+09-buttons-nav-tabs,nav-tab-contact-source,transparent png,09-buttons-nav-tabs/transparent-png/nav-tab-contact-source.png,Paper background removed algorithmically from raster crop.,"1428,928,1526,968"
+09-buttons-nav-tabs,buttons-row-source source crop,source crop png,09-buttons-nav-tabs/source-crops/buttons-row-source__source.png,Exact crop from raster source image.,"1052,977,1525,1009"
+09-buttons-nav-tabs,buttons-row-source,transparent png,09-buttons-nav-tabs/transparent-png/buttons-row-source.png,Paper background removed algorithmically from raster crop.,"1052,977,1525,1009"
+09-buttons-nav-tabs,button-open-reel-source source crop,source crop png,09-buttons-nav-tabs/source-crops/button-open-reel-source__source.png,Exact crop from raster source image.,"1052,977,1166,1009"
+09-buttons-nav-tabs,button-open-reel-source,transparent png,09-buttons-nav-tabs/transparent-png/button-open-reel-source.png,Paper background removed algorithmically from raster crop.,"1052,977,1166,1009"
+09-buttons-nav-tabs,button-browse-sketchbook-source source crop,source crop png,09-buttons-nav-tabs/source-crops/button-browse-sketchbook-source__source.png,Exact crop from raster source image.,"1190,977,1346,1009"
+09-buttons-nav-tabs,button-browse-sketchbook-source,transparent png,09-buttons-nav-tabs/transparent-png/button-browse-sketchbook-source.png,Paper background removed algorithmically from raster crop.,"1190,977,1346,1009"
+09-buttons-nav-tabs,button-view-finished-work-source source crop,source crop png,09-buttons-nav-tabs/source-crops/button-view-finished-work-source__source.png,Exact crop from raster source image.,"1370,977,1525,1009"
+09-buttons-nav-tabs,button-view-finished-work-source,transparent png,09-buttons-nav-tabs/transparent-png/button-view-finished-work-source.png,Paper background removed algorithmically from raster crop.,"1370,977,1525,1009"
+01-homepage-layout,tech-python,svg,01-homepage-layout/svg-recreated/tech-python.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-python,png preview,01-homepage-layout/transparent-png/tech-python.png,,
+01-homepage-layout,tech-javascript,svg,01-homepage-layout/svg-recreated/tech-javascript.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-javascript,png preview,01-homepage-layout/transparent-png/tech-javascript.png,,
+01-homepage-layout,tech-typescript,svg,01-homepage-layout/svg-recreated/tech-typescript.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-typescript,png preview,01-homepage-layout/transparent-png/tech-typescript.png,,
+01-homepage-layout,tech-java,svg,01-homepage-layout/svg-recreated/tech-java.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-java,png preview,01-homepage-layout/transparent-png/tech-java.png,,
+01-homepage-layout,tech-cpp,svg,01-homepage-layout/svg-recreated/tech-cpp.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-cpp,png preview,01-homepage-layout/transparent-png/tech-cpp.png,,
+01-homepage-layout,tech-csharp,svg,01-homepage-layout/svg-recreated/tech-csharp.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-csharp,png preview,01-homepage-layout/transparent-png/tech-csharp.png,,
+01-homepage-layout,tech-react,svg,01-homepage-layout/svg-recreated/tech-react.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-react,png preview,01-homepage-layout/transparent-png/tech-react.png,,
+01-homepage-layout,tech-vue,svg,01-homepage-layout/svg-recreated/tech-vue.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-vue,png preview,01-homepage-layout/transparent-png/tech-vue.png,,
+01-homepage-layout,tech-nodejs,svg,01-homepage-layout/svg-recreated/tech-nodejs.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-nodejs,png preview,01-homepage-layout/transparent-png/tech-nodejs.png,,
+01-homepage-layout,tech-django,svg,01-homepage-layout/svg-recreated/tech-django.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-django,png preview,01-homepage-layout/transparent-png/tech-django.png,,
+01-homepage-layout,tech-fastapi,svg,01-homepage-layout/svg-recreated/tech-fastapi.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-fastapi,png preview,01-homepage-layout/transparent-png/tech-fastapi.png,,
+01-homepage-layout,tech-flask,svg,01-homepage-layout/svg-recreated/tech-flask.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-flask,png preview,01-homepage-layout/transparent-png/tech-flask.png,,
+01-homepage-layout,tech-postgresql,svg,01-homepage-layout/svg-recreated/tech-postgresql.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-postgresql,png preview,01-homepage-layout/transparent-png/tech-postgresql.png,,
+01-homepage-layout,tech-mysql,svg,01-homepage-layout/svg-recreated/tech-mysql.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-mysql,png preview,01-homepage-layout/transparent-png/tech-mysql.png,,
+01-homepage-layout,tech-mongodb,svg,01-homepage-layout/svg-recreated/tech-mongodb.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-mongodb,png preview,01-homepage-layout/transparent-png/tech-mongodb.png,,
+01-homepage-layout,tech-gcp,svg,01-homepage-layout/svg-recreated/tech-gcp.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-gcp,png preview,01-homepage-layout/transparent-png/tech-gcp.png,,
+01-homepage-layout,tech-aws,svg,01-homepage-layout/svg-recreated/tech-aws.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-aws,png preview,01-homepage-layout/transparent-png/tech-aws.png,,
+01-homepage-layout,tech-docker,svg,01-homepage-layout/svg-recreated/tech-docker.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-docker,png preview,01-homepage-layout/transparent-png/tech-docker.png,,
+01-homepage-layout,tech-kubernetes,svg,01-homepage-layout/svg-recreated/tech-kubernetes.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-kubernetes,png preview,01-homepage-layout/transparent-png/tech-kubernetes.png,,
+01-homepage-layout,tech-git,svg,01-homepage-layout/svg-recreated/tech-git.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-git,png preview,01-homepage-layout/transparent-png/tech-git.png,,
+01-homepage-layout,tech-github,svg,01-homepage-layout/svg-recreated/tech-github.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-github,png preview,01-homepage-layout/transparent-png/tech-github.png,,
+01-homepage-layout,tech-cicd,svg,01-homepage-layout/svg-recreated/tech-cicd.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-cicd,png preview,01-homepage-layout/transparent-png/tech-cicd.png,,
+01-homepage-layout,tech-jenkins,svg,01-homepage-layout/svg-recreated/tech-jenkins.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-jenkins,png preview,01-homepage-layout/transparent-png/tech-jenkins.png,,
+01-homepage-layout,tech-redux,svg,01-homepage-layout/svg-recreated/tech-redux.svg,Technology icon vector recreated for toolkit section.,
+01-homepage-layout,tech-redux,png preview,01-homepage-layout/transparent-png/tech-redux.png,,
+03-icons-doodles,tech-python,svg,03-icons-doodles/svg/tech-python.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-python,png preview,03-icons-doodles/png/tech-python.png,,
+03-icons-doodles,tech-javascript,svg,03-icons-doodles/svg/tech-javascript.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-javascript,png preview,03-icons-doodles/png/tech-javascript.png,,
+03-icons-doodles,tech-typescript,svg,03-icons-doodles/svg/tech-typescript.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-typescript,png preview,03-icons-doodles/png/tech-typescript.png,,
+03-icons-doodles,tech-java,svg,03-icons-doodles/svg/tech-java.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-java,png preview,03-icons-doodles/png/tech-java.png,,
+03-icons-doodles,tech-cpp,svg,03-icons-doodles/svg/tech-cpp.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-cpp,png preview,03-icons-doodles/png/tech-cpp.png,,
+03-icons-doodles,tech-csharp,svg,03-icons-doodles/svg/tech-csharp.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-csharp,png preview,03-icons-doodles/png/tech-csharp.png,,
+03-icons-doodles,tech-react,svg,03-icons-doodles/svg/tech-react.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-react,png preview,03-icons-doodles/png/tech-react.png,,
+03-icons-doodles,tech-vue,svg,03-icons-doodles/svg/tech-vue.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-vue,png preview,03-icons-doodles/png/tech-vue.png,,
+03-icons-doodles,tech-nodejs,svg,03-icons-doodles/svg/tech-nodejs.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-nodejs,png preview,03-icons-doodles/png/tech-nodejs.png,,
+03-icons-doodles,tech-django,svg,03-icons-doodles/svg/tech-django.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-django,png preview,03-icons-doodles/png/tech-django.png,,
+03-icons-doodles,tech-fastapi,svg,03-icons-doodles/svg/tech-fastapi.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-fastapi,png preview,03-icons-doodles/png/tech-fastapi.png,,
+03-icons-doodles,tech-flask,svg,03-icons-doodles/svg/tech-flask.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-flask,png preview,03-icons-doodles/png/tech-flask.png,,
+03-icons-doodles,tech-postgresql,svg,03-icons-doodles/svg/tech-postgresql.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-postgresql,png preview,03-icons-doodles/png/tech-postgresql.png,,
+03-icons-doodles,tech-mysql,svg,03-icons-doodles/svg/tech-mysql.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-mysql,png preview,03-icons-doodles/png/tech-mysql.png,,
+03-icons-doodles,tech-mongodb,svg,03-icons-doodles/svg/tech-mongodb.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-mongodb,png preview,03-icons-doodles/png/tech-mongodb.png,,
+03-icons-doodles,tech-gcp,svg,03-icons-doodles/svg/tech-gcp.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-gcp,png preview,03-icons-doodles/png/tech-gcp.png,,
+03-icons-doodles,tech-aws,svg,03-icons-doodles/svg/tech-aws.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-aws,png preview,03-icons-doodles/png/tech-aws.png,,
+03-icons-doodles,tech-docker,svg,03-icons-doodles/svg/tech-docker.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-docker,png preview,03-icons-doodles/png/tech-docker.png,,
+03-icons-doodles,tech-kubernetes,svg,03-icons-doodles/svg/tech-kubernetes.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-kubernetes,png preview,03-icons-doodles/png/tech-kubernetes.png,,
+03-icons-doodles,tech-git,svg,03-icons-doodles/svg/tech-git.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-git,png preview,03-icons-doodles/png/tech-git.png,,
+03-icons-doodles,tech-github,svg,03-icons-doodles/svg/tech-github.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-github,png preview,03-icons-doodles/png/tech-github.png,,
+03-icons-doodles,tech-cicd,svg,03-icons-doodles/svg/tech-cicd.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-cicd,png preview,03-icons-doodles/png/tech-cicd.png,,
+03-icons-doodles,tech-jenkins,svg,03-icons-doodles/svg/tech-jenkins.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-jenkins,png preview,03-icons-doodles/png/tech-jenkins.png,,
+03-icons-doodles,tech-redux,svg,03-icons-doodles/svg/tech-redux.svg,Technology icon vector recreated for toolkit section.,
+03-icons-doodles,tech-redux,png preview,03-icons-doodles/png/tech-redux.png,,
+preview-contact-sheets,01-homepage-layout,contact sheet,preview-contact-sheets/01-homepage-layout-contact-sheet.jpg,,
+preview-contact-sheets,03-icons-doodles,contact sheet,preview-contact-sheets/03-icons-doodles-contact-sheet.jpg,,
+preview-contact-sheets,04-hand-drawn-ui-elements,contact sheet,preview-contact-sheets/04-hand-drawn-ui-elements-contact-sheet.jpg,,
+preview-contact-sheets,05-typography,contact sheet,preview-contact-sheets/05-typography-contact-sheet.jpg,,
+preview-contact-sheets,06-color-palette,contact sheet,preview-contact-sheets/06-color-palette-contact-sheet.jpg,,
+preview-contact-sheets,07-ui-cards-components,contact sheet,preview-contact-sheets/07-ui-cards-components-contact-sheet.jpg,,
+preview-contact-sheets,08-textures-background,contact sheet,preview-contact-sheets/08-textures-background-contact-sheet.jpg,,
+preview-contact-sheets,09-buttons-nav-tabs,contact sheet,preview-contact-sheets/09-buttons-nav-tabs-contact-sheet.jpg,,

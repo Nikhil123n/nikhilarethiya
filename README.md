@@ -1,84 +1,91 @@
 # Sketchbook Scroll-Telling Portfolio
 
-A complete static website codebase for a hand-drawn, sketchbook-style Software Engineer portfolio. It uses the separated SVG/PNG assets generated from the design sheet and avatar package.
+A premium Next.js App Router portfolio migrated from the original static sketchbook site. The new app keeps the paper background, spiral notebook navigation, hand-drawn cards, tape, sticky notes, sketch fonts, project cards, education, skills, contact, and avatar reactions while moving the implementation to React components and typed content files.
 
-## What is included
+The previous static site is preserved at `/legacy/` for rollback and visual parity checks.
 
-- `index.html` - complete single-page portfolio
-- `css/styles.css` - design system, layout, responsive styling, animation states
-- `js/main.js` - scroll-telling state changes, active navigation, cursor-reactive motion, hover tilt
-- `assets/avatars/` - separated avatar illustrations with transparent PNG backgrounds
-- `assets/artifacts/` - all deconstructed icons, doodles, UI elements, cards, textures, typography, nav tabs, and source crops
-- `docs/implementation-notes.md` - developer notes and customization guidance
+## Stack
 
-## Run locally
+- Next.js App Router
+- TypeScript
+- Tailwind CSS v4
+- CSS variables for sketchbook design tokens
+- `next/font` for the sketch font stack
+- `next/image` for local image assets
+- Motion for component reveals and micro-interactions
+- GSAP ScrollTrigger for the Professional Experience journey
 
-Open `index.html` directly in a browser, or run a local static server:
+## Run Locally
 
 ```bash
-npm run build
-python scripts/dev_server.py --port 5173
+npm install
+npm run dev
 ```
 
 Then visit:
 
 ```text
-http://localhost:5173
+http://localhost:3000
 ```
 
-You can also use the npm script:
+Legacy static parity copy:
+
+```text
+http://localhost:3000/legacy/
+```
+
+## Validate
 
 ```bash
-npm run dev
+npm run typecheck
+npm run build
+npm run test:e2e
 ```
 
-No package installation is required.
+`npm run check` runs typechecking and the production build. The Playwright suite starts the app on port `3100` and verifies the migrated sections, reduced-motion experience, mobile road containment, contact constraints, and `/legacy/` fallback in Chromium.
 
-On macOS or Linux, use `python3 scripts/dev_server.py --port 5173` if `python` is not available.
+## Architecture
 
-## Validate changes
+- `src/app/` owns the App Router entry points, metadata, fonts, and global sketchbook design tokens.
+- `src/components/portfolio/` contains the reusable section and interaction components.
+- `src/data/` contains typed, serializable portfolio content and semantic asset aliases.
+- `public/assets/` contains the artwork used by the Next.js app.
+- `public/legacy/` contains the preserved static portfolio for parity checks and rollback.
+- `docs/asset-inventory.md` records the migrated asset taxonomy and app usage.
 
-Before opening a pull request or pushing to `main`, run:
+The portfolio still includes Home, About, Toolkit/Skills, Featured Projects, Professional Experience, Education, Contact, the notebook navigation rail, scene avatar, progress rail, and footer. No legacy section was removed during the migration.
 
-```bash
-npm run check
-```
+## Edit Content
 
-This regenerates the public site config and verifies the local Python dev server parses correctly.
+Content is split by section under `src/data/`:
 
-## Public contact configuration
+- `site.ts` - display name, metadata, social/contact values from `PUBLIC_*` env vars
+- `nav.ts` - notebook navigation and scene avatar captions
+- `projects.ts` - featured project cards
+- `skills.ts` - toolkit groups and certifications
+- `education.ts` - education history
+- `experience.ts` - scroll-driven professional journey entries
+- `assets.ts` - semantic aliases for reused public assets
 
-Direct contact details and social URLs are generated into `js/site-config.js` from environment variables. That generated file is ignored by Git so personal details do not live in repository source.
+All visible text is HTML/JSX text, not generated image text.
 
-Copy `.env.example` to your local environment or set these values in your hosting provider:
+Environment-specific contact and social values use the `PUBLIC_*` variables listed in `.env.example`. These values are rendered in the browser and must not contain secrets.
 
-- `PUBLIC_SITE_DISPLAY_NAME`
-- `PUBLIC_SITE_TITLE`
-- `PUBLIC_SITE_DESCRIPTION`
-- `PUBLIC_GITHUB_URL`
-- `PUBLIC_LINKEDIN_URL`
-- `PUBLIC_CONTACT_EMAIL`
-- `PUBLIC_CONTACT_PHONE`
-- `PUBLIC_CONTACT_FORM_ENDPOINT`
-- `PUBLIC_CONTACT_FORM_METHOD`
+## Animation Responsibilities
 
-These values are intentionally prefixed with `PUBLIC_`: if they appear on the deployed static website, visitors can inspect them in the browser. Use a form endpoint or serverless function if you need to receive messages without publishing an email address.
+- Motion handles section reveals, controls, avatar movement, and small component interactions.
+- GSAP ScrollTrigger owns only the Professional Experience chapter: desktop pinning, scrubbed road drawing, stop reveals, map pins, organization marks, and decorative parallax.
+- Lenis provides smooth scrolling after hydration and forwards scroll updates to ScrollTrigger.
+- Motion and GSAP do not control the same property on the same experience element.
 
-For Vercel or Netlify, use:
+The experience journey uses the illustrated road in `public/assets/artifacts/experience-road/` with an SVG path overlay that reveals it as the page scrolls. Desktop uses a pinned stage; mobile renders a readable stacked journey without pinning.
 
-- Build command: `npm run build`
-- Publish/output directory: `.`
+With `prefers-reduced-motion: reduce`, Motion interactions settle immediately, Lenis is skipped, ScrollTrigger pinning is not created, and the complete road and experience content remain visible in normal document flow. The experience section also includes a local motion toggle for testing and user control.
 
-## GitHub workflow
+## Assets
 
-This repo includes GitHub Actions CI, Dependabot, pull request templates, and issue templates.
+Original assets remain in `assets/` and are copied into `public/assets/` for Next.js serving. See `docs/asset-inventory.md` for the asset inventory and semantic usage notes.
 
-- CI runs `npm run check` on pushes to `main` and pull requests into `main`.
-- Dependabot checks monthly and groups GitHub Actions updates into one pull request.
-- Use pull requests for focused changes and include screenshots for visual updates.
+## Deployment
 
-See `docs/github-workflow.md` for branch protection, secrets, and release guidance.
-
-## Customize
-
-Edit project details and section copy in `index.html`. Keep contact/social values in environment variables. Update animation behavior in `js/main.js`. Update visual tokens in `css/styles.css` under the `:root` block.
+The repository is configured for Vercel as a Next.js project. CI runs `npm ci`, `npm run check`, and the Playwright browser smoke suite for pull requests and pushes to `main`.
