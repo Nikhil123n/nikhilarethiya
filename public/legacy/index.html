@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sketchbook style scroll-telling software engineering portfolio." data-config-meta="siteDescription">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JG1Z97Y7FE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JG1Z97Y7FE');
+  </script>
+  <title>Software Engineer Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="paper-noise" aria-hidden="true"></div>
+  <div class="cursor-orb" aria-hidden="true"></div>
+  <svg class="svg-filters" aria-hidden="true" focusable="false" width="0" height="0">
+    <filter id="rough-hero-name" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028 0.12" numOctaves="2" seed="12" result="roughInk"/>
+      <feDisplacementMap in="SourceGraphic" in2="roughInk" scale="1.15" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <aside class="notebook-rail" aria-label="Section navigation">
+    <div class="spiral" aria-hidden="true"></div>
+    <a class="logo-mark" href="#home" aria-label="Back to top">NA<span>.</span></a>
+    <nav class="tab-nav">
+      <a class="tab tab-home active" href="#home" data-target="home"><img src="assets/artifacts/03-icons-doodles/svg/sidebar-home.svg" alt=""><span>Home</span></a>
+      <a class="tab tab-about" href="#about" data-target="about"><img src="assets/artifacts/03-icons-doodles/svg/sidebar-user.svg" alt=""><span>About</span></a>
+      <a class="tab tab-skills" href="#toolkit" data-target="skills"><img src="assets/artifacts/03-icons-doodles/svg/sidebar-skills.svg" alt=""><span>Skills</span></a>
+      <a class="tab tab-projects" href="#projects" data-target="projects"><img src="assets/artifacts/03-icons-doodles/svg/code-brackets.svg" alt=""><span>Projects</span></a>
+      <a class="tab tab-experience" href="#experience-timeline" data-target="experience"><img src="assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt=""><span>Experience</span></a>
+      <a class="tab tab-education" href="#education" data-target="education"><img src="assets/artifacts/03-icons-doodles/svg/education-cap.svg" alt=""><span>Education</span></a>
+      <a class="tab tab-contact" href="#contact" data-target="contact"><img src="assets/artifacts/03-icons-doodles/svg/contact-mail.svg" alt=""><span>Contact</span></a>
+    </nav>
+    <div class="scroll-note">
+      <span>Scroll</span>
+      <strong>down</strong>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="top-socials" aria-label="Contact and social links">
+      <a href="#" target="_blank" rel="noreferrer" aria-label="GitHub" data-config-href="githubUrl" data-analytics="contact_click" data-contact-type="github" data-link-location="topbar">
+        <svg class="top-icon top-icon-github" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 3.4c-7.1 0-12.8 5.7-12.8 12.8 0 5.7 3.7 10.5 8.8 12.2.6.1.9-.3.9-.6v-2.4c-3.6.8-4.3-1.5-4.3-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.3 2 1.3 1.1 1.9 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.8-.3-5.8-1.4-5.8-6.3 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1.1-.3 3.5 1.3 1-.3 2.1-.4 3.2-.4s2.2.1 3.2.4c2.4-1.6 3.5-1.3 3.5-1.3.7 1.7.3 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.9-3 6-5.8 6.3.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.9.6 5.1-1.7 8.8-6.5 8.8-12.2C28.8 9.1 23.1 3.4 16 3.4Z"/>
+        </svg>
+      </a>
+      <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-config-href="linkedinUrl" data-analytics="contact_click" data-contact-type="linkedin" data-link-location="topbar">
+        <svg class="top-icon top-icon-linkedin" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect x="4.5" y="4.5" width="23" height="23" rx="2.4"/>
+          <circle cx="10.8" cy="11" r="1.8" fill="var(--paper)"/>
+          <path d="M9.2 14.2h3.2v9.6H9.2v-9.6Zm5.4 0h3.1v1.3c.7-1 1.8-1.6 3.3-1.6 2.5 0 4.3 1.6 4.3 5v4.9h-3.2v-4.4c0-1.6-.6-2.5-1.9-2.5-1.4 0-2.3 1-2.3 2.6v4.3h-3.3v-9.6Z" fill="var(--paper)"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Email" data-config-href="emailHref">
+        <svg class="top-icon top-icon-mail" viewBox="0 0 36 28" aria-hidden="true" focusable="false">
+          <path d="M3.5 5.2c0-1.4 1.1-2.5 2.5-2.5h24c1.4 0 2.5 1.1 2.5 2.5v17.6c0 1.4-1.1 2.5-2.5 2.5H6c-1.4 0-2.5-1.1-2.5-2.5V5.2Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="m5 5 13 10.6L31 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="m5.7 23.5 10.1-8.2m14.5 8.2-10.1-8.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="scene-progress" aria-hidden="true">
+    <span class="scene-progress-fill"></span>
+  </div>
+
+  <div class="reactive-avatar" aria-live="polite">
+    <div class="reactive-avatar__pin"></div>
+    <img id="reactionAvatar" src="assets/avatars/01-working-at-laptop-desk.png" alt="Illustrated avatar reacting to scroll section">
+    <p id="reactionCaption">Scene 01: building from ideas.</p>
+  </div>
+
+  <main id="content">
+    <section id="home" class="scene hero" data-scene="home" data-avatar="assets/avatars/01-working-at-laptop-desk.png" data-caption="Scene 01: building from ideas.">
+      <div class="hero-copy reveal">
+        <p class="hero-kicker">Hi, I'm</p>
+        <div class="hero-name-wrap">
+          <h1 class="hero-name" data-config-name>Software<br>Engineer</h1>
+        </div>
+        <p class="hero-role">Software Engineer.<br><span class="role-underlined">Problem Solver.</span> <span class="accent">Builder.</span> Storyteller.</p>
+        <p class="hero-description">I turn ideas into scalable systems and craft digital experiences that solve real problems.</p>
+        <p class="hero-mantra">Code is my tool.<br>Impact is my goal.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><span></span>View Projects</a>
+          <a href="extra/#sketchbook" class="btn btn-ghost">Browse Sketchbook</a>
+          <a href="#contact" class="btn btn-line">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" data-tilt-card>
+        <img class="hero-avatar" src="assets/avatars/01-working-at-laptop-desk.png" alt="Hand-drawn avatar working at a laptop">
+        <div class="code-note floating-note" data-float="1">
+          <pre>function buildImpact() {
+  const idea = sketch();
+  const plan = architect();
+  const code = build();
+  return ship(code);
+}</pre>
+          <span>// stories live forever</span>
+        </div>
+        <article class="certifications-card plan-note" aria-labelledby="today-plan-title" data-float="2">
+          <div class="certifications-card__content plan-note__content">
+            <h3 id="today-plan-title" class="certifications-title plan-note__title">I build</h3>
+            <ul class="certifications-list plan-note__list" aria-label="Today's build plan">
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Scalable Systems</span>
+              </li>
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Intuitive UIs</span>
+              </li>
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Clean Code</span>
+              </li>
+              <li class="certification-item plan-note__item">
+                <span class="certification-check" aria-hidden="true"></span>
+                <span class="certification-copy">Real Impact</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <img class="doodle doodle-plant" src="assets/artifacts/01-homepage-layout/transparent-png/hero-plant.png" alt="" aria-hidden="true">
+        <img class="doodle doodle-arrow" src="assets/artifacts/03-icons-doodles/svg/arrow-curved-right.svg" alt="" aria-hidden="true">
+        <img class="doodle doodle-spark" src="assets/artifacts/03-icons-doodles/svg/sparkle.svg" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <section id="about" class="scene section about-section" data-scene="about" data-avatar="assets/avatars/04-headshot-left.png" data-caption="Scene 02: engineer by profession, creator by passion.">
+      <div class="stats-grid reveal-grid">
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/briefcase.svg" alt="">
+          <strong>2+</strong>
+          <span>Years of<br>Experience</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/rocket.svg" alt="">
+          <strong>10+</strong>
+          <span>Projects<br>Shipped</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/code-brackets.svg" alt="">
+          <strong>5+</strong>
+          <span>Technologies<br>Mastered</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/puzzle.svg" alt="">
+          <strong>1000+</strong>
+          <span>Problems<br>Solved</span>
+        </article>
+        <article class="stat-card">
+          <img src="assets/artifacts/03-icons-doodles/svg/clock.svg" alt="">
+          <strong>24/7</strong>
+          <span>Always<br>Learning</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="toolkit" class="scene toolkit-strip-section" data-scene="toolkit" data-avatar="assets/avatars/03-writing-sketching-table.png" data-caption="Scene 03: my toolkit." aria-labelledby="toolkit-strip-title">
+      <div class="toolkit-strip-layout">
+        <div class="toolkit-strip reveal">
+          <div class="toolkit-strip-intro">
+            <div class="toolkit-strip-heading">
+              <h2 id="toolkit-strip-title">My Toolkit</h2>
+              <span class="toolkit-strip-sun" aria-hidden="true"></span>
+            </div>
+            <p>The technologies<br>I use to build<br>and ship.</p>
+          </div>
+
+          <div class="toolkit-strip-group">
+            <h3>Languages</h3>
+            <div class="toolkit-strip-icons">
+              <span class="toolkit-icon" data-label="Python" role="img" aria-label="Python" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-python"></use></svg></span>
+              <span class="toolkit-icon" data-label="JavaScript" role="img" aria-label="JavaScript" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-javascript"></use></svg></span>
+              <span class="toolkit-icon" data-label="TypeScript" role="img" aria-label="TypeScript" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-typescript"></use></svg></span>
+              <span class="toolkit-icon" data-label="Java" role="img" aria-label="Java" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-java"></use></svg></span>
+              <span class="toolkit-icon" data-label="C++" role="img" aria-label="C++" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-cpp"></use></svg></span>
+            </div>
+          </div>
+
+          <div class="toolkit-strip-group">
+            <h3>Frameworks</h3>
+            <div class="toolkit-strip-icons">
+              <span class="toolkit-icon" data-label="React" role="img" aria-label="React" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-react"></use></svg></span>
+              <span class="toolkit-icon" data-label="Vue" role="img" aria-label="Vue" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-vue"></use></svg></span>
+              <span class="toolkit-icon" data-label="Node.js" role="img" aria-label="Node.js" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-node"></use></svg></span>
+              <span class="toolkit-icon" data-label="Django" role="img" aria-label="Django" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-django"></use></svg></span>
+              <span class="toolkit-icon" data-label="FastAPI" role="img" aria-label="FastAPI" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-fastapi"></use></svg></span>
+            </div>
+          </div>
+
+          <div class="toolkit-strip-group">
+            <h3>Databases &amp; Cloud</h3>
+            <div class="toolkit-strip-icons">
+              <span class="toolkit-icon" data-label="PostgreSQL" role="img" aria-label="PostgreSQL" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-postgresql"></use></svg></span>
+              <span class="toolkit-icon" data-label="MongoDB" role="img" aria-label="MongoDB" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-mongodb"></use></svg></span>
+              <span class="toolkit-icon" data-label="GCP" role="img" aria-label="GCP" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-gcp"></use></svg></span>
+              <span class="toolkit-icon" data-label="Firebase" role="img" aria-label="Firebase" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-firebase"></use></svg></span>
+            </div>
+          </div>
+
+          <div class="toolkit-strip-group">
+            <h3>DevOps &amp; Tools</h3>
+            <div class="toolkit-strip-icons">
+              <span class="toolkit-icon" data-label="Docker" role="img" aria-label="Docker" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-docker"></use></svg></span>
+              <span class="toolkit-icon" data-label="Kubernetes" role="img" aria-label="Kubernetes" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-kubernetes"></use></svg></span>
+              <span class="toolkit-icon" data-label="Jenkins" role="img" aria-label="Jenkins" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-jenkins"></use></svg></span>
+              <span class="toolkit-icon" data-label="Git" role="img" aria-label="Git" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-git"></use></svg></span>
+              <span class="toolkit-icon" data-label="GitHub" role="img" aria-label="GitHub" tabindex="0"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="assets/artifacts/09-toolkit-strip-icons/toolkit-icons.svg#icon-github"></use></svg></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certifications-showcase reveal">
+          <article class="certifications-card" aria-labelledby="certifications-title">
+            <div class="certifications-card__content">
+              <h3 id="certifications-title" class="certifications-title">Certifications</h3>
+              <ul class="certifications-list" aria-label="Certifications">
+                <li class="certification-item">
+                  <span class="certification-check" aria-hidden="true"></span>
+                  <span class="certification-copy">
+                    <span>Building Production</span>
+                    <span>Ready React Apps</span>
+                    <span class="certification-provider">(<span class="certification-provider__name">Linkedin</span>)</span>
+                  </span>
+                </li>
+                <li class="certification-item">
+                  <span class="certification-check" aria-hidden="true"></span>
+                  <span class="certification-copy">
+                    <span>AWS Cloud</span>
+                    <span>Foundations</span>
+                  </span>
+                </li>
+                <li class="certification-item">
+                  <span class="certification-check" aria-hidden="true"></span>
+                  <span class="certification-copy">
+                    <span>MongoDB Developers'</span>
+                    <span>Toolkit</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="scene section projects-section" data-scene="projects" data-avatar="assets/avatars/06-sketching-notebook.png" data-caption="Scene 04: translating sketches into products.">
+      <div class="projects-showcase">
+        <aside class="project-side reveal">
+          <div class="section-kicker">Featured Projects</div>
+          <p>Where engineering<br>meets thoughtful<br>product design.</p>
+        </aside>
+
+        <div class="project-pager" aria-label="Project pages">
+          <button class="project-pager__button" type="button" data-project-page-prev aria-label="Previous projects">&larr;</button>
+          <button class="project-pager__button" type="button" data-project-page-next aria-label="Next projects">&rarr;</button>
+          <span class="project-pager__count" data-project-page-indicator>01 / 01</span>
+        </div>
+
+        <div class="project-grid reveal-grid" data-project-grid>
+          <article class="project-card" data-tilt-card>
+            <div class="project-sketch dashboard-sketch" aria-hidden="true">
+              <span class="dash-panel"></span>
+              <span class="dash-list"></span>
+              <span class="dash-map"></span>
+              <span class="dash-chart chart-one"></span>
+              <span class="dash-chart chart-two"></span>
+              <span class="dash-pin"></span>
+            </div>
+            <h3>Airbnb Recommendation System</h3>
+            <div class="tags"><span>Vue.js</span><span>Python</span><span>FastAPI</span><span>Plotly.js</span></div>
+            <p>Hybrid recommendation engine with real-time filters and dynamic map visualizations.</p>
+            <a href="#contact">Case Study <span>-&gt;</span></a>
+          </article>
+          <article class="project-card" data-tilt-card>
+            <div class="project-sketch medical-sketch" aria-hidden="true">
+              <span class="medical-note note-left"></span>
+              <span class="medical-note note-right"></span>
+              <span class="profile-head"></span>
+              <span class="profile-neck"></span>
+              <span class="brain-loop loop-one"></span>
+              <span class="brain-loop loop-two"></span>
+              <span class="brain-stem"></span>
+            </div>
+            <h3>Medical Document AI with RAG</h3>
+            <div class="tags"><span>GCP</span><span>Dialogflow CX</span><span>Vertex AI</span><span>FastAPI</span></div>
+            <p>AI assistant for medical documents using hybrid retrieval and generative AI.</p>
+            <a href="#contact">Case Study <span>-&gt;</span></a>
+          </article>
+          <article class="project-card" data-tilt-card>
+            <div class="project-sketch neural-sketch" aria-hidden="true">
+              <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span><span class="node n5"></span><span class="node n6"></span><span class="node n7"></span><span class="node n8"></span>
+            </div>
+            <h3>Neural Data Processing Platform</h3>
+            <div class="tags"><span>Django</span><span>Celery</span><span>Docker</span><span>PostgreSQL</span></div>
+            <p>Automated pipeline for neural data processing at scale with secure distributed execution.</p>
+            <a href="#contact">Case Study <span>-&gt;</span></a>
+          </article>
+        </div>
+        <div class="project-more-row reveal">
+          <a class="project-more-link" href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl" data-analytics="github_project_click" data-link-location="featured_projects">View All Projects <span>-&gt;</span></a>
+        </div>
+        <div class="project-footer-tags reveal" aria-label="Project notes">
+          <div class="project-footer-tag project-footer-tag--yellow">
+            <span>Engineer by profession,<br>creator by passion.</span>
+            <span class="project-footer-tag__icon project-footer-tag__icon--camera" aria-hidden="true"></span>
+          </div>
+          <div class="project-footer-tag project-footer-tag--blue">
+            <span>Let's build something awesome!</span>
+            <span class="project-footer-tag__icon project-footer-tag__icon--sparkle" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience-timeline" class="scene section experience-timeline-section" data-scene="experience-detail" data-caption="Scene 05: detailed experience timeline." aria-labelledby="experience-timeline-title">
+      <div class="experience-timeline-paper">
+        <h2 id="experience-timeline-title">Professional Experience</h2>
+        <span class="experience-loop-doodle" aria-hidden="true"></span>
+        <img class="experience-star-doodle" src="assets/artifacts/03-icons-doodles/svg/star.svg" alt="">
+
+        <div class="experience-timeline-list">
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Software Engineer <span>|</span> HIVE Labs</h3>
+              <time>May 2025 - Dec 2025</time>
+            </div>
+            <ul>
+              <li>Built Apache <span class="experience-tech">Spark</span> + Python ingestion pipeline for 1,067 participants, cutting data prep time by ~35%.</li>
+              <li>Delivered <span class="experience-tech">Vue.js</span> real-time dashboard (500ms latency) with Jest tests achieving 80%+ UI coverage.</li>
+              <li>Automated ML training &amp; validation with pytest; reduced QA effort by 40% on <span class="experience-tech">AWS EKS</span>.</li>
+              <li>Authored 2 research papers on AI-driven glucose prediction and time-series modeling.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Data Research Intern <span>|</span> United Nations</h3>
+              <time>May 2025 - Aug 2025</time>
+            </div>
+            <ul>
+              <li>Built Python ETL pipelines validating 100K+ records, eliminating 30% manual processing overhead.</li>
+              <li>Resolved 45+ critical data discrepancies through cross-functional audits.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Backend Software Engineer <span>|</span> System Neural Development Lab</h3>
+              <time>Mar 2025 - May 2025</time>
+            </div>
+            <ul>
+              <li>Built <span class="experience-tech">Dockerized</span> Django app with Celery &amp; Redis; automated 1+ TB/day neural data processing.</li>
+              <li>Secured 4-node pipeline with RBAC, JWT auth &amp; REST APIs; zero unauthorized access events.</li>
+              <li>Hardened nodes with SSH/TLS tunnels &amp; isolated containers for safe, auditable execution.</li>
+              <li>Orchestrated CI/CD with Jenkins &amp; Kubernetes; cut config overhead by 60%.</li>
+            </ul>
+          </article>
+
+          <article class="experience-timeline-item">
+            <span class="experience-timeline-dot" aria-hidden="true"></span>
+            <div class="experience-timeline-heading">
+              <h3>Software Developer <span>|</span> National Informatics Centre</h3>
+              <time>Jan 2023 - Jun 2024</time>
+            </div>
+            <ul>
+              <li>Migrated 12-year-old JSP platform to modern stack; resolved 25+ version conflicts.</li>
+              <li>Built <span class="experience-tech">React.js</span> frontend; improved page load latency by 33% across 708 districts.</li>
+              <li>Optimized 12 SQL stored procedures; improved API query latency from ~8s to ~4s (2x faster).</li>
+              <li>Refactored 6 JSP modules to REST APIs; saved 8+ engineering hours monthly.</li>
+              <li>Migrated to UTF-8 Unicode, expanded support from 10 to 22 Indian languages.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="scene section education-section" data-scene="education" data-caption="Scene 06: education foundations." aria-labelledby="education-title">
+      <div class="education-paper">
+        <h2 id="education-title">Education</h2>
+        <div class="education-layout">
+          <div class="education-list" aria-label="Education history">
+            <article class="education-item">
+              <img src="assets/artifacts/03-icons-doodles/transparent-png/education-campus-pencil-strokes.png" alt="">
+              <div class="education-copy">
+                <div class="education-heading">
+                  <h3>The George Washington University, Washington DC, USA</h3>
+                  <time>Aug 2024 - May 2026</time>
+                </div>
+                <p>Master of Science in Computer Science (GPA: 3.89/4)</p>
+                <p><strong>Coursework:</strong> Design &amp; Analysis of Algorithms, Advanced Software Paradigms,<br>Component Based Software Architecture</p>
+              </div>
+            </article>
+
+            <article class="education-item">
+              <img src="assets/artifacts/03-icons-doodles/transparent-png/education-cap-pencil-strokes.png" alt="">
+              <div class="education-copy">
+                <div class="education-heading">
+                  <h3>University of Mumbai, India</h3>
+                  <time>Aug 2019 - May 2023</time>
+                </div>
+                <p>Bachelor of Engineering in Computer Engineering (GPA: 3.78/4)</p>
+              </div>
+            </article>
+          </div>
+
+          <img class="education-illustration" src="assets/artifacts/03-icons-doodles/transparent-png/education-books-apple-sketch-hd.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="scene section contact-section" data-scene="contact" data-avatar="assets/avatars/07-celebrating-pose.png" data-caption="Scene 07: ready to ship the next thing.">
+      <div class="contact-copy reveal">
+        <div class="section-kicker">Let's Connect</div>
+        <h2>Let's build something real.</h2>
+        <p>I am open to software engineering roles, product engineering collaborations, and systems work with meaningful impact.</p>
+        <div class="contact-links">
+          <a href="#" data-config-href="emailHref" data-config-required="contactEmail"><img src="assets/artifacts/03-icons-doodles/svg/contact-mail.svg" alt=""><span data-config-text="contactEmail">Email</span></a>
+          <a href="#" data-config-href="phoneHref" data-config-required="contactPhone"><img src="assets/artifacts/03-icons-doodles/svg/contact-phone.svg" alt=""><span data-config-text="contactPhone">Phone</span></a>
+          <a href="#" target="_blank" rel="noreferrer" data-config-href="githubUrl" data-analytics="contact_click" data-contact-type="github" data-link-location="contact_section"><img src="assets/artifacts/03-icons-doodles/svg/contact-github.svg" alt="">GitHub</a>
+          <a href="#" target="_blank" rel="noreferrer" data-config-href="linkedinUrl" data-analytics="contact_click" data-contact-type="linkedin" data-link-location="contact_section"><img src="assets/artifacts/03-icons-doodles/svg/contact-linkedin.svg" alt="">LinkedIn</a>
+        </div>
+      </div>
+      <form class="contact-form reveal" action="#" method="post" data-config-form>
+        <label>Name<input type="text" name="name" placeholder="Your name"></label>
+        <label>Email<input type="email" name="email" placeholder="your@email.com"></label>
+        <label>Message<textarea name="message" rows="5" placeholder="Tell me about the project, role, or idea."></textarea></label>
+        <button class="btn btn-primary" type="submit"><span></span>Send Note</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="footer-copy"><span aria-hidden="true">&copy;</span> 2025 <span data-config-text="displayName">Portfolio Owner</span>. All rights reserved.</span>
+    <span class="footer-note">Built with passion. Framed with purpose.
+      <svg class="footer-heart" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16 27c-5-4-10-8-12-13-2-6 5-10 12-3 7-7 14-3 12 3-2 5-7 9-12 13Z"/>
+      </svg>
+    </span>
+  </footer>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/portfolio-content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

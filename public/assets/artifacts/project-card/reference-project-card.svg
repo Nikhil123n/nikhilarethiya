@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="1220" viewBox="0 0 980 1220" preserveAspectRatio="none" role="img" aria-labelledby="title desc">
+  <title id="title">Reference blank sketch project card</title>
+  <desc id="desc">A tall cream paper card with a hand drawn border.</desc>
+  <defs>
+    <filter id="paperNoise" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="15" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.94 0 0 0 0 0.89 0 0 0 0 0.79 0 0 0 .18 0" result="paper"/>
+      <feBlend in="SourceGraphic" in2="paper" mode="multiply"/>
+    </filter>
+    <filter id="roughen" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.045" numOctaves="2" seed="8" result="rough"/>
+      <feDisplacementMap in="SourceGraphic" in2="rough" scale="2.1" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="shadow" x="-12%" y="-10%" width="124%" height="124%">
+      <feDropShadow dx="6" dy="10" stdDeviation="6" flood-color="#2f2417" flood-opacity="0.16"/>
+    </filter>
+    <linearGradient id="paperWarm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8ec"/>
+      <stop offset="0.55" stop-color="#f8eedc"/>
+      <stop offset="1" stop-color="#f0dfc4"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M22 28 C106 24 178 32 260 26 C352 22 434 31 520 27 C617 23 690 31 780 26 C842 23 902 30 956 28 C952 111 959 187 956 270 C952 357 961 432 956 522 C951 625 960 700 957 795 C954 892 960 966 955 1059 C953 1108 956 1152 952 1190 C868 1184 780 1192 690 1187 C594 1183 519 1191 424 1186 C330 1181 250 1191 160 1187 C109 1185 65 1192 25 1187 C31 1102 23 1028 27 944 C31 842 22 761 27 666 C32 557 22 483 27 383 C31 284 23 206 28 111 C30 78 24 53 22 28 Z" fill="#d3b98f" opacity="0.3"/>
+    <path d="M26 22 C107 19 184 27 266 21 C355 17 438 26 523 22 C615 19 695 25 779 21 C847 18 909 24 955 22 C950 106 958 185 954 269 C951 355 959 431 954 521 C949 624 957 701 954 795 C951 891 957 968 952 1058 C949 1111 954 1154 950 1188 C865 1182 782 1190 690 1185 C595 1180 520 1189 425 1184 C329 1179 250 1188 160 1184 C107 1181 62 1189 27 1185 C32 1104 24 1027 28 944 C33 843 24 760 29 667 C34 558 24 481 29 383 C33 284 25 207 29 111 C31 75 25 52 26 22 Z" fill="url(#paperWarm)" filter="url(#paperNoise)"/>
+  </g>
+  <g filter="url(#roughen)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 25 C111 20 187 29 268 23 C356 18 437 28 524 23 C614 20 692 27 779 23 C846 19 909 26 956 24 C951 109 958 186 955 270 C952 358 960 432 955 521 C950 624 959 700 955 795 C952 893 958 969 953 1059 C950 1110 955 1153 951 1188 C865 1182 780 1190 690 1185 C595 1181 520 1189 425 1184 C329 1179 250 1188 160 1184 C107 1182 62 1189 27 1185 C32 1104 24 1028 28 944 C32 843 24 760 29 667 C34 558 24 482 29 383 C33 284 25 207 29 111 C30 75 25 52 25 25 Z" stroke="#6c5b43" stroke-width="2.2" opacity="0.72"/>
+    <path d="M31 35 C113 31 190 38 271 32 C358 28 438 36 524 32 C613 29 691 35 777 32 C843 29 904 34 949 32" stroke="#8a775d" stroke-width="1.2" opacity="0.34"/>
+    <path d="M34 1178 C126 1174 208 1181 301 1176 C394 1172 481 1179 574 1175 C665 1170 744 1179 838 1173 C879 1171 914 1178 945 1175" stroke="#8a775d" stroke-width="1.2" opacity="0.34"/>
+    <path d="M36 49 C76 43 116 50 156 45" stroke="#b79a6b" stroke-width="1.1" opacity="0.22"/>
+    <path d="M742 64 C814 52 882 64 948 55" stroke="#b79a6b" stroke-width="1.1" opacity="0.22"/>
+    <path d="M45 1112 C116 1097 184 1116 260 1101" stroke="#b79a6b" stroke-width="1.1" opacity="0.2"/>
+  </g>
+</svg>

@@ -1,0 +1,4162 @@
+[
+  {
+    "section": "01-homepage-layout",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "01-homepage-layout/section-crop/01-homepage-layout__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "0,0,650,1024"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "03-icons-doodles/03-icons-doodles__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "1004,0,1267,410"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "04-hand-drawn-ui-elements/04-hand-drawn-ui-elements__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "1266,0,1536,410"
+  },
+  {
+    "section": "05-typography",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "05-typography/05-typography__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "650,410,1004,628"
+  },
+  {
+    "section": "06-color-palette",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "06-color-palette/06-color-palette__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "650,628,1004,760"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "07-ui-cards-components/07-ui-cards-components__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "1004,410,1536,750"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "08-textures-background/08-textures-background__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "1004,750,1536,884"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "full section crop",
+    "type": "section png",
+    "file": "09-buttons-nav-tabs/09-buttons-nav-tabs__full-section.png",
+    "notes": "Full visible numbered section crop from source design sheet.",
+    "source_box": "1004,884,1536,1024"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "notebook-binding-and-left-tabs source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/notebook-binding-and-left-tabs__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "0,0,105,420"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "notebook-binding-and-left-tabs",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/notebook-binding-and-left-tabs.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "0,0,105,420"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "na-logo-and-hover-note source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/na-logo-and-hover-note__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "52,10,150,62"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "na-logo-and-hover-note",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/na-logo-and-hover-note.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "52,10,150,62"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "top-navigation source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/top-navigation__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "222,12,615,50"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "top-navigation",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/top-navigation.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "222,12,615,50"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-intro-title-copy source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-intro-title-copy__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "82,60,285,334"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-intro-title-copy",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-intro-title-copy.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "82,60,285,334"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-name-wordmark source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-name-wordmark__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "86,92,292,198"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-name-wordmark",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-name-wordmark.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "86,92,292,198"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-positioning-copy source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-positioning-copy__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "85,200,283,333"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-positioning-copy",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-positioning-copy.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "85,200,283,333"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-cta-buttons source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-cta-buttons__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "87,341,247,402"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-cta-buttons",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-cta-buttons.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "87,341,247,402"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-workspace-composite source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-workspace-composite__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "246,56,545,388"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-workspace-composite",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-workspace-composite.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "246,56,545,388"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-code-snippet source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-code-snippet__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "457,58,550,175"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-code-snippet",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-code-snippet.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "457,58,550,175"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-todays-plan-sticky-note source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-todays-plan-sticky-note__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "553,57,638,183"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-todays-plan-sticky-note",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-todays-plan-sticky-note.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "553,57,638,183"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-process-diagram-paper source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-process-diagram-paper__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "270,58,405,157"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-process-diagram-paper",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-process-diagram-paper.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "270,58,405,157"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-plant source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-plant__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "564,207,635,289"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-plant",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-plant.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "564,207,635,289"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-cursor-note source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/hero-cursor-note__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "522,313,638,371"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero-cursor-note",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/hero-cursor-note.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "522,313,638,371"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-strip-full source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-strip-full__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "30,425,626,612"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-strip-full",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-strip-full.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "30,425,626,612"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-01-idea source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-step-01-idea__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "55,477,140,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-01-idea",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-step-01-idea.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "55,477,140,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-02-plan source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-step-02-plan__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "158,477,245,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-02-plan",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-step-02-plan.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "158,477,245,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-03-build source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-step-03-build__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "265,477,350,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-03-build",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-step-03-build.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "265,477,350,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-04-test source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-step-04-test__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "370,477,456,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-04-test",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-step-04-test.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "370,477,456,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-05-deploy source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-step-05-deploy__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "477,477,557,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-05-deploy",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-step-05-deploy.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "477,477,557,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-06-impact source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/journey-step-06-impact__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "566,477,630,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "journey-step-06-impact",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/journey-step-06-impact.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "566,477,630,590"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "engineers-toolkit-full source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/engineers-toolkit-full__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "30,623,650,753"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "engineers-toolkit-full",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/engineers-toolkit-full.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "30,623,650,753"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-languages source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/toolkit-languages__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "137,625,251,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-languages",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/toolkit-languages.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "137,625,251,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-frameworks source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/toolkit-frameworks__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "252,625,374,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-frameworks",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/toolkit-frameworks.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "252,625,374,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-databases source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/toolkit-databases__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "375,625,469,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-databases",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/toolkit-databases.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "375,625,469,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-cloud-devops source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/toolkit-cloud-devops__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "470,625,574,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-cloud-devops",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/toolkit-cloud-devops.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "470,625,574,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-tools source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/toolkit-tools__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "574,625,648,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "toolkit-tools",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/toolkit-tools.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "574,625,648,725"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "sketchbook-projects-callout source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/sketchbook-projects-callout__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "28,762,318,930"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "sketchbook-projects-callout",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/sketchbook-projects-callout.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "28,762,318,930"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "small-about-portrait-area source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/small-about-portrait-area__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "90,760,260,928"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "small-about-portrait-area",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/small-about-portrait-area.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "90,760,260,928"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "stats-grid source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/stats-grid__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "410,775,680,913"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "stats-grid",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/stats-grid.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "410,775,680,913"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "system-architecture-notebook source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/system-architecture-notebook__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "718,756,995,950"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "system-architecture-notebook",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/system-architecture-notebook.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "718,756,995,950"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "lets-connect-footer source crop",
+    "type": "source crop png",
+    "file": "01-homepage-layout/source-crops/lets-connect-footer__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "28,952,830,1018"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "lets-connect-footer",
+    "type": "transparent png",
+    "file": "01-homepage-layout/transparent-png/lets-connect-footer.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "28,952,830,1018"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "hero name wordmark",
+    "type": "svg + png",
+    "file": "01-homepage-layout/svg-recreated/hero-name-wordmark.svg",
+    "notes": "Recreated editable SVG wordmark.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "lightbulb",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/lightbulb.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "lightbulb",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/lightbulb.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-right",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/arrow-right.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-right",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/arrow-right.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-curved-right",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/arrow-curved-right.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-curved-right",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/arrow-curved-right.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-curved-left",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/arrow-curved-left.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-curved-left",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/arrow-curved-left.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-dashed",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/arrow-dashed.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "arrow-dashed",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/arrow-dashed.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "star",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/star.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "star",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/star.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sparkle",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/sparkle.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sparkle",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/sparkle.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "planet",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/planet.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "planet",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/planet.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "x-mark",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/x-mark.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "x-mark",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/x-mark.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "exclamation",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/exclamation.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "exclamation",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/exclamation.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/question.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/question.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "code-brackets",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/code-brackets.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "code-brackets",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/code-brackets.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "terminal-window",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/terminal-window.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "terminal-window",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/terminal-window.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "gear",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/gear.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "gear",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/gear.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/cloud.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/cloud.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud-upload",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/cloud-upload.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud-upload",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/cloud-upload.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "globe",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/globe.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "globe",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/globe.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "database",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/database.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "database",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/database.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cube",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/cube.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cube",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/cube.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "puzzle",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/puzzle.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "puzzle",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/puzzle.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "org-chart",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/org-chart.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "org-chart",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/org-chart.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "network-nodes",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/network-nodes.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "network-nodes",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/network-nodes.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "rocket",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/rocket.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "rocket",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/rocket.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "paper-plane",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/paper-plane.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "paper-plane",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/paper-plane.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "mail",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/mail.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "mail",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/mail.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "at-sign",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/at-sign.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "at-sign",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/at-sign.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "phone",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/phone.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "phone",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/phone.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "location-pin",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/location-pin.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "location-pin",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/location-pin.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cursor",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/cursor.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cursor",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/cursor.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/scribble-blue.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/scribble-blue.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-green",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/scribble-green.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-green",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/scribble-green.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-orange",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/scribble-orange.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-orange",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/scribble-orange.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-purple",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/scribble-purple.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-purple",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/scribble-purple.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "underline-blue",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/underline-blue.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "underline-blue",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/underline-blue.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "underline-red",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/underline-red.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "underline-red",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/underline-red.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "underline-green",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/underline-green.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "underline-green",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/underline-green.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "dashed-arc",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/dashed-arc.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "dashed-arc",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/dashed-arc.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sketch-star-small",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/sketch-star-small.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sketch-star-small",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/sketch-star-small.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "lightbulb-doodle source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/lightbulb-doodle__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1015,47,1071,100"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "lightbulb-doodle",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/lightbulb-doodle.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1015,47,1071,100"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "long-arrow-right source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/long-arrow-right__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1080,53,1145,86"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "long-arrow-right",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/long-arrow-right.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1080,53,1145,86"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "star-doodle source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/star-doodle__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1150,48,1200,96"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "star-doodle",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/star-doodle.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1150,48,1200,96"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sparkles-doodle source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/sparkles-doodle__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1205,47,1237,97"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sparkles-doodle",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/sparkles-doodle.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1205,47,1237,97"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "planet-doodle source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/planet-doodle__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1235,50,1264,80"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "planet-doodle",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/planet-doodle.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1235,50,1264,80"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "curved-arrow-small-01 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/curved-arrow-small-01__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1018,110,1052,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "curved-arrow-small-01",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/curved-arrow-small-01.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1018,110,1052,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "curved-arrow-small-02 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/curved-arrow-small-02__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1076,110,1114,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "curved-arrow-small-02",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/curved-arrow-small-02.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1076,110,1114,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "curved-arrow-small-03 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/curved-arrow-small-03__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1140,110,1177,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "curved-arrow-small-03",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/curved-arrow-small-03.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1140,110,1177,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "red-x-mark source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/red-x-mark__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1198,108,1230,140"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "red-x-mark",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/red-x-mark.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1198,108,1230,140"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "exclamation-mark source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/exclamation-mark__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1235,108,1260,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "exclamation-mark",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/exclamation-mark.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1235,108,1260,145"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question-mark-01 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/question-mark-01__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1018,156,1048,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question-mark-01",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/question-mark-01.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1018,156,1048,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sketch-swoosh-01 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/sketch-swoosh-01__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1078,155,1110,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sketch-swoosh-01",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/sketch-swoosh-01.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1078,155,1110,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sketch-hatch-01 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/sketch-hatch-01__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1138,155,1174,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "sketch-hatch-01",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/sketch-hatch-01.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1138,155,1174,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question-mark-02 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/question-mark-02__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1198,155,1230,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question-mark-02",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/question-mark-02.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1198,155,1230,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question-mark-03 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/question-mark-03__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1235,155,1263,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "question-mark-03",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/question-mark-03.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1235,155,1263,190"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "code-brackets source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/code-brackets__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1015,204,1050,245"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "code-brackets",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/code-brackets.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1015,204,1050,245"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "terminal-window source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/terminal-window__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1065,204,1110,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "terminal-window",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/terminal-window.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1065,204,1110,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "gear source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/gear__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1120,205,1155,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "gear",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/gear.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1120,205,1155,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/cloud__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1160,205,1198,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/cloud.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1160,205,1198,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud-upload source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/cloud-upload__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1200,205,1238,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cloud-upload",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/cloud-upload.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1200,205,1238,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "globe source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/globe__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1238,205,1265,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "globe",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/globe.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1238,205,1265,244"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "database source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/database__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1016,255,1047,292"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "database",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/database.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1016,255,1047,292"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cube source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/cube__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1068,253,1105,292"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "cube",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/cube.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1068,253,1105,292"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "puzzle source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/puzzle__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1120,253,1155,292"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "puzzle",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/puzzle.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1120,253,1155,292"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "org-chart-01 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/org-chart-01__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1165,252,1195,293"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "org-chart-01",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/org-chart-01.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1165,252,1195,293"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "org-chart-02 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/org-chart-02__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1205,252,1238,293"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "org-chart-02",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/org-chart-02.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1205,252,1238,293"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "network-nodes source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/network-nodes__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1240,252,1266,293"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "network-nodes",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/network-nodes.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1240,252,1266,293"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "rocket source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/rocket__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1015,308,1047,350"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "rocket",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/rocket.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1015,308,1047,350"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "paper-plane source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/paper-plane__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1066,310,1106,347"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "paper-plane",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/paper-plane.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1066,310,1106,347"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "mail source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/mail__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1118,312,1157,342"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "mail",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/mail.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1118,312,1157,342"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "at-sign source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/at-sign__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1168,309,1198,346"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "at-sign",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/at-sign.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1168,309,1198,346"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "phone source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/phone__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1208,309,1238,347"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "phone",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/phone.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1208,309,1238,347"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "location-pin source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/location-pin__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1242,309,1265,347"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "location-pin",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/location-pin.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1242,309,1265,347"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue-top source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-blue-top__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1014,360,1062,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue-top",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-blue-top.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1014,360,1062,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-green-top source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-green-top__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1074,360,1122,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-green-top",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-green-top.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1074,360,1122,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue-top-2 source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-blue-top-2__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1132,360,1182,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue-top-2",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-blue-top-2.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1132,360,1182,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-black-top source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-black-top__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1192,360,1238,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-black-top",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-black-top.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1192,360,1238,380"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-orange-bottom source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-orange-bottom__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1014,386,1062,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-orange-bottom",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-orange-bottom.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1014,386,1062,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue-bottom source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-blue-bottom__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1074,386,1122,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-blue-bottom",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-blue-bottom.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1074,386,1122,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-yellow-bottom source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-yellow-bottom__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1132,386,1182,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-yellow-bottom",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-yellow-bottom.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1132,386,1182,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-purple-bottom source crop",
+    "type": "source crop png",
+    "file": "03-icons-doodles/source-crops/scribble-purple-bottom__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1192,386,1238,405"
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "scribble-purple-bottom",
+    "type": "transparent png",
+    "file": "03-icons-doodles/transparent-png/scribble-purple-bottom.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1192,386,1238,405"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "paperclip",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/paperclip.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "paperclip",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/paperclip.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-red",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/pushpin-red.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-red",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/pushpin-red.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-blue",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/pushpin-blue.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-blue",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/pushpin-blue.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-yellow",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/pushpin-yellow.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-yellow",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/pushpin-yellow.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-green",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/pushpin-green.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpin-green",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/pushpin-green.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "speech-bubble",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/speech-bubble.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "speech-bubble",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/speech-bubble.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "cloud-bubble",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/cloud-bubble.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "cloud-bubble",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/cloud-bubble.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "rectangle-bubble",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/rectangle-bubble.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "rectangle-bubble",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/rectangle-bubble.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "arrow-curved-right",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/arrow-curved-right.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "arrow-curved-right",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/arrow-curved-right.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "arrow-curved-left",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/arrow-curved-left.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "arrow-curved-left",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/arrow-curved-left.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "arrow-dashed",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/arrow-dashed.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "arrow-dashed",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/arrow-dashed.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "cursor",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/cursor.svg",
+    "notes": "Clean recreated vector asset matching visible doodle style.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "cursor",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/cursor.png",
+    "notes": "PNG render of SVG asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "tape-strip",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/tape-strip.svg",
+    "notes": "Recreated vector texture/UI primitive.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "tape-strip",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/tape-strip.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "torn-paper",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/torn-paper.svg",
+    "notes": "Recreated vector texture/UI primitive.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "torn-paper",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/torn-paper.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "notebook-paper",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/notebook-paper.svg",
+    "notes": "Recreated vector texture/UI primitive.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "notebook-paper",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/notebook-paper.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "sticky-note-blank",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/sticky-note-blank.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "sticky-note-blank",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/sticky-note-blank.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "lined-notebook-paper",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/lined-notebook-paper.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "lined-notebook-paper",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/lined-notebook-paper.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "button-outline-black",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/button-outline-black.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "button-outline-black",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/button-outline-black.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "button-outline-red",
+    "type": "svg",
+    "file": "04-hand-drawn-ui-elements/svg/button-outline-red.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "button-outline-red",
+    "type": "png preview",
+    "file": "04-hand-drawn-ui-elements/png/button-outline-red.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "sticky-note-blank-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/sticky-note-blank-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1281,47,1368,151"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "sticky-note-blank-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/sticky-note-blank-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1281,47,1368,151"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "lined-notebook-paper-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/lined-notebook-paper-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1372,47,1485,151"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "lined-notebook-paper-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/lined-notebook-paper-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1372,47,1485,151"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "tape-strip-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/tape-strip-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1280,172,1375,205"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "tape-strip-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/tape-strip-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1280,172,1375,205"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpins-row-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/pushpins-row-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1378,160,1498,221"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "pushpins-row-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/pushpins-row-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1378,160,1498,221"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "paperclip-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/paperclip-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1502,135,1530,204"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "paperclip-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/paperclip-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1502,135,1530,204"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "speech-bubble-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/speech-bubble-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1280,262,1358,324"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "speech-bubble-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/speech-bubble-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1280,262,1358,324"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "cloud-bubble-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/cloud-bubble-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1367,262,1452,324"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "cloud-bubble-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/cloud-bubble-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1367,262,1452,324"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "rectangle-bubble-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/rectangle-bubble-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1456,262,1526,324"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "rectangle-bubble-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/rectangle-bubble-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1456,262,1526,324"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "buttons-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/buttons-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1280,330,1518,371"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "buttons-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/buttons-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1280,330,1518,371"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "dashed-arrows-and-cursor-source source crop",
+    "type": "source crop png",
+    "file": "04-hand-drawn-ui-elements/source-crops/dashed-arrows-and-cursor-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1278,378,1534,410"
+  },
+  {
+    "section": "04-hand-drawn-ui-elements",
+    "name": "dashed-arrows-and-cursor-source",
+    "type": "transparent png",
+    "file": "04-hand-drawn-ui-elements/transparent-png/dashed-arrows-and-cursor-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1278,378,1534,410"
+  },
+  {
+    "section": "05-typography",
+    "name": "wordmark-nikhil-arethiya-source source crop",
+    "type": "source crop png",
+    "file": "05-typography/source-crops/wordmark-nikhil-arethiya-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "680,468,800,555"
+  },
+  {
+    "section": "05-typography",
+    "name": "wordmark-nikhil-arethiya-source",
+    "type": "transparent png",
+    "file": "05-typography/transparent-png/wordmark-nikhil-arethiya-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "680,468,800,555"
+  },
+  {
+    "section": "05-typography",
+    "name": "the-journey-heading-source source crop",
+    "type": "source crop png",
+    "file": "05-typography/source-crops/the-journey-heading-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "680,555,790,610"
+  },
+  {
+    "section": "05-typography",
+    "name": "the-journey-heading-source",
+    "type": "transparent png",
+    "file": "05-typography/transparent-png/the-journey-heading-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "680,555,790,610"
+  },
+  {
+    "section": "05-typography",
+    "name": "heading-subheading-body-specimen-source source crop",
+    "type": "source crop png",
+    "file": "05-typography/source-crops/heading-subheading-body-specimen-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "810,468,985,612"
+  },
+  {
+    "section": "05-typography",
+    "name": "heading-subheading-body-specimen-source",
+    "type": "transparent png",
+    "file": "05-typography/transparent-png/heading-subheading-body-specimen-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "810,468,985,612"
+  },
+  {
+    "section": "05-typography",
+    "name": "wordmark-nikhil-arethiya",
+    "type": "svg",
+    "file": "05-typography/svg/wordmark-nikhil-arethiya.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "05-typography",
+    "name": "wordmark-nikhil-arethiya",
+    "type": "png preview",
+    "file": "05-typography/png/wordmark-nikhil-arethiya.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "05-typography",
+    "name": "section-heading-the-journey",
+    "type": "svg",
+    "file": "05-typography/svg/section-heading-the-journey.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "05-typography",
+    "name": "section-heading-the-journey",
+    "type": "png preview",
+    "file": "05-typography/png/section-heading-the-journey.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "05-typography",
+    "name": "typography specimen html",
+    "type": "html",
+    "file": "05-typography/html/typography-specimen.html",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tokens json",
+    "type": "json",
+    "file": "06-color-palette/tokens/colors.json",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tokens css",
+    "type": "css",
+    "file": "06-color-palette/tokens/colors.css",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color paper",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-paper.svg",
+    "notes": "#F8F2E7",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color paper",
+    "type": "png",
+    "file": "06-color-palette/png/color-paper.png",
+    "notes": "#F8F2E7",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color ink",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-ink.svg",
+    "notes": "#242423",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color ink",
+    "type": "png",
+    "file": "06-color-palette/png/color-ink.png",
+    "notes": "#242423",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color blue",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-blue.svg",
+    "notes": "#2B7FFB",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color blue",
+    "type": "png",
+    "file": "06-color-palette/png/color-blue.png",
+    "notes": "#2B7FFB",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color orange",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-orange.svg",
+    "notes": "#F1A108",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color orange",
+    "type": "png",
+    "file": "06-color-palette/png/color-orange.png",
+    "notes": "#F1A108",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color red",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-red.svg",
+    "notes": "#E55539",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color red",
+    "type": "png",
+    "file": "06-color-palette/png/color-red.png",
+    "notes": "#E55539",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color green",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-green.svg",
+    "notes": "#1BAB72",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color green",
+    "type": "png",
+    "file": "06-color-palette/png/color-green.png",
+    "notes": "#1BAB72",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color purple",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-purple.svg",
+    "notes": "#9864DD",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color purple",
+    "type": "png",
+    "file": "06-color-palette/png/color-purple.png",
+    "notes": "#9864DD",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color gray",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-gray.svg",
+    "notes": "#757B81",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color gray",
+    "type": "png",
+    "file": "06-color-palette/png/color-gray.png",
+    "notes": "#757B81",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color yellow_note",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-yellow_note.svg",
+    "notes": "#F6D982",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color yellow_note",
+    "type": "png",
+    "file": "06-color-palette/png/color-yellow_note.png",
+    "notes": "#F6D982",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tape",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-tape.svg",
+    "notes": "#D7BA73",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tape",
+    "type": "png",
+    "file": "06-color-palette/png/color-tape.png",
+    "notes": "#D7BA73",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_orange",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-tab_orange.svg",
+    "notes": "#EAA65E",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_orange",
+    "type": "png",
+    "file": "06-color-palette/png/color-tab_orange.png",
+    "notes": "#EAA65E",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_yellow",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-tab_yellow.svg",
+    "notes": "#EEDC8D",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_yellow",
+    "type": "png",
+    "file": "06-color-palette/png/color-tab_yellow.png",
+    "notes": "#EEDC8D",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_green",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-tab_green.svg",
+    "notes": "#A9C786",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_green",
+    "type": "png",
+    "file": "06-color-palette/png/color-tab_green.png",
+    "notes": "#A9C786",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_blue",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-tab_blue.svg",
+    "notes": "#8FC4E8",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_blue",
+    "type": "png",
+    "file": "06-color-palette/png/color-tab_blue.png",
+    "notes": "#8FC4E8",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_purple",
+    "type": "svg",
+    "file": "06-color-palette/svg/color-tab_purple.svg",
+    "notes": "#C59AE6",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "color tab_purple",
+    "type": "png",
+    "file": "06-color-palette/png/color-tab_purple.png",
+    "notes": "#C59AE6",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "full color palette",
+    "type": "svg",
+    "file": "06-color-palette/svg/full-color-palette.svg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "06-color-palette",
+    "name": "source-color-swatch-row source crop",
+    "type": "source crop png",
+    "file": "06-color-palette/source-crops/source-color-swatch-row__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "665,688,990,752"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "project-card-source source crop",
+    "type": "source crop png",
+    "file": "07-ui-cards-components/source-crops/project-card-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1010,455,1155,694"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "project-card-source",
+    "type": "transparent png",
+    "file": "07-ui-cards-components/transparent-png/project-card-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1010,455,1155,694"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "skill-badge-source source crop",
+    "type": "source crop png",
+    "file": "07-ui-cards-components/source-crops/skill-badge-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1205,465,1305,555"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "skill-badge-source",
+    "type": "transparent png",
+    "file": "07-ui-cards-components/transparent-png/skill-badge-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1205,465,1305,555"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "sticky-note-checklist-source source crop",
+    "type": "source crop png",
+    "file": "07-ui-cards-components/source-crops/sticky-note-checklist-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1358,462,1468,612"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "sticky-note-checklist-source",
+    "type": "transparent png",
+    "file": "07-ui-cards-components/transparent-png/sticky-note-checklist-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1358,462,1468,612"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "notebook-section-title-source source crop",
+    "type": "source crop png",
+    "file": "07-ui-cards-components/source-crops/notebook-section-title-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1180,615,1310,695"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "notebook-section-title-source",
+    "type": "transparent png",
+    "file": "07-ui-cards-components/transparent-png/notebook-section-title-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1180,615,1310,695"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "step-box-source source crop",
+    "type": "source crop png",
+    "file": "07-ui-cards-components/source-crops/step-box-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1350,650,1522,728"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "step-box-source",
+    "type": "transparent png",
+    "file": "07-ui-cards-components/transparent-png/step-box-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1350,650,1522,728"
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "project-card-template",
+    "type": "svg",
+    "file": "07-ui-cards-components/svg/project-card-template.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "project-card-template",
+    "type": "png preview",
+    "file": "07-ui-cards-components/png/project-card-template.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "skill-badge-javascript",
+    "type": "svg",
+    "file": "07-ui-cards-components/svg/skill-badge-javascript.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "skill-badge-javascript",
+    "type": "png preview",
+    "file": "07-ui-cards-components/png/skill-badge-javascript.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "sticky-note-checklist",
+    "type": "svg",
+    "file": "07-ui-cards-components/svg/sticky-note-checklist.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "sticky-note-checklist",
+    "type": "png preview",
+    "file": "07-ui-cards-components/png/sticky-note-checklist.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "notebook-section-title",
+    "type": "svg",
+    "file": "07-ui-cards-components/svg/notebook-section-title.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "notebook-section-title",
+    "type": "png preview",
+    "file": "07-ui-cards-components/png/notebook-section-title.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "journey-step-box-template",
+    "type": "svg",
+    "file": "07-ui-cards-components/svg/journey-step-box-template.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "journey-step-box-template",
+    "type": "png preview",
+    "file": "07-ui-cards-components/png/journey-step-box-template.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "07-ui-cards-components",
+    "name": "component preview html",
+    "type": "html",
+    "file": "07-ui-cards-components/html/component-preview.html",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "paper-texture",
+    "type": "svg",
+    "file": "08-textures-background/svg/paper-texture.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "paper-texture",
+    "type": "png preview",
+    "file": "08-textures-background/png/paper-texture.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "notebook-paper",
+    "type": "svg",
+    "file": "08-textures-background/svg/notebook-paper.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "notebook-paper",
+    "type": "png preview",
+    "file": "08-textures-background/png/notebook-paper.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "notebook-binding",
+    "type": "svg",
+    "file": "08-textures-background/svg/notebook-binding.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "notebook-binding",
+    "type": "png preview",
+    "file": "08-textures-background/png/notebook-binding.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "tape-strip",
+    "type": "svg",
+    "file": "08-textures-background/svg/tape-strip.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "tape-strip",
+    "type": "png preview",
+    "file": "08-textures-background/png/tape-strip.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "torn-paper",
+    "type": "svg",
+    "file": "08-textures-background/svg/torn-paper.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "torn-paper",
+    "type": "png preview",
+    "file": "08-textures-background/png/torn-paper.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "graphite-hatching",
+    "type": "svg",
+    "file": "08-textures-background/svg/graphite-hatching.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "graphite-hatching",
+    "type": "png preview",
+    "file": "08-textures-background/png/graphite-hatching.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "watercolor-wash-blue",
+    "type": "svg",
+    "file": "08-textures-background/svg/watercolor-wash-blue.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "watercolor-wash-blue",
+    "type": "png preview",
+    "file": "08-textures-background/png/watercolor-wash-blue.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "grid-paper",
+    "type": "svg",
+    "file": "08-textures-background/svg/grid-paper.svg",
+    "notes": "Recreated reusable texture/background element.",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "grid-paper",
+    "type": "png preview",
+    "file": "08-textures-background/png/grid-paper.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "textures css",
+    "type": "css",
+    "file": "08-textures-background/css/textures.css",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "08-textures-background",
+    "name": "notebook-paper-texture-source source crop",
+    "type": "source crop png",
+    "file": "08-textures-background/source-crops/notebook-paper-texture-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1028,780,1165,866"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "notebook-paper-texture-source",
+    "type": "transparent png",
+    "file": "08-textures-background/transparent-png/notebook-paper-texture-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1028,780,1165,866"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "torn-paper-texture-source source crop",
+    "type": "source crop png",
+    "file": "08-textures-background/source-crops/torn-paper-texture-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1180,778,1308,856"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "torn-paper-texture-source",
+    "type": "transparent png",
+    "file": "08-textures-background/transparent-png/torn-paper-texture-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1180,778,1308,856"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "graphite-hatching-light-source source crop",
+    "type": "source crop png",
+    "file": "08-textures-background/source-crops/graphite-hatching-light-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1325,785,1408,845"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "graphite-hatching-light-source",
+    "type": "transparent png",
+    "file": "08-textures-background/transparent-png/graphite-hatching-light-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1325,785,1408,845"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "graphite-hatching-dark-source source crop",
+    "type": "source crop png",
+    "file": "08-textures-background/source-crops/graphite-hatching-dark-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1420,785,1518,845"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "graphite-hatching-dark-source",
+    "type": "transparent png",
+    "file": "08-textures-background/transparent-png/graphite-hatching-dark-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1420,785,1518,845"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "thin-pencil-lines-source source crop",
+    "type": "source crop png",
+    "file": "08-textures-background/source-crops/thin-pencil-lines-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1210,862,1500,880"
+  },
+  {
+    "section": "08-textures-background",
+    "name": "thin-pencil-lines-source",
+    "type": "transparent png",
+    "file": "08-textures-background/transparent-png/thin-pencil-lines-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1210,862,1500,880"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-home",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/nav-tab-home.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-home",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/nav-tab-home.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-about",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/nav-tab-about.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-about",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/nav-tab-about.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-projects",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/nav-tab-projects.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-projects",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/nav-tab-projects.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-sketchbook",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/nav-tab-sketchbook.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-sketchbook",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/nav-tab-sketchbook.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-contact",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/nav-tab-contact.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-contact",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/nav-tab-contact.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-open-reel-red",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/button-open-reel-red.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-open-reel-red",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/button-open-reel-red.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-browse-sketchbook",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/button-browse-sketchbook.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-browse-sketchbook",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/button-browse-sketchbook.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-view-finished-work",
+    "type": "svg",
+    "file": "09-buttons-nav-tabs/svg/button-view-finished-work.svg",
+    "notes": "Recreated vector asset.",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-view-finished-work",
+    "type": "png preview",
+    "file": "09-buttons-nav-tabs/png/button-view-finished-work.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tabs-row-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/nav-tabs-row-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1030,928,1526,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tabs-row-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/nav-tabs-row-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1030,928,1526,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-home-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/nav-tab-home-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1030,928,1124,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-home-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/nav-tab-home-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1030,928,1124,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-about-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/nav-tab-about-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1124,928,1214,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-about-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/nav-tab-about-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1124,928,1214,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-projects-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/nav-tab-projects-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1214,928,1319,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-projects-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/nav-tab-projects-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1214,928,1319,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-sketchbook-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/nav-tab-sketchbook-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1319,928,1428,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-sketchbook-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/nav-tab-sketchbook-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1319,928,1428,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-contact-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/nav-tab-contact-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1428,928,1526,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "nav-tab-contact-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/nav-tab-contact-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1428,928,1526,968"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "buttons-row-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/buttons-row-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1052,977,1525,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "buttons-row-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/buttons-row-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1052,977,1525,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-open-reel-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/button-open-reel-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1052,977,1166,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-open-reel-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/button-open-reel-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1052,977,1166,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-browse-sketchbook-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/button-browse-sketchbook-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1190,977,1346,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-browse-sketchbook-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/button-browse-sketchbook-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1190,977,1346,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-view-finished-work-source source crop",
+    "type": "source crop png",
+    "file": "09-buttons-nav-tabs/source-crops/button-view-finished-work-source__source.png",
+    "notes": "Exact crop from raster source image.",
+    "source_box": "1370,977,1525,1009"
+  },
+  {
+    "section": "09-buttons-nav-tabs",
+    "name": "button-view-finished-work-source",
+    "type": "transparent png",
+    "file": "09-buttons-nav-tabs/transparent-png/button-view-finished-work-source.png",
+    "notes": "Paper background removed algorithmically from raster crop.",
+    "source_box": "1370,977,1525,1009"
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-python",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-python.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-python",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-python.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-javascript",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-javascript.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-javascript",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-javascript.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-typescript",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-typescript.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-typescript",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-typescript.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-java",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-java.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-java",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-java.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-cpp",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-cpp.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-cpp",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-cpp.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-csharp",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-csharp.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-csharp",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-csharp.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-react",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-react.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-react",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-react.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-vue",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-vue.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-vue",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-vue.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-nodejs",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-nodejs.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-nodejs",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-nodejs.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-django",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-django.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-django",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-django.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-fastapi",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-fastapi.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-fastapi",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-fastapi.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-flask",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-flask.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-flask",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-flask.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-postgresql",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-postgresql.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-postgresql",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-postgresql.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-mysql",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-mysql.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-mysql",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-mysql.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-mongodb",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-mongodb.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-mongodb",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-mongodb.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-gcp",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-gcp.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-gcp",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-gcp.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-aws",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-aws.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-aws",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-aws.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-docker",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-docker.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-docker",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-docker.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-kubernetes",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-kubernetes.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-kubernetes",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-kubernetes.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-git",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-git.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-git",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-git.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-github",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-github.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-github",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-github.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-cicd",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-cicd.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-cicd",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-cicd.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-jenkins",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-jenkins.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-jenkins",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-jenkins.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-redux",
+    "type": "svg",
+    "file": "01-homepage-layout/svg-recreated/tech-redux.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "01-homepage-layout",
+    "name": "tech-redux",
+    "type": "png preview",
+    "file": "01-homepage-layout/transparent-png/tech-redux.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-python",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-python.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-python",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-python.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-javascript",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-javascript.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-javascript",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-javascript.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-typescript",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-typescript.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-typescript",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-typescript.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-java",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-java.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-java",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-java.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-cpp",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-cpp.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-cpp",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-cpp.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-csharp",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-csharp.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-csharp",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-csharp.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-react",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-react.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-react",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-react.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-vue",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-vue.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-vue",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-vue.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-nodejs",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-nodejs.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-nodejs",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-nodejs.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-django",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-django.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-django",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-django.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-fastapi",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-fastapi.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-fastapi",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-fastapi.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-flask",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-flask.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-flask",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-flask.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-postgresql",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-postgresql.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-postgresql",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-postgresql.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-mysql",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-mysql.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-mysql",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-mysql.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-mongodb",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-mongodb.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-mongodb",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-mongodb.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-gcp",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-gcp.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-gcp",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-gcp.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-aws",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-aws.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-aws",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-aws.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-docker",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-docker.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-docker",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-docker.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-kubernetes",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-kubernetes.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-kubernetes",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-kubernetes.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-git",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-git.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-git",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-git.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-github",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-github.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-github",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-github.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-cicd",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-cicd.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-cicd",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-cicd.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-jenkins",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-jenkins.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-jenkins",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-jenkins.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-redux",
+    "type": "svg",
+    "file": "03-icons-doodles/svg/tech-redux.svg",
+    "notes": "Technology icon vector recreated for toolkit section.",
+    "source_box": ""
+  },
+  {
+    "section": "03-icons-doodles",
+    "name": "tech-redux",
+    "type": "png preview",
+    "file": "03-icons-doodles/png/tech-redux.png",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "01-homepage-layout",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/01-homepage-layout-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "03-icons-doodles",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/03-icons-doodles-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "04-hand-drawn-ui-elements",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/04-hand-drawn-ui-elements-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "05-typography",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/05-typography-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "06-color-palette",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/06-color-palette-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "07-ui-cards-components",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/07-ui-cards-components-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "08-textures-background",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/08-textures-background-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  },
+  {
+    "section": "preview-contact-sheets",
+    "name": "09-buttons-nav-tabs",
+    "type": "contact sheet",
+    "file": "preview-contact-sheets/09-buttons-nav-tabs-contact-sheet.jpg",
+    "notes": "",
+    "source_box": ""
+  }
+]

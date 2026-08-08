@@ -1,0 +1,20 @@
+
+/* CSS texture utilities. Use these without external image loading. */
+.paper-texture {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(241,161,8,.06), transparent 28%),
+    radial-gradient(circle at 82% 6%, rgba(43,127,251,.05), transparent 26%),
+    linear-gradient(90deg, rgba(36,36,35,.025) 1px, transparent 1px),
+    linear-gradient(rgba(36,36,35,.018) 1px, transparent 1px);
+  background-size: auto, auto, 28px 28px, 28px 28px;
+}
+.notebook-lines {
+  background-image: linear-gradient(rgba(43,127,251,.13) 1px, transparent 1px);
+  background-size: 100% 32px;
+}
+.torn-paper-edge {
+  clip-path: polygon(0 2%, 8% 0, 18% 3%, 31% 0, 44% 3%, 58% 0, 74% 2%, 87% 0, 100% 2%, 100% 98%, 92% 100%, 78% 97%, 60% 100%, 48% 97%, 31% 100%, 18% 98%, 0 100%);
+}
+.tape-bg { background: linear-gradient(110deg, rgba(215,186,115,.75), rgba(245,218,141,.45)); }
+.base64-paper { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22320%22%20height%3D%22320%22%20viewBox%3D%220%200%20320%20320%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.8%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22/%3E%3CfeComponentTransfer%3E%3CfeFuncA%20type%3D%22table%22%20tableValues%3D%220%200.13%22/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect%20width%3D%22320%22%20height%3D%22320%22%20fill%3D%22%23F8F2E7%22/%3E%3Crect%20width%3D%22320%22%20height%3D%22320%22%20filter%3D%22url%28%23n%29%22%20opacity%3D%220.5%22/%3E%3C/svg%3E"); }

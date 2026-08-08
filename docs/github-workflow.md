@@ -1,12 +1,12 @@
 # GitHub Workflow
 
-This repository is a static portfolio, so the GitHub workflow stays intentionally lightweight: every change should prove that the generated site config still builds and the local Python dev server still parses.
+This repository is a Next.js App Router portfolio. Every change must install from the lockfile, pass TypeScript validation, produce a successful production build, and pass the browser smoke suite.
 
 ## Daily Development
 
 1. Create a branch from `main`.
 2. Make focused changes.
-3. Run `npm run check`.
+3. Run `npm run check` and `npm run test:e2e`.
 4. Open a pull request into `main`.
 5. Include screenshots for visual or responsive changes.
 
@@ -23,9 +23,11 @@ It runs on:
 The validation job:
 
 - checks out the repository
-- installs Node.js 20
-- installs Python 3.12
+- configures Node.js 20 with the npm cache
+- installs dependencies with `npm ci`
 - runs `npm run check`
+- installs Chromium for Playwright
+- runs `npm run test:e2e`
 
 ## Dependency Updates
 
@@ -52,7 +54,7 @@ These are GitHub repository settings, not files that can be fully enforced from 
 
 Do not commit `.env`, personal emails, phone numbers, API tokens, or deployment tokens.
 
-Use GitHub repository secrets for CI/CD secrets and hosting-provider environment variables for public site config.
+Use GitHub repository secrets for CI/CD secrets and hosting-provider environment variables for public site config. The `PUBLIC_*` values are browser-visible configuration, not a place for private credentials.
 
 ## Releases
 
