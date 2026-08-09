@@ -4,6 +4,8 @@ This repository is a Next.js App Router portfolio. Every change must install fro
 
 ## Daily Development
 
+On a new machine, install Chromium and its system dependencies once with `npx playwright install --with-deps chromium`.
+
 1. Create a branch from `main`.
 2. Make focused changes.
 3. Run `npm run check` and `npm run test:e2e`.
@@ -52,9 +54,9 @@ These are GitHub repository settings, not files that can be fully enforced from 
 
 ## Secrets
 
-Do not commit `.env`, personal emails, phone numbers, API tokens, or deployment tokens.
+Do not commit `.env`, private credentials, API tokens, deployment tokens, or contact data that is not intended for public display.
 
-Use GitHub repository secrets for CI/CD secrets and hosting-provider environment variables for public site config. The `PUBLIC_*` values are browser-visible configuration, not a place for private credentials.
+Use GitHub repository secrets for CI/CD secrets and hosting-provider environment variables for public site config. The `PUBLIC_*` values are browser-visible configuration; only intentionally public profile and contact values belong there.
 
 ## Releases
 

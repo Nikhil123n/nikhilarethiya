@@ -4,6 +4,8 @@
 
 This guide is written for a portfolio website that may be built as static HTML/CSS/JS, React, Next.js, or a similar frontend framework.
 
+> **Current repository:** Google Analytics is already rendered in `src/app/layout.tsx` with `@next/third-parties/google` and measurement ID `G-JG1Z97Y7FE`. The app does not currently read `NEXT_PUBLIC_GA_MEASUREMENT_ID`. Edit or remove that component to change or disable analytics. Section 7 below is an optional environment-variable-based alternative, not the current implementation.
+
 ## Current Short UTM Convention
 
 For this portfolio, keep public links short and readable:
@@ -267,7 +269,7 @@ After deployment, GA4 should receive page views.
 
 ---
 
-## 7. Option B: Next.js App Router Setup
+## 7. Option B: Environment-Based Next.js App Router Setup
 
 ### 7.1 Add Environment Variable
 
@@ -1197,15 +1199,15 @@ gtag('event', 'contact_click', {
 
 ### If deploying on Vercel
 
-1. Add environment variable:
+The current repository reads its GA measurement ID directly from `src/app/layout.tsx`. Change the `GoogleAnalytics` component there, redeploy, then test the Realtime report and a UTM link.
+
+If you first adopt the optional environment-based implementation from Section 7, add:
 
 ```text
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-2. Redeploy.
-3. Test Realtime report.
-4. Test UTM link.
+Then redeploy and repeat the same tests.
 
 ### If deploying on Netlify
 
