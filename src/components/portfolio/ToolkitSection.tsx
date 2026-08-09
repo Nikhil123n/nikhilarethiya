@@ -1,5 +1,6 @@
 import { assets, type Certification, type SkillGroup } from "@/data";
 import { MotionReveal } from "./MotionReveal";
+import { PushPin } from "./PushPin";
 
 type ToolkitSectionProps = {
   skills: SkillGroup[];
@@ -40,6 +41,7 @@ export function ToolkitSection({ skills, certifications }: ToolkitSectionProps) 
         </MotionReveal>
         <MotionReveal className="certifications-showcase" delay={0.08} rotate={false}>
           <article className="certifications-card certifications-card--toolkit">
+            <PushPin color="purple" className="certifications-card__pin" />
             <div className="certifications-card__content">
               <h3 className="certifications-title">Certifications</h3>
               <ul className="certifications-list" aria-label="Certifications">

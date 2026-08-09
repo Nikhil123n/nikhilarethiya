@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Project, SiteConfig } from "@/data";
 import { MotionReveal } from "./MotionReveal";
 import { ProjectCard } from "./ProjectCard";
+import type { PushPinColor } from "./PushPin";
 
 type ProjectsSectionProps = {
   projects: Project[];
@@ -44,6 +45,8 @@ const projectPageSpring = {
   damping: 25,
   mass: 0.9,
 };
+
+const projectPinColors: readonly PushPinColor[] = ["blue", "green", "purple"];
 
 export function ProjectsSection({ projects, site }: ProjectsSectionProps) {
   const pageSize = 3;
@@ -125,9 +128,9 @@ export function ProjectsSection({ projects, site }: ProjectsSectionProps) {
                 transition={reduceProjectMotion ? { duration: 0 } : projectPageSpring}
                 layout="position"
               >
-                {activeProjects.map((project) => (
+                {activeProjects.map((project, projectIndex) => (
                   <motion.div className="project-slide-card" key={project.id} layout="position">
-                    <ProjectCard project={project} />
+                    <ProjectCard project={project} pinColor={projectPinColors[projectIndex % projectPinColors.length]} />
                   </motion.div>
                 ))}
               </motion.div>

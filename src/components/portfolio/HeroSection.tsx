@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { assets, type SiteConfig } from "@/data";
 import { MotionReveal } from "./MotionReveal";
+import { PushPin } from "./PushPin";
 import { SketchButton } from "./SketchButton";
 import { TiltCard } from "./TiltCard";
 
@@ -61,6 +62,7 @@ export function HeroSection({ site }: HeroSectionProps) {
             <span>// stories live forever</span>
           </div>
           <article className="certifications-card plan-note" aria-labelledby="today-plan-title">
+            <PushPin color="green" className="plan-note__pin" />
             <div className="certifications-card__content plan-note__content">
               <h3 id="today-plan-title" className="certifications-title plan-note__title">
                 I build
