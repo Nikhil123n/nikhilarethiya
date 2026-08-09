@@ -1,16 +1,19 @@
 import type { Project } from "@/data";
+import { PushPin, type PushPinColor } from "./PushPin";
 
 type ProjectCardProps = {
   project: Project;
+  pinColor?: PushPinColor;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, pinColor = "blue" }: ProjectCardProps) {
   const githubHref = project.githubUrl || "#contact";
   const liveDemoHref = project.liveDemoUrl || project.demoUrl || githubHref;
 
   return (
     <article className="project-card project-card--artifact project-card--reference">
       <span className="project-card-paper" aria-hidden="true" />
+      <PushPin color={pinColor} className="project-card__pin" />
       <span className="project-paperclip-pin" aria-hidden="true" />
       <span className="project-tape-pin" aria-hidden="true" />
       <div className="project-card-content">
