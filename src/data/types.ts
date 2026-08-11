@@ -46,15 +46,28 @@ export type EducationEntry = {
   icon: string;
 };
 
+export type ExperienceStoryVisual =
+  | "civic-grid"
+  | "neural-pipeline"
+  | "validation-ledger"
+  | "glucose-wave";
+
+export type ExperienceMetric = {
+  value: string;
+  label: string;
+};
+
 export type ExperienceEntry = {
   id: string;
   date: string;
   role: string;
   company: string;
+  chapter: string;
+  metric: ExperienceMetric;
+  storyVisual: ExperienceStoryVisual;
   impact: string;
   tags: string[];
   takeaway: string;
-  side: "left" | "right";
 };
 
 export type SiteConfig = {

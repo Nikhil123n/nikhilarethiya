@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "motion/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import type { ExperienceEntry } from "@/data";
+import { ExperienceStoryDiagram } from "./ExperienceStoryDiagram";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -15,8 +16,7 @@ type ExperienceJourneySectionProps = {
 
 type MotionPreference = "system" | "full" | "reduce";
 
-const ROAD_PATH =
-  "M20 126 C238 124 456 196 470 318 C486 455 250 421 254 575 C258 724 646 705 674 880 C704 1054 498 1086 572 1244 C642 1392 828 1458 986 1528";
+const WIDE_STORY_QUERY = "(min-width: 1200px) and (min-height: 860px)";
 const ROAD_ARTIFACT_PATH = "/assets/artifacts/experience-road/sketchbook-road-diagonal-selected.png";
 
 const stopIconLabels: Record<string, string> = {
@@ -26,13 +26,16 @@ const stopIconLabels: Record<string, string> = {
   hive: "H",
 };
 
-const stopCalloutSides: Array<"left" | "right"> = ["right", "left", "right", "left"];
+const chapterStarts = [0.1, 0.29, 0.5, 0.7];
+
+function scrollDistance() {
+  return Math.min(4600, Math.max(3400, Math.round(window.innerHeight * 4.25)));
+}
 
 export function ExperienceJourneySection({ experience }: ExperienceJourneySectionProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
-  const roadRef = useRef<SVGPathElement | null>(null);
-  const roadLaneRef = useRef<SVGPathElement | null>(null);
+  const roadRevealRef = useRef<SVGRectElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
   const [hasHydrated, setHasHydrated] = useState(false);
   const [motionPreference, setMotionPreference] = useState<MotionPreference>("system");
@@ -41,27 +44,25 @@ export function ExperienceJourneySection({ experience }: ExperienceJourneySectio
     (hasHydrated && motionPreference === "system" && Boolean(prefersReducedMotion));
 
   useEffect(() => {
-    setHasHydrated(true);
-  }, []);
-
-  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const queryPreference = params.get("motion") || params.get("experienceMotion");
 
     if (queryPreference === "full" || queryPreference === "reduce" || queryPreference === "system") {
       setMotionPreference(queryPreference);
     }
+    setHasHydrated(true);
   }, []);
 
   useEffect(() => {
-    let startCorrectionTimer: number | undefined;
+    let correctionTimer: number | undefined;
+    let refreshFrame: number | undefined;
 
     const refreshExperience = () => {
       if (window.location.hash !== "#experience") return;
-      window.requestAnimationFrame(() => {
-        ScrollTrigger.refresh();
 
-        startCorrectionTimer = window.setTimeout(() => {
+      refreshFrame = window.requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+        correctionTimer = window.setTimeout(() => {
           const section = sectionRef.current;
           if (!section) return;
 
@@ -79,161 +80,161 @@ export function ExperienceJourneySection({ experience }: ExperienceJourneySectio
 
     return () => {
       window.removeEventListener("hashchange", refreshExperience);
-      if (startCorrectionTimer) window.clearTimeout(startCorrectionTimer);
+      if (refreshFrame) window.cancelAnimationFrame(refreshFrame);
+      if (correctionTimer) window.clearTimeout(correctionTimer);
     };
-  }, [motionPreference]);
+  }, [hasHydrated, motionPreference, reduceMotion]);
 
   const handleMotionPreference = () => {
-    const nextPreference: MotionPreference = reduceMotion ? "full" : "reduce";
-    setMotionPreference(nextPreference);
-    window.requestAnimationFrame(() => ScrollTrigger.refresh());
+    setMotionPreference(reduceMotion ? "full" : "reduce");
   };
 
   useGSAP(
     () => {
       const section = sectionRef.current;
       const stage = stageRef.current;
-      const road = roadRef.current;
-      const roadLane = roadLaneRef.current;
-      if (!section || !stage || !road || !roadLane) return;
+      const roadReveal = roadRevealRef.current;
+      if (!hasHydrated || !section || !stage || !roadReveal) return;
 
-      const roadTrack = section.querySelector<HTMLElement>(".experience-road-track");
-      const callouts = gsap.utils.toArray<HTMLElement>(".experience-stop-callout", section);
-      const roadPins = gsap.utils.toArray<HTMLElement>(".experience-map-pin", section);
-      const pinLabels = gsap.utils.toArray<HTMLElement>(".experience-stop-label", section);
-      const doodles = gsap.utils.toArray<HTMLElement>(".experience-doodle", section);
-      const artifacts = gsap.utils.toArray<HTMLElement>(".experience-map-artifact", section);
-      const animatedDetails = gsap.utils.toArray<HTMLElement>(
-        ".experience-org-badge, .experience-stop-copy",
+      const chapters = gsap.utils.toArray<HTMLElement>(".experience-stop-callout", section);
+      const chapterShells = gsap.utils.toArray<HTMLElement>(".experience-story-chapter", section);
+      const chapterDetails = gsap.utils.toArray<HTMLElement>(
+        ".experience-story-metric, .experience-impact, .experience-tags, .experience-takeaway",
         section,
       );
+      const stations = gsap.utils.toArray<HTMLElement>(".experience-route-station", section);
+      const progressItems = gsap.utils.toArray<HTMLElement>(".experience-progress-item", section);
+      const synthesis = section.querySelector<HTMLElement>(".experience-synthesis");
+
+      const clearActiveState = () => {
+        chapters.forEach((chapter) => {
+          chapter.dataset.active = "false";
+        });
+        progressItems.forEach((item) => {
+          item.dataset.active = "false";
+        });
+        if (synthesis) synthesis.dataset.active = "false";
+        section.dataset.activeChapter = "all";
+      };
+
+      section.dataset.layout = "natural";
+      clearActiveState();
 
       if (reduceMotion) {
-        gsap.set(road, { strokeDasharray: "none", strokeDashoffset: 0, autoAlpha: 1 });
-        gsap.set(roadLane, { autoAlpha: 1, clearProps: "strokeDasharray,strokeDashoffset" });
-        gsap.set(roadTrack, { clearProps: "transform" });
-        gsap.set(callouts, { autoAlpha: 1, x: 0, y: 0, clearProps: "transform" });
-        gsap.set(roadPins, { autoAlpha: 1, y: 0, scale: 1, clearProps: "transform" });
-        gsap.set(pinLabels, { autoAlpha: 1, y: 0, clearProps: "transform" });
-        gsap.set(animatedDetails, { autoAlpha: 1, y: 0, scale: 1, clearProps: "transform" });
-        gsap.set([...doodles, ...artifacts], { clearProps: "transform", autoAlpha: 1 });
+        gsap.set([...chapterShells, ...chapters, ...chapterDetails, ...stations, synthesis], {
+          clearProps: "all",
+        });
+        gsap.set(roadReveal, { attr: { height: 1600 } });
         return;
       }
 
-      ScrollTrigger.getAll().forEach((trigger) => {
-        const triggerElement = trigger.trigger;
-        const ownsTrigger = triggerElement instanceof Element && section.contains(triggerElement);
-        if (ownsTrigger || trigger.pin === stage) trigger.kill(true);
-      });
+      const media = gsap.matchMedia();
 
-      gsap.set([stage, road, roadLane, roadTrack, ...callouts, ...roadPins, ...pinLabels, ...animatedDetails, ...doodles, ...artifacts], {
-        clearProps: "all",
-      });
+      media.add(WIDE_STORY_QUERY, () => {
+        let activeChapter = "";
 
-      const pathLength = road.getTotalLength();
-      gsap.set(road, {
-        strokeDasharray: pathLength,
-        strokeDashoffset: pathLength,
-      });
-      gsap.set(roadLane, {
-        strokeDasharray: pathLength,
-        strokeDashoffset: pathLength,
-        autoAlpha: 0,
-      });
-      gsap.set(roadPins, { autoAlpha: 0, y: -22, scale: 0.35, transformOrigin: "50% 90%" });
-      gsap.set(pinLabels, { autoAlpha: 0, y: 10 });
-      gsap.set(animatedDetails, { autoAlpha: 0, y: 12, scale: 0.92 });
-      gsap.set(artifacts, { autoAlpha: 0.34, y: 32, rotate: -1.5 });
-      gsap.set(roadTrack, { y: 60 });
+        const syncActiveChapter = (nextChapter: string) => {
+          if (activeChapter === nextChapter) return;
+          activeChapter = nextChapter;
+          section.dataset.activeChapter = nextChapter;
 
-      callouts.forEach((callout) => {
-        const side = callout.dataset.side === "right" ? 1 : -1;
-        gsap.set(callout, { autoAlpha: 0, x: side * 42, y: 18 });
-      });
+          chapters.forEach((chapter) => {
+            chapter.dataset.active = String(chapter.dataset.experienceId === nextChapter);
+          });
+          progressItems.forEach((item) => {
+            item.dataset.active = String(item.dataset.experienceId === nextChapter);
+          });
+          if (synthesis) synthesis.dataset.active = String(nextChapter === "synthesis");
+        };
 
-      const mm = gsap.matchMedia();
+        const syncFromProgress = (progress: number) => {
+          if (progress >= 0.925) syncActiveChapter("synthesis");
+          else if (progress >= 0.72) syncActiveChapter(experience[3]?.id ?? "hive");
+          else if (progress >= 0.52) syncActiveChapter(experience[2]?.id ?? "un");
+          else if (progress >= 0.31) syncActiveChapter(experience[1]?.id ?? "sndl");
+          else syncActiveChapter(experience[0]?.id ?? "nic");
+        };
 
-      mm.add("(min-width: 900px)", () => {
-        const revealPositions = [0.14, 0.36, 0.58, 0.8];
+        gsap.set(roadReveal, { attr: { height: 0 } });
+        gsap.set(chapterShells, { opacity: 0, y: 18, scale: 0.985 });
+        gsap.set(chapterDetails, { opacity: 0, y: 10 });
+        const openingChapter = chapterShells[0];
+        const openingDetails = openingChapter?.querySelectorAll<HTMLElement>(
+          ".experience-story-metric, .experience-impact, .experience-tags, .experience-takeaway",
+        );
+        if (openingChapter) gsap.set(openingChapter, { opacity: 1, y: 0, scale: 1 });
+        if (openingDetails) gsap.set(openingDetails, { opacity: 1, y: 0 });
+        gsap.set(stations, { opacity: 0, scale: 0.92, transformOrigin: "50% 50%" });
+        if (stations[0]) gsap.set(stations[0], { opacity: 1, scale: 1 });
+        if (synthesis) gsap.set(synthesis, { opacity: 0, y: 16 });
+
+        section.dataset.layout = "pinned";
+        syncActiveChapter(experience[0]?.id ?? "nic");
+
         const timeline = gsap.timeline({
           defaults: { overwrite: "auto" },
           scrollTrigger: {
+            id: "experience-living-systems-road",
             trigger: section,
             start: "top top",
-            end: "+=5000",
-            scrub: 0.95,
+            end: () => `+=${scrollDistance()}`,
+            scrub: 0.32,
             pin: stage,
             anticipatePin: 1,
             invalidateOnRefresh: true,
+            onEnter: () => section.classList.add("is-animating"),
+            onEnterBack: () => section.classList.add("is-animating"),
+            onLeave: () => section.classList.remove("is-animating"),
+            onLeaveBack: () => section.classList.remove("is-animating"),
+            onUpdate: ({ progress }) => syncFromProgress(progress),
           },
         });
 
-        timeline.to(road, { strokeDashoffset: 0, ease: "none", duration: 0.88 }, 0);
-        timeline.to(roadLane, { strokeDashoffset: 0, autoAlpha: 0.42, ease: "none", duration: 0.88 }, 0.02);
-        timeline.to(roadTrack, { y: -90, ease: "none", duration: 0.88 }, 0);
-        timeline.to(doodles, { y: -34, x: 12, rotate: 1.8, ease: "none", stagger: 0.03, duration: 0.88 }, 0);
-        timeline.to(artifacts, { autoAlpha: 0.9, y: -18, rotate: 1, ease: "none", stagger: 0.04, duration: 0.88 }, 0.02);
+        timeline.addLabel("intro", 0);
+        timeline.to(roadReveal, { attr: { height: 1600 }, duration: 0.88, ease: "none" }, 0.02);
 
-        callouts.forEach((callout, index) => {
-          const start = revealPositions[index] ?? 0.2 + index * 0.17;
-          const side = callout.dataset.side === "right" ? 1 : -1;
-          const roadPin = roadPins[index];
-          const label = pinLabels[index];
-          const badge = callout.querySelector(".experience-org-badge");
-          const copy = callout.querySelector(".experience-stop-copy");
+        chapterShells.forEach((chapter, index) => {
+          const start = chapterStarts[index] ?? 0.1 + index * 0.19;
+          const detailElements = chapter.querySelectorAll<HTMLElement>(
+            ".experience-story-metric, .experience-impact, .experience-tags, .experience-takeaway",
+          );
+          const station = stations[index];
 
-          timeline.to(roadPin, { autoAlpha: 1, y: 0, scale: 1, duration: 0.055, ease: "back.out(3.2)" }, start);
-          timeline.to(label, { autoAlpha: 1, y: 0, duration: 0.045, ease: "power2.out" }, start + 0.02);
-          timeline.to(callout, { autoAlpha: 1, x: 0, y: 0, duration: 0.09, ease: "power3.out" }, start + 0.025);
-          timeline.to(badge, { autoAlpha: 1, y: 0, scale: 1, duration: 0.055, ease: "back.out(2.5)" }, start + 0.055);
-          timeline.fromTo(copy, { x: side * 10 }, { autoAlpha: 1, x: 0, y: 0, scale: 1, duration: 0.07, ease: "power2.out" }, start + 0.08);
+          timeline.addLabel(experience[index]?.id ?? `chapter-${index + 1}`, start);
+          if (index > 0) {
+            timeline.to(chapterShells[index - 1], { opacity: 0, y: -12, duration: 0.06, ease: "power2.in" }, start - 0.035);
+          }
+          timeline.to(chapter, { opacity: 1, y: 0, scale: 1, duration: 0.085, ease: "power3.out" }, start);
+          timeline.to(
+            detailElements,
+            { opacity: 1, y: 0, duration: 0.07, stagger: 0.012, ease: "power2.out" },
+            start + 0.025,
+          );
+          if (station) {
+            timeline.to(station, { opacity: 1, scale: 1, duration: 0.07, ease: "power2.out" }, start);
+          }
         });
 
-        timeline.to({}, { duration: 0.15 }, 0.95);
-
-        return () => timeline.kill();
-      });
-
-      mm.add("(max-width: 899px)", () => {
-        gsap.set(roadTrack, { clearProps: "transform" });
-        gsap.set(callouts, { autoAlpha: 1, x: 0, y: 0 });
-        gsap.set(animatedDetails, { autoAlpha: 1, y: 0, scale: 1 });
-        gsap.set(roadPins, { autoAlpha: 1, y: 0, scale: 1 });
-        gsap.set(pinLabels, { autoAlpha: 1, y: 0 });
-
-        const mobileRoad = gsap.to(road, {
-          strokeDashoffset: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 70%",
-            end: "bottom 45%",
-            scrub: 0.45,
-            invalidateOnRefresh: true,
-          },
-        });
-        const mobileLane = gsap.to(roadLane, {
-          strokeDashoffset: 0,
-          autoAlpha: 0.78,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 70%",
-            end: "bottom 45%",
-            scrub: 0.45,
-            invalidateOnRefresh: true,
-          },
-        });
+        timeline.addLabel("synthesis", 0.91);
+        if (chapterShells.at(-1)) {
+          timeline.to(chapterShells.at(-1)!, { opacity: 0, y: -12, duration: 0.06, ease: "power2.in" }, 0.9);
+        }
+        if (synthesis) {
+          timeline.to(synthesis, { opacity: 1, y: 0, duration: 0.08, ease: "power3.out" }, 0.92);
+        }
+        timeline.to({}, { duration: 0.02 }, 0.98);
 
         return () => {
-          mobileRoad.kill();
-          mobileLane.kill();
+          timeline.kill();
+          section.classList.remove("is-animating");
+          section.dataset.layout = "natural";
+          clearActiveState();
         };
       });
 
-      return () => mm.revert();
+      return () => media.revert();
     },
-    { scope: sectionRef, dependencies: [reduceMotion, motionPreference], revertOnUpdate: true },
+    { scope: sectionRef, dependencies: [hasHydrated, reduceMotion], revertOnUpdate: true },
   );
 
   return (
@@ -243,102 +244,146 @@ export function ExperienceJourneySection({ experience }: ExperienceJourneySectio
       aria-labelledby="experience-title"
       data-reduced-motion={reduceMotion ? "true" : "false"}
       data-motion-preference={motionPreference}
+      data-layout="natural"
+      data-active-chapter="all"
+      data-hydrated={hasHydrated ? "true" : "false"}
       ref={sectionRef}
     >
       <div className="experience-journey-stage" ref={stageRef}>
-        <div className="experience-doodle experience-doodle--compass" aria-hidden="true" />
-        <div className="experience-doodle experience-doodle--route" aria-hidden="true" />
-        <div className="experience-doodle experience-doodle--spark" aria-hidden="true" />
+        <div className="experience-story-layout">
+          <header className="experience-journey-heading">
+            <p className="experience-story-overline">Field notes · systems in motion</p>
+            <h2 id="experience-title" className="section-kicker">
+              Professional Experience
+            </h2>
+            <p>
+              I follow the signal from public infrastructure to research systems—modernizing,
+              scaling, validating, and turning data into tools people can trust.
+            </p>
+            {hasHydrated && (
+              <button
+                className="experience-motion-toggle"
+                type="button"
+                aria-label={`Experience motion is ${reduceMotion ? "reduced" : "full"}. Activate to ${
+                  reduceMotion ? "play the scroll story" : "show the static story"
+                }.`}
+                aria-pressed={reduceMotion}
+                onClick={handleMotionPreference}
+              >
+                <span aria-hidden="true" className="experience-motion-toggle-dot" />
+                Experience Motion: {reduceMotion ? "Reduced" : "Full"}
+              </button>
+            )}
+          </header>
 
-        <div className="experience-journey-heading">
-          <h2 id="experience-title" className="section-kicker">
-            Professional Experience
-          </h2>
-          <p>Four stops, one route: public-sector scale, research infrastructure, global data, and product-minded engineering.</p>
-          {hasHydrated && (prefersReducedMotion || motionPreference === "reduce") && (
-            <button
-              className="experience-motion-toggle"
-              type="button"
-              onClick={handleMotionPreference}
-            >
-              {reduceMotion ? "Play journey" : "Reduce motion"}
-            </button>
-          )}
-        </div>
+          <ol className="experience-progress" aria-hidden="true">
+            {experience.map((entry, index) => (
+              <li className="experience-progress-item" data-experience-id={entry.id} data-active="false" key={entry.id}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                {entry.chapter}
+              </li>
+            ))}
+          </ol>
 
-        <div className="experience-road-scene" aria-label="Professional experience journey">
-          <div className="experience-map-artifacts" aria-hidden="true">
-            <span className="experience-map-artifact experience-map-mountains" />
-            <span className="experience-map-artifact experience-map-dashed-route" />
-            <span className="experience-map-artifact experience-map-tree experience-map-tree--one" />
-            <span className="experience-map-artifact experience-map-tree experience-map-tree--two" />
-            <span className="experience-map-artifact experience-map-tree experience-map-tree--three" />
-            <span className="experience-map-artifact experience-map-tree experience-map-tree--four" />
-            <span className="experience-map-artifact experience-map-traveler" />
-          </div>
-
-          <div className="experience-road-track" aria-hidden="true">
-            <svg className="experience-road" viewBox="0 0 1000 1600" role="img" aria-label="Winding road path connecting experience cards">
-              <defs>
-                <mask id="experience-road-artifact-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1600">
-                  <rect x="0" y="0" width="1000" height="1600" fill="black" />
-                  <path ref={roadRef} className="experience-road-draw experience-road-reveal-mask" d={ROAD_PATH} />
-                </mask>
-              </defs>
-              <image
-                className="experience-road-artifact experience-road-artifact--ghost"
-                href={ROAD_ARTIFACT_PATH}
-                x="0"
-                y="0"
-                width="1000"
-                height="1600"
-                preserveAspectRatio="xMidYMid meet"
-              />
-              <image
-                className="experience-road-artifact experience-road-artifact--draw"
-                href={ROAD_ARTIFACT_PATH}
-                x="0"
-                y="0"
-                width="1000"
-                height="1600"
-                preserveAspectRatio="xMidYMid meet"
-                mask="url(#experience-road-artifact-mask)"
-              />
-              <path ref={roadLaneRef} className="experience-road-centerline" d={ROAD_PATH} />
-            </svg>
-
-            <div className="experience-map-pins">
-              {experience.map((entry, index) => (
-                <span className={`experience-map-pin experience-map-pin--${entry.id}`} key={entry.id}>
-                  <span className="experience-stop-label">{String(index + 1).padStart(2, "0")}</span>
-                </span>
-              ))}
-            </div>
-
-            <div className="experience-callout-layer">
-              {experience.map((entry, index) => {
-                const calloutSide = stopCalloutSides[index] ?? entry.side;
-
-                return (
-                  <article
-                    className={`experience-stop-callout experience-stop-callout--${calloutSide}`}
-                    data-side={calloutSide}
-                    key={entry.id}
-                    aria-label={`${entry.date}, ${entry.company}, ${entry.role}`}
+          <div className="experience-road-scene" aria-hidden="true">
+            <p className="experience-route-caption">One living route · four system scales</p>
+            <div className="experience-road-track">
+              <svg className="experience-road" viewBox="0 0 1000 1600" focusable="false">
+                <defs>
+                  <mask
+                    id="experience-road-artifact-mask"
+                    className="experience-road-mask"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="1000"
+                    height="1600"
                   >
-                    <span className={`experience-org-badge experience-org-badge--${entry.id}`} aria-hidden="true">
-                      {stopIconLabels[entry.id] ?? String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div className="experience-stop-copy">
-                      <time>{entry.date}</time>
-                      <p className="experience-stop-company">{entry.company}</p>
-                      <h3 className="experience-stop-role">{entry.role}</h3>
-                    </div>
-                  </article>
-                );
-              })}
+                    <rect x="0" y="0" width="1000" height="1600" fill="black" />
+                    <rect
+                      ref={roadRevealRef}
+                      className="experience-road-reveal-window"
+                      x="0"
+                      y="0"
+                      width="1000"
+                      height="1600"
+                      fill="white"
+                    />
+                  </mask>
+                </defs>
+                <image
+                  className="experience-road-artifact experience-road-artifact--draw"
+                  href={ROAD_ARTIFACT_PATH}
+                  x="0"
+                  y="0"
+                  width="1000"
+                  height="1600"
+                  preserveAspectRatio="xMidYMid meet"
+                  mask="url(#experience-road-artifact-mask)"
+                />
+              </svg>
+
+              <div className="experience-route-stations">
+                {experience.map((entry, index) => (
+                  <span
+                    className={`experience-route-station experience-route-station--${entry.id}`}
+                    data-experience-id={entry.id}
+                    key={entry.id}
+                  >
+                    <span className="experience-route-station-mark">{stopIconLabels[entry.id] ?? index + 1}</span>
+                    <span className="experience-route-station-number">{String(index + 1).padStart(2, "0")}</span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
+
+          <ol className="experience-story-list">
+            {experience.map((entry, index) => (
+              <li className="experience-story-chapter" key={entry.id}>
+                <article
+                  className="experience-stop-callout experience-story-card"
+                  data-experience-id={entry.id}
+                  data-active="false"
+                >
+                  <div className="experience-story-card-head">
+                    <div>
+                      <p className="experience-stop-eyebrow">
+                        Chapter {String(index + 1).padStart(2, "0")} · {entry.chapter}
+                      </p>
+                      <time>{entry.date}</time>
+                      <h3>{entry.role}</h3>
+                      <p className="experience-company">{entry.company}</p>
+                    </div>
+                    <ExperienceStoryDiagram visual={entry.storyVisual} />
+                  </div>
+
+                  <div className="experience-story-metric">
+                    <strong>{entry.metric.value}</strong>
+                    <span>{entry.metric.label}</span>
+                  </div>
+                  <p className="experience-impact">{entry.impact}</p>
+                  <ul className="experience-tags" aria-label="Technologies and methods">
+                    {entry.tags.map((tag) => (
+                      <li className="experience-tag" key={tag}>
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="experience-takeaway">{entry.takeaway}</p>
+                </article>
+              </li>
+            ))}
+          </ol>
+
+          <aside className="experience-synthesis" data-active="false" aria-label="Experience story synthesis">
+            <p className="experience-stop-eyebrow">The route so far</p>
+            <h3>Reliable systems. Trusted data. Human outcomes.</h3>
+            <p>
+              Public systems → reliable infrastructure → trusted data → human-centered research tooling.
+            </p>
+            <span>Next stop: deeper study and education.</span>
+          </aside>
         </div>
       </div>
     </section>

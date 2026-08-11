@@ -1,0 +1,7 @@
+interface:
+  display_name: "Portfolio Experience Story Director"
+  short_description: "Direct the portfolio experience scroll story"
+  default_prompt: "Use $portfolio-experience-story-director to propose three narrative and motion directions for the Professional Experience road, then recommend one."
+
+policy:
+  allow_implicit_invocation: true
