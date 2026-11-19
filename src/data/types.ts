@@ -66,6 +66,8 @@ export type ExperienceEntry = {
   metric: ExperienceMetric;
   storyVisual: ExperienceStoryVisual;
   impact: string;
+  impactHighlight?: string;
+  keyImpacts?: string[];
   tags: string[];
   takeaway: string;
 };

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import type { ExperienceEntry } from "@/data";
 import { ExperienceStoryDiagram } from "./ExperienceStoryDiagram";
+import { NicExperienceCard } from "./NicExperienceCard";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -340,38 +341,45 @@ export function ExperienceJourneySection({ experience }: ExperienceJourneySectio
 
           <ol className="experience-story-list">
             {experience.map((entry, index) => (
-              <li className="experience-story-chapter" key={entry.id}>
-                <article
-                  className="experience-stop-callout experience-story-card"
-                  data-experience-id={entry.id}
-                  data-active="false"
-                >
-                  <div className="experience-story-card-head">
-                    <div>
-                      <p className="experience-stop-eyebrow">
-                        Chapter {String(index + 1).padStart(2, "0")} · {entry.chapter}
-                      </p>
-                      <time>{entry.date}</time>
-                      <h3>{entry.role}</h3>
-                      <p className="experience-company">{entry.company}</p>
+              <li
+                className={`experience-story-chapter${entry.id === "nic" ? " experience-story-chapter--nic" : ""}`}
+                key={entry.id}
+              >
+                {entry.id === "nic" ? (
+                  <NicExperienceCard entry={entry} index={index} />
+                ) : (
+                  <article
+                    className="experience-stop-callout experience-story-card"
+                    data-experience-id={entry.id}
+                    data-active="false"
+                  >
+                    <div className="experience-story-card-head">
+                      <div>
+                        <p className="experience-stop-eyebrow">
+                          Chapter {String(index + 1).padStart(2, "0")} · {entry.chapter}
+                        </p>
+                        <time>{entry.date}</time>
+                        <h3>{entry.role}</h3>
+                        <p className="experience-company">{entry.company}</p>
+                      </div>
+                      <ExperienceStoryDiagram visual={entry.storyVisual} />
                     </div>
-                    <ExperienceStoryDiagram visual={entry.storyVisual} />
-                  </div>
 
-                  <div className="experience-story-metric">
-                    <strong>{entry.metric.value}</strong>
-                    <span>{entry.metric.label}</span>
-                  </div>
-                  <p className="experience-impact">{entry.impact}</p>
-                  <ul className="experience-tags" aria-label="Technologies and methods">
-                    {entry.tags.map((tag) => (
-                      <li className="experience-tag" key={tag}>
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="experience-takeaway">{entry.takeaway}</p>
-                </article>
+                    <div className="experience-story-metric">
+                      <strong>{entry.metric.value}</strong>
+                      <span>{entry.metric.label}</span>
+                    </div>
+                    <p className="experience-impact">{entry.impact}</p>
+                    <ul className="experience-tags" aria-label="Technologies and methods">
+                      {entry.tags.map((tag) => (
+                        <li className="experience-tag" key={tag}>
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="experience-takeaway">{entry.takeaway}</p>
+                  </article>
+                )}
               </li>
             ))}
           </ol>

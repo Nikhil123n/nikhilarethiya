@@ -134,9 +134,10 @@ textarea:focus-visible {
 }
 
 .scene {
+  --scene-inline-padding: clamp(28px, 6vw, 92px);
   position: relative;
   min-height: 100vh;
-  padding: 96px clamp(28px, 6vw, 92px) 72px;
+  padding: 96px var(--scene-inline-padding) 72px;
   scroll-margin-top: 86px;
 }
 
@@ -2843,7 +2844,7 @@ textarea:focus-visible {
 
 /* Living Systems Road ------------------------------------------------------ */
 
-.experience-journey-section {
+.scene.experience-journey-section {
   --experience-paper: rgba(255, 251, 241, 0.92);
   --experience-rule: rgba(36, 36, 35, 0.2);
   --experience-route-blue: #4676bf;
@@ -2862,7 +2863,7 @@ textarea:focus-visible {
   width: 100%;
   height: auto;
   min-height: auto;
-  padding: clamp(96px, 10vw, 132px) clamp(20px, 6vw, 84px) clamp(82px, 8vw, 112px);
+  padding: clamp(96px, 10vw, 132px) var(--scene-inline-padding) clamp(82px, 8vw, 112px);
   overflow: hidden;
   background: transparent;
 }
@@ -2887,7 +2888,7 @@ textarea:focus-visible {
   display: grid;
   gap: clamp(24px, 4vw, 52px);
   width: min(100%, 1180px);
-  margin: 0 auto;
+  margin: 0;
 }
 
 .experience-journey-heading {
@@ -3450,17 +3451,17 @@ textarea:focus-visible {
     display: flex;
     height: 100vh;
     min-height: 860px;
-    padding: clamp(64px, 7vh, 84px) clamp(38px, 4.6vw, 72px) clamp(36px, 4vh, 52px);
+    padding: clamp(64px, 7vh, 84px) var(--scene-inline-padding) clamp(36px, 4vh, 52px);
   }
 
   .experience-journey-section[data-layout="pinned"] .experience-story-layout {
-    grid-template-columns: minmax(370px, 430px) minmax(520px, 1fr);
+    grid-template-columns: minmax(360px, 430px) minmax(500px, 1fr);
     grid-template-rows: auto auto minmax(0, 1fr);
     grid-template-areas:
       "heading road"
       "progress road"
       "chapters road";
-    column-gap: clamp(42px, 5vw, 76px);
+    column-gap: clamp(32px, 4vw, 76px);
     row-gap: 20px;
     align-items: start;
     height: 100%;
@@ -3597,7 +3598,7 @@ textarea:focus-visible {
 @media (max-width: 719px) {
   .experience-journey-stage,
   .experience-journey-section[data-reduced-motion="true"] .experience-journey-stage {
-    padding: 88px 16px 76px;
+    padding: 88px var(--scene-inline-padding) 76px;
   }
 
   .experience-story-layout {
@@ -3700,6 +3701,434 @@ textarea:focus-visible {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
+  }
+}
+
+/* NIC reference card ------------------------------------------------------ */
+
+.experience-story-chapter--nic {
+  container-type: inline-size;
+}
+
+.experience-stop-callout.experience-story-card.experience-story-card--nic {
+  --experience-nic-card-paper: #faf1e3;
+  --experience-nic-card-paper-highlight: #fffaf2;
+  --experience-nic-card-edge: #d9cebc;
+  --experience-nic-card-ink: #161513;
+  --experience-nic-card-muted: #403a33;
+  --experience-nic-card-border: #a9a095;
+  --experience-nic-card-shadow: #2e241c24;
+  --experience-nic-card-inner-shadow: #ffffff99;
+  --experience-nic-accent: #e12a1e;
+  --experience-nic-accent-soft: #e12a1e38;
+  --experience-nic-note-paper: #f6d982;
+  --experience-nic-note-rule: #d7ba73;
+  --experience-nic-note-ink: #242423;
+  --experience-nic-note-shadow: #4b351b2b;
+  --experience-nic-tag-paper: #fbf5ee;
+  --experience-nic-tag-border: #b7ada0;
+  --experience-nic-tag-shadow: #2e241c1f;
+  --experience-nic-icon-blue: #2778a8;
+  --experience-nic-icon-orange: #e36227;
+  --experience-nic-icon-red: #dd3126;
+  --experience-nic-icon-green: #4f942f;
+  --experience-nic-icon-black: #242423;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(124px, 29cqi, 144px);
+  gap: clamp(10px, 2.8cqi, 18px);
+  align-items: stretch;
+  height: auto;
+  min-height: 264px;
+  padding: 20px 13px 17px 46px;
+  overflow: visible;
+  border: 1.5px solid var(--experience-nic-card-border);
+  border-radius: 15px 12px 17px 13px / 13px 16px 12px 18px;
+  background:
+    linear-gradient(104deg, var(--experience-nic-card-paper-highlight) 0%, #ffffff00 38%),
+    radial-gradient(ellipse at 98% 92%, var(--experience-nic-card-edge) 0%, #d9cebc00 36%),
+    var(--experience-nic-card-paper);
+  box-shadow:
+    0 11px 22px var(--experience-nic-card-shadow),
+    1px 2px 3px var(--experience-nic-card-shadow),
+    inset 0 0 0 1px var(--experience-nic-card-inner-shadow),
+    inset -8px -8px 18px #8f7a5d0d;
+  color: var(--experience-nic-card-ink);
+  isolation: isolate;
+  transform: rotate(-0.16deg);
+}
+
+.experience-stop-callout.experience-story-card.experience-story-card--nic::before {
+  content: none;
+}
+
+.experience-stop-callout.experience-story-card.experience-story-card--nic::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(178deg, #ffffff24 0%, #ffffff00 36%, #4738220d 100%),
+    url("/assets/artifacts/08-textures-background/transparent-png/notebook-paper-texture-soft.png") center / 280px 210px repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.experience-nic-card__main,
+.experience-nic-key-impact {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.experience-nic-card__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-nic-card__pin {
+  position: absolute;
+  z-index: 4;
+  top: 11px;
+  left: 5px;
+  display: block;
+  width: 32px;
+  height: 70px;
+  pointer-events: none;
+  filter: drop-shadow(2px 3px 2px var(--experience-nic-card-shadow));
+  transform: rotate(10deg);
+  transform-origin: 50% 22%;
+}
+
+.experience-nic-card__pin::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 43px;
+  width: 22px;
+  height: 18px;
+  border-left: 1.5px solid var(--experience-nic-card-ink);
+  border-radius: 50%;
+  transform: rotate(17deg);
+}
+
+.experience-nic-card__pin img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experience-story-card--nic .experience-stop-eyebrow {
+  color: var(--experience-nic-accent);
+  font-size: clamp(9px, 2.35cqi, 11px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.experience-story-card--nic h3 {
+  max-width: none;
+  margin: 7px 0 0;
+  color: var(--experience-nic-card-ink);
+  font-family: var(--font-hand);
+  font-size: clamp(21px, 5.45cqi, 28px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-shadow: 0.35px 0 var(--experience-nic-card-ink);
+  text-wrap: balance;
+}
+
+.experience-nic-role {
+  margin: 5px 0 0;
+  color: var(--experience-nic-card-ink);
+  font-family: var(--font-hand);
+  font-size: clamp(15px, 3.6cqi, 18px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.experience-story-card--nic .experience-nic-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 29px;
+  margin: 10px 0 0;
+  padding: 5px 10px 5px 8px;
+  border: 1.2px solid var(--experience-nic-card-border);
+  border-radius: 7px 6px 8px 6px;
+  background: var(--experience-nic-tag-paper);
+  color: var(--experience-nic-card-ink);
+  font-family: var(--font-hand);
+  font-size: clamp(12px, 3cqi, 14px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  box-shadow:
+    1px 2px 3px var(--experience-nic-tag-shadow),
+    inset 0 1px 0 var(--experience-nic-card-inner-shadow);
+  transform: rotate(0.35deg);
+}
+
+.experience-nic-date svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: var(--experience-nic-card-ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.experience-story-card--nic .experience-impact {
+  margin: 11px 0 0;
+  color: var(--experience-nic-card-muted);
+  font-family: var(--font-hand);
+  font-size: clamp(14px, 3.45cqi, 17px);
+  line-height: 1.32;
+  letter-spacing: 0.005em;
+}
+
+.experience-impact-highlight {
+  position: relative;
+  color: var(--experience-nic-accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.experience-impact-highlight::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -2px;
+  bottom: -2px;
+  height: 4px;
+  background:
+    linear-gradient(176deg, #ffffff00 0 31%, var(--experience-nic-accent) 34% 51%, #ffffff00 54%),
+    linear-gradient(181deg, #ffffff00 0 57%, var(--experience-nic-accent-soft) 60% 73%, #ffffff00 76%);
+  transform: rotate(-0.8deg);
+}
+
+.experience-story-card--nic .experience-tags {
+  gap: 5px;
+  margin: auto 0 0;
+  padding-top: 11px;
+}
+
+.experience-story-card--nic .experience-tag {
+  gap: 4px;
+  min-height: 25px;
+  padding: 3px 5px 3px 4px;
+  border: 1px solid var(--experience-nic-tag-border);
+  border-radius: 7px 6px 8px 6px;
+  background: var(--experience-nic-tag-paper);
+  color: var(--experience-nic-card-ink);
+  font-family: var(--font-hand);
+  font-size: clamp(10px, 2.35cqi, 12px);
+  font-weight: 700;
+  line-height: 1;
+  box-shadow:
+    1px 2px 3px var(--experience-nic-tag-shadow),
+    inset 0 1px 0 var(--experience-nic-card-inner-shadow);
+}
+
+.experience-story-card--nic .experience-tag:nth-child(even) {
+  transform: rotate(0.35deg);
+}
+
+.experience-story-card--nic .experience-tag:nth-child(odd) {
+  transform: rotate(-0.3deg);
+}
+
+.experience-nic-tech-icon {
+  flex: 0 0 auto;
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.experience-nic-tech-icon--java {
+  object-fit: contain;
+}
+
+.experience-nic-tech-icon--jsp {
+  fill: #e3622726;
+  stroke: var(--experience-nic-icon-orange);
+}
+
+.experience-nic-tech-icon--oracle {
+  stroke: var(--experience-nic-icon-red);
+}
+
+.experience-nic-tech-icon--spring {
+  fill: #4f942f1f;
+  stroke: var(--experience-nic-icon-green);
+}
+
+.experience-nic-tech-icon--linux {
+  fill: #24242314;
+  stroke: var(--experience-nic-icon-black);
+}
+
+.experience-nic-key-impact {
+  align-self: center;
+  width: 100%;
+  min-height: 220px;
+  padding: 34px 17px 22px 20px;
+  color: var(--experience-nic-note-ink);
+  filter: drop-shadow(3px 5px 4px var(--experience-nic-note-shadow));
+  transform: rotate(-1.25deg);
+}
+
+.experience-nic-key-impact__paper {
+  z-index: -1;
+  object-fit: fill;
+  transform: scale(1.38, 1.9);
+}
+
+.experience-nic-key-impact__content {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-nic-key-impact__title {
+  margin: 0;
+  color: var(--experience-nic-note-ink);
+  font-family: var(--font-sketch-caps);
+  font-size: clamp(13px, 3.1cqi, 16px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  text-shadow: 0.25px 0 var(--experience-nic-note-ink);
+}
+
+.experience-nic-key-impact__title::after {
+  content: "";
+  display: block;
+  width: 94%;
+  height: 1px;
+  margin-top: 7px;
+  background: var(--experience-nic-note-rule);
+  transform: rotate(-0.7deg);
+}
+
+.experience-nic-key-impact__list {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  margin: 2px 0 0;
+  list-style: none;
+}
+
+.experience-nic-key-impact__list li {
+  position: relative;
+  min-height: 25px;
+  padding: 6px 0 4px 21px;
+  border-bottom: 1px solid var(--experience-nic-note-rule);
+  font-family: var(--font-hand);
+  font-size: clamp(11px, 2.75cqi, 13px);
+  font-weight: 700;
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.experience-nic-key-impact__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  color: var(--experience-nic-card-ink);
+  font-family: var(--font-hand);
+  font-size: 17px;
+  line-height: 1;
+  text-shadow: 1px 1px 0 var(--experience-nic-card-inner-shadow);
+  transform: rotate(-8deg);
+}
+
+@media (min-width: 1200px) and (min-height: 860px) {
+  .experience-journey-section[data-layout="pinned"] .experience-stop-callout.experience-story-card--nic {
+    grid-template-columns: minmax(0, 1fr) 132px;
+    gap: 10px;
+    width: calc(100% + clamp(24px, 3vw, 44px));
+    min-height: 266px;
+    padding: 18px 14px 15px 44px;
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-story-card--nic h3 {
+    margin-top: 6px;
+    font-size: clamp(20px, 1.7vw, 24px);
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-story-card--nic .experience-impact {
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-story-card--nic .experience-tags {
+    gap: 4px;
+    margin-top: auto;
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-story-card--nic .experience-tag {
+    min-height: 23px;
+    padding: 3px 6px 3px 5px;
+    font-size: 11px;
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-nic-key-impact {
+    min-height: 210px;
+    padding: 32px 14px 20px 18px;
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-nic-key-impact__paper {
+    transform: scale(1.38, 1.9);
+  }
+
+  .experience-journey-section[data-layout="pinned"] .experience-nic-key-impact__list li {
+    min-height: 24px;
+    padding-top: 6px;
+    font-size: 11px;
+  }
+}
+
+@container (max-width: 390px) {
+  .experience-stop-callout.experience-story-card.experience-story-card--nic {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 24px 20px 24px 48px;
+  }
+
+  .experience-story-card--nic .experience-stop-eyebrow {
+    white-space: normal;
+  }
+
+  .experience-story-card--nic h3 {
+    font-size: clamp(23px, 7.5cqi, 28px);
+  }
+
+  .experience-nic-key-impact {
+    justify-self: center;
+    width: min(100%, 210px);
+    min-height: 230px;
+    margin: 8px 0 0;
+    padding: 37px 24px 23px 27px;
+  }
+
+  .experience-nic-key-impact__list li {
+    font-size: 13px;
+  }
+
+  .experience-nic-key-impact__paper {
+    transform: scale(1.38, 1.25);
   }
 }
 
@@ -4265,7 +4694,8 @@ textarea:focus-visible {
   }
 
   .scene {
-    padding: 84px 20px 112px;
+    --scene-inline-padding: 20px;
+    padding: 84px var(--scene-inline-padding) 112px;
   }
 
   #about {
@@ -4561,8 +4991,9 @@ textarea:focus-visible {
 
 @media (max-width: 460px) {
   .scene {
-    padding-left: 16px;
-    padding-right: 16px;
+    --scene-inline-padding: 16px;
+    padding-left: var(--scene-inline-padding);
+    padding-right: var(--scene-inline-padding);
   }
 
   .top-socials a {

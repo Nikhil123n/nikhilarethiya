@@ -5,14 +5,12 @@ const sectionIds = ["home", "about", "toolkit", "projects", "experience", "educa
 const experienceEntries = [
   {
     id: "nic",
-    date: "Jan 2023 - Jun 2024",
+    date: "Jan 2023 – Jun 2024",
     role: "Software Developer",
     company: "National Informatics Centre",
     impact:
-      "Modernized a district-scale JSP platform into REST-backed React workflows, improving page and query latency for 708 districts.",
-    tags: ["React", "REST APIs", "SQL", "Unicode"],
-    takeaway: "Legacy systems deserve careful migration notes.",
-    metric: { value: "708", label: "districts modernized" },
+      "Modernized a 12-year-old Java platform supporting 708 districts and millions of citizens.",
+    tags: ["Java", "JSP", "Oracle", "Spring", "Linux"],
   },
   {
     id: "sndl",
@@ -54,9 +52,7 @@ async function waitForExperienceHydration(page: Page, preference: "full" | "redu
 
   await expect(experience).toHaveAttribute("data-motion-preference", preference);
   await expect(experience.locator(".experience-stop-callout")).toHaveCount(experienceEntries.length);
-  await page.evaluate(
-    () => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))),
-  );
+  await expect(experience).toHaveAttribute("data-hydrated", "true");
 
   return experience;
 }
@@ -531,14 +527,110 @@ test.describe("Living Systems Road", () => {
       await expect(chapter.getByText(entry.company, { exact: true })).toBeVisible();
       await expect(chapter.getByText(entry.role, { exact: true })).toBeVisible();
       await expect(chapter.locator(".experience-impact")).toHaveText(entry.impact);
-      await expect(chapter.locator(".experience-takeaway")).toHaveText(entry.takeaway);
       const tags = chapter.locator(".experience-tags");
       await expect(tags).toHaveCount(1);
       for (const tag of entry.tags) {
         await expect(tags.getByText(tag, { exact: true })).toBeVisible();
       }
-      await expect(chapter.locator(".experience-story-metric strong")).toHaveText(entry.metric.value);
-      await expect(chapter.locator(".experience-story-metric span")).toHaveText(entry.metric.label);
+      if ("takeaway" in entry && "metric" in entry) {
+        await expect(chapter.locator(".experience-takeaway")).toHaveText(entry.takeaway);
+        await expect(chapter.locator(".experience-story-metric strong")).toHaveText(entry.metric.value);
+        await expect(chapter.locator(".experience-story-metric span")).toHaveText(entry.metric.label);
+      }
+    }
+  });
+
+  test("renders the NIC-only reference card without changing the generic chapters", async ({ page }) => {
+    await page.goto("/?motion=reduce#experience");
+    const experience = await waitForExperienceHydration(page, "reduce");
+    const nic = experience.locator(
+      'article[data-experience-id="nic"].experience-story-card--nic',
+    );
+
+    await expect(nic).toHaveCount(1);
+    await expect(nic.locator(".experience-nic-card__main")).toHaveCount(1);
+    await expect(
+      nic.getByRole("heading", { name: "National Informatics Centre", exact: true }),
+    ).toBeVisible();
+    await expect(nic.getByText("Software Developer", { exact: true })).toBeVisible();
+    await expect(nic.locator(".experience-nic-date")).toHaveText("Jan 2023 – Jun 2024");
+
+    const description = nic.locator(".experience-impact");
+    await expect(description).toHaveText(
+      "Modernized a 12-year-old Java platform supporting 708 districts and millions of citizens.",
+    );
+    const highlightedDistricts = description.locator(".experience-impact-highlight");
+    await expect(highlightedDistricts).toHaveText("708 districts");
+    await expect(highlightedDistricts).toBeVisible();
+
+    await expect(nic.locator(".experience-tags .experience-tag")).toHaveText([
+      "Java",
+      "JSP",
+      "Oracle",
+      "Spring",
+      "Linux",
+    ]);
+
+    const pin = nic.locator(".experience-nic-card__pin");
+    await expect(pin).toHaveCount(1);
+    await expect(pin).toHaveAttribute("data-pin-color", "red");
+    const pinImage = pin.locator("img");
+    await expect(pinImage).toHaveCount(1);
+    const pinSource = await pinImage.getAttribute("src");
+    expect(decodeURIComponent(pinSource ?? "")).toContain("/assets/pushpin-sketchbook-red.png");
+
+    const keyImpact = nic.locator(".experience-nic-key-impact");
+    await expect(keyImpact).toHaveCount(1);
+    await expect(keyImpact.locator(".experience-nic-key-impact__title")).toHaveText("KEY IMPACT");
+    await expect(keyImpact.locator(".experience-nic-key-impact__list > li")).toHaveText([
+      "708 districts served",
+      "~8s → ~4s latency",
+      "22 official languages",
+      "63% fewer complaints",
+      "5 zero-fail releases",
+    ]);
+
+    const colorTokens = await nic.evaluate((card) => {
+      const styles = getComputedStyle(card);
+
+      return {
+        cardPaper: styles.getPropertyValue("--experience-nic-card-paper").trim(),
+        cardInk: styles.getPropertyValue("--experience-nic-card-ink").trim(),
+        cardBorder: styles.getPropertyValue("--experience-nic-card-border").trim(),
+        cardShadow: styles.getPropertyValue("--experience-nic-card-shadow").trim(),
+        accent: styles.getPropertyValue("--experience-nic-accent").trim().toLowerCase(),
+        notePaper: styles.getPropertyValue("--experience-nic-note-paper").trim().toLowerCase(),
+        noteRule: styles.getPropertyValue("--experience-nic-note-rule").trim(),
+        tagPaper: styles.getPropertyValue("--experience-nic-tag-paper").trim(),
+      };
+    });
+
+    for (const value of Object.values(colorTokens)) {
+      expect(value).not.toBe("");
+    }
+    expect(colorTokens.accent).toBe("#e12a1e");
+    expect(colorTokens.notePaper).toBe("#f6d982");
+    await expect(
+      nic.locator(".experience-story-metric, .experience-story-diagram, .experience-takeaway"),
+    ).toHaveCount(0);
+
+    for (const entry of experienceEntries.slice(1)) {
+      if (!("takeaway" in entry)) throw new Error("Generic experience evidence is missing");
+
+      const chapter = experience.locator(
+        `article[data-experience-id="${entry.id}"]`,
+      );
+
+      await expect(chapter).not.toHaveClass(/(?:^|\s)experience-story-card--nic(?:\s|$)/);
+      await expect(
+        chapter.locator(
+          ".experience-nic-card__main, .experience-nic-card__pin, .experience-nic-date, .experience-impact-highlight, .experience-nic-key-impact, .experience-nic-key-impact__title, .experience-nic-key-impact__list",
+        ),
+      ).toHaveCount(0);
+      await expect(
+        chapter.locator(".experience-story-card-head > .experience-story-diagram"),
+      ).toHaveCount(1);
+      await expect(chapter.locator(".experience-takeaway")).toHaveText(entry.takeaway);
     }
   });
 
@@ -568,6 +660,44 @@ test.describe("Living Systems Road", () => {
       expect(state.visibility).not.toBe("hidden");
     }
   });
+
+  for (const viewport of [
+    { width: 1200, height: 900, layout: "pinned" },
+    { width: 1440, height: 900, layout: "pinned" },
+    { width: 1920, height: 1080, layout: "pinned" },
+    { width: 900, height: 800, layout: "natural" },
+    { width: 390, height: 844, layout: "natural" },
+  ]) {
+    test(`aligns the experience intro text block with the hero intro at ${viewport.width}px`, async ({ page }) => {
+      await page.setViewportSize(viewport);
+      await page.goto("/?motion=full");
+      const experience = await waitForExperienceHydration(page, "full");
+      const heroIntro = page.locator(".hero-copy");
+
+      await expect.poll(() => experience.getAttribute("data-layout"), { timeout: 3_000 }).toBe(viewport.layout);
+      await expect.poll(() => heroIntro.evaluate((intro) => getComputedStyle(intro).transform)).toBe("none");
+
+      const alignment = await page.evaluate(() => {
+        const heroIntro = document.querySelector<HTMLElement>(".hero-copy");
+        const experienceIntro = document.querySelector<HTMLElement>(".experience-journey-heading");
+
+        if (!heroIntro || !experienceIntro) throw new Error("Intro containers are missing");
+
+        const heroRect = heroIntro.getBoundingClientRect();
+        const experienceRect = experienceIntro.getBoundingClientRect();
+
+        return {
+          heroLeft: heroRect.left,
+          experienceLeft: experienceRect.left,
+          delta: Math.abs(experienceRect.left - heroRect.left),
+          hasHorizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
+        };
+      });
+
+      expect(alignment.delta, JSON.stringify(alignment)).toBeLessThanOrEqual(2);
+      expect(alignment.hasHorizontalOverflow).toBe(false);
+    });
+  }
 
   test("reveals one continuous road without a ghost, fork, or future stations", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });

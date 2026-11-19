@@ -3,15 +3,23 @@ import type { ExperienceEntry } from "./types";
 export const experience: ExperienceEntry[] = [
   {
     id: "nic",
-    date: "Jan 2023 - Jun 2024",
+    date: "Jan 2023 – Jun 2024",
     role: "Software Developer",
     company: "National Informatics Centre",
     chapter: "Civic systems",
     metric: { value: "708", label: "districts modernized" },
     storyVisual: "civic-grid",
     impact:
-      "Modernized a district-scale JSP platform into REST-backed React workflows, improving page and query latency for 708 districts.",
-    tags: ["React", "REST APIs", "SQL", "Unicode"],
+      "Modernized a 12-year-old Java platform supporting 708 districts and millions of citizens.",
+    impactHighlight: "708 districts",
+    keyImpacts: [
+      "708 districts served",
+      "~8s → ~4s latency",
+      "22 official languages",
+      "63% fewer complaints",
+      "5 zero-fail releases",
+    ],
+    tags: ["Java", "JSP", "Oracle", "Spring", "Linux"],
     takeaway: "Legacy systems deserve careful migration notes.",
   },
   {
