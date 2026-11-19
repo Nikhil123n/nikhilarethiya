@@ -9,6 +9,7 @@ export type {
   Certification,
   EducationEntry,
   ExperienceEntry,
+  ExperienceStoryVisual,
   NavItem,
   Project,
   SceneMeta,

@@ -1,0 +1,11 @@
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+enabled = true
+required = false
+enabled_tools = ["resolve-library-id", "query-docs"]
+
+[mcp_servers.motion]
+url = "https://mcp.motion.dev"
+enabled = true
+required = false
+enabled_tools = ["search-motion-docs", "generate-css-easing"]

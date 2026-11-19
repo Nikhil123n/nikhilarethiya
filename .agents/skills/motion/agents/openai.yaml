@@ -1,0 +1,7 @@
+interface:
+  display_name: "Motion"
+  short_description: "Build and review Motion and CSS animation"
+  default_prompt: "Use $motion to design or review this Motion and CSS animation with current base-library best practices."
+
+policy:
+  allow_implicit_invocation: true
